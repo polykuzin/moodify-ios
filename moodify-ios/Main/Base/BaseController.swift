@@ -8,9 +8,5 @@
 import UIKit
 
 open class BaseController : UIViewController {
-    
-    open override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
+
 }

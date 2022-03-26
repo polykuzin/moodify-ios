@@ -9,10 +9,15 @@ import UIKit
 
 public extension UIView {
     
-    class func loadFromNib<T: UIView>() throws -> T {
-        guard
-            let view = Bundle(for: T.self).loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as? T
-        else { throw NSError(domain: "ru.polykuzin.common", code: 0) }
-        return view
+    /**
+     Load the view from a nib file called with the name of the class;
+      - note: The first object of the nib file **must** be of the matching class
+      - parameters:
+        - none
+     */
+    static func loadFromNib() -> Self {
+        let bundle = Bundle(for: self)
+        let nib = UINib(nibName: String(describing: self), bundle: bundle)
+        return nib.instantiate(withOwner: nil, options: nil).first as! Self
     }
 }

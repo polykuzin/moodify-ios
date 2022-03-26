@@ -1,0 +1,17 @@
+/* 
+  OnBoarding.strings
+  moodify-ios
+
+  Created by polykuzin on 26/03/2022.
+  
+*/
+
+"1st_step_title" = "Do not panic!";
+"2nd_step_title" = "Big picture";
+"3rd_step_title" = "Mental health tests";
+
+"1st_step_descr" = "If you track your mood every day, you will understand what it depends on and the worries will go away!";
+"2nd_step_descr" = "Check your daily / weekly / annual progress.\n\nYou will receive a notification after some time, if you want)";
+"3rd_step_descr" = "Explore practical tools for self-care, and share it with your friends.";
+
+"step_button_title" = "Continue";

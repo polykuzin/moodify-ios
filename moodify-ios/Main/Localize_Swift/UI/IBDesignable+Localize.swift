@@ -5,15 +5,12 @@
 //  Copyright © 2020 Roy Marmelstein. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-// MARK: - UILabel localize Key extention for language in story board
-
 @IBDesignable public extension UILabel {
+    
     @IBInspectable var localizeKey: String? {
         set {
-            // set new value from dictionary
             DispatchQueue.main.async {
                 self.text = newValue?.localized()
             }
@@ -24,13 +21,10 @@ import UIKit
     }
 }
 
-// MARK: - UIButton localize Key extention for language in story board
-
 @IBDesignable public extension UIButton {
 
     @IBInspectable var localizeKey: String? {
         set {
-            // set new value from dictionary
             DispatchQueue.main.async {
                 self.setTitle(newValue?.localized(), for: .normal)
             }
@@ -40,8 +34,6 @@ import UIKit
         }
     }
 }
-
-// MARK: - UITextView localize Key extention for language in story board
 
 @IBDesignable public extension UITextView {
 
@@ -58,8 +50,6 @@ import UIKit
     }
 }
 
-// MARK: - UITextField localize Key extention for language in story board
-
 @IBDesignable public extension UITextField {
     @IBInspectable var localizeKey: String? {
         set {
@@ -73,8 +63,6 @@ import UIKit
         }
     }
 }
-
-// MARK: - UINavigationItem localize Key extention for language in story board
 
 @IBDesignable public extension UINavigationItem {
 
