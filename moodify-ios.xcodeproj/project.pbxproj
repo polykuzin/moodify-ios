@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6845E9462810D94100B99024 /* MoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6845E9442810D94100B99024 /* MoodCell.swift */; };
+		6845E9472810D94100B99024 /* MoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6845E9452810D94100B99024 /* MoodCell.xib */; };
+		68C5A0342812192F00AC5F18 /* CoreTableView in Frameworks */ = {isa = PBXBuildFile; productRef = 68C5A0332812192F00AC5F18 /* CoreTableView */; };
+		68C5A03628121DF900AC5F18 /* MoodChooserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5A03528121DF900AC5F18 /* MoodChooserManager.swift */; };
+		68FCA6F32810911A004EDCED /* MoodChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FCA6F22810911A004EDCED /* MoodChooserView.swift */; };
+		68FCA6F528109126004EDCED /* MoodChooserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68FCA6F428109126004EDCED /* MoodChooserView.xib */; };
+		68FCA6F728109207004EDCED /* MoodChooser.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68FCA6F628109207004EDCED /* MoodChooser.strings */; };
+		68FCA6F928109216004EDCED /* MoodChooser.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68FCA6F828109216004EDCED /* MoodChooser.xcassets */; };
+		68FCA6FB281094B3004EDCED /* MoodChooserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FCA6FA281094B3004EDCED /* MoodChooserController.swift */; };
 		6D748FB527D63FF2006CBA91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D748FB427D63FF2006CBA91 /* AppDelegate.swift */; };
 		6D748FB727D63FF2006CBA91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D748FB627D63FF2006CBA91 /* SceneDelegate.swift */; };
 		6D748FBE27D63FF4006CBA91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D748FBD27D63FF4006CBA91 /* Assets.xcassets */; };
@@ -44,6 +53,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6845E9442810D94100B99024 /* MoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCell.swift; sourceTree = "<group>"; };
+		6845E9452810D94100B99024 /* MoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodCell.xib; sourceTree = "<group>"; };
+		68C5A03528121DF900AC5F18 /* MoodChooserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodChooserManager.swift; sourceTree = "<group>"; };
+		68FCA6F22810911A004EDCED /* MoodChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodChooserView.swift; sourceTree = "<group>"; };
+		68FCA6F428109126004EDCED /* MoodChooserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodChooserView.xib; sourceTree = "<group>"; };
+		68FCA6F628109207004EDCED /* MoodChooser.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = MoodChooser.strings; sourceTree = "<group>"; };
+		68FCA6F828109216004EDCED /* MoodChooser.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MoodChooser.xcassets; sourceTree = "<group>"; };
+		68FCA6FA281094B3004EDCED /* MoodChooserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodChooserController.swift; sourceTree = "<group>"; };
 		6D748FB127D63FF2006CBA91 /* moodify-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "moodify-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D748FB427D63FF2006CBA91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D748FB627D63FF2006CBA91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,12 +104,60 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68C5A0342812192F00AC5F18 /* CoreTableView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6845E9432810D91E00B99024 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6845E9442810D94100B99024 /* MoodCell.swift */,
+				6845E9452810D94100B99024 /* MoodCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		68FCA6EE281090BC004EDCED /* MoodChooser */ = {
+			isa = PBXGroup;
+			children = (
+				68FCA6F628109207004EDCED /* MoodChooser.strings */,
+				68FCA6F828109216004EDCED /* MoodChooser.xcassets */,
+				68FCA6F128109100004EDCED /* View */,
+				68FCA6F0281090F9004EDCED /* Manager */,
+				68FCA6EF281090EF004EDCED /* Controller */,
+			);
+			path = MoodChooser;
+			sourceTree = "<group>";
+		};
+		68FCA6EF281090EF004EDCED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				68FCA6FA281094B3004EDCED /* MoodChooserController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		68FCA6F0281090F9004EDCED /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				68C5A03528121DF900AC5F18 /* MoodChooserManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		68FCA6F128109100004EDCED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6845E9432810D91E00B99024 /* Cell */,
+				68FCA6F22810911A004EDCED /* MoodChooserView.swift */,
+				68FCA6F428109126004EDCED /* MoodChooserView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6D748FA827D63FF2006CBA91 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +191,7 @@
 			children = (
 				6DBDF39627EF64AE00CEEB08 /* _Launch */,
 				6DBDF3B627EF81A900CEEB08 /* OnBoarding */,
+				68FCA6EE281090BC004EDCED /* MoodChooser */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -328,6 +394,7 @@
 			);
 			name = "moodify-ios";
 			packageProductDependencies = (
+				68C5A0332812192F00AC5F18 /* CoreTableView */,
 			);
 			productName = "moodify-ios";
 			productReference = 6D748FB127D63FF2006CBA91 /* moodify-ios.app */;
@@ -357,6 +424,7 @@
 			);
 			mainGroup = 6D748FA827D63FF2006CBA91;
 			packageReferences = (
+				68C5A0322812192F00AC5F18 /* XCRemoteSwiftPackageReference "CoreTableView" */,
 			);
 			productRefGroup = 6D748FB227D63FF2006CBA91 /* Products */;
 			projectDirPath = "";
@@ -376,10 +444,14 @@
 				6DBDF3C427EF873800CEEB08 /* OnBoarding.strings in Resources */,
 				6DBDF3D327EF90E700CEEB08 /* OnBoardingCollectionCell.xib in Resources */,
 				6D748FD727D64919006CBA91 /* UI_Colors.xcassets in Resources */,
+				68FCA6F528109126004EDCED /* MoodChooserView.xib in Resources */,
+				68FCA6F928109216004EDCED /* MoodChooser.xcassets in Resources */,
 				6DBDF3C227EF872D00CEEB08 /* OnBoarding.xcassets in Resources */,
 				6DBDF3A627EF6FEB00CEEB08 /* SplashView.xib in Resources */,
+				6845E9472810D94100B99024 /* MoodCell.xib in Resources */,
 				6DBDF39A27EF655A00CEEB08 /* LaunchView.storyboard in Resources */,
 				6DBDF39C27EF664D00CEEB08 /* Splash.xcassets in Resources */,
+				68FCA6F728109207004EDCED /* MoodChooser.strings in Resources */,
 				6DBDF39E27EF665A00CEEB08 /* Splash.strings in Resources */,
 				6D748FBE27D63FF4006CBA91 /* Assets.xcassets in Resources */,
 			);
@@ -396,6 +468,7 @@
 				6DBDF3E727EFC1F400CEEB08 /* OnBoardingStateManager.swift in Sources */,
 				6DBDF3B527EF805000CEEB08 /* AppStorage.swift in Sources */,
 				6D748FE527D64B49006CBA91 /* Localize.swift in Sources */,
+				68FCA6FB281094B3004EDCED /* MoodChooserController.swift in Sources */,
 				6D748FE627D64B49006CBA91 /* IBDesignable+Localize.swift in Sources */,
 				6D748FE327D64B49006CBA91 /* String+LocalizeBundle.swift in Sources */,
 				6D748FD927D64934006CBA91 /* UI_Typography.swift in Sources */,
@@ -407,12 +480,15 @@
 				6DBDF3E027EF91BF00CEEB08 /* Ext+UICollectionViewCell.swift in Sources */,
 				6DBDF3A827EF722E00CEEB08 /* SplashController.swift in Sources */,
 				6DBDF3B327EF7CAE00CEEB08 /* SplashStateManager.swift in Sources */,
+				68C5A03628121DF900AC5F18 /* MoodChooserManager.swift in Sources */,
 				6DBDF3A427EF6FDD00CEEB08 /* SplashView.swift in Sources */,
 				6D748FF627D64D0D006CBA91 /* Ext+UIView.swift in Sources */,
+				68FCA6F32810911A004EDCED /* MoodChooserView.swift in Sources */,
 				6D748FD427D64867006CBA91 /* UI_Colors.swift in Sources */,
 				6D74902A27D65F3B006CBA91 /* SafeIndex.swift in Sources */,
 				6D748FB727D63FF2006CBA91 /* SceneDelegate.swift in Sources */,
 				6D748FE427D64B49006CBA91 /* String+LocalizeTableName.swift in Sources */,
+				6845E9462810D94100B99024 /* MoodCell.swift in Sources */,
 				6D74902827D65F3B006CBA91 /* Ext+String.swift in Sources */,
 				6DBDF3D227EF90E700CEEB08 /* OnBoardingCollectionCell.swift in Sources */,
 				6D748FFB27D64D43006CBA91 /* BaseView.swift in Sources */,
@@ -614,6 +690,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		68C5A0322812192F00AC5F18 /* XCRemoteSwiftPackageReference "CoreTableView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MosMetro-official/CoreTableView";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		68C5A0332812192F00AC5F18 /* CoreTableView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68C5A0322812192F00AC5F18 /* XCRemoteSwiftPackageReference "CoreTableView" */;
+			productName = CoreTableView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6D748FA927D63FF2006CBA91 /* Project object */;
 }

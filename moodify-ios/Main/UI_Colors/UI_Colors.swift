@@ -12,4 +12,8 @@ public extension UIColor {
     static var base : UIColor {
         return UIColor(named: #function)!
     }
+    
+    static var cellText: UIColor {
+        return UIColor(named: #function)!
+    }
 }
