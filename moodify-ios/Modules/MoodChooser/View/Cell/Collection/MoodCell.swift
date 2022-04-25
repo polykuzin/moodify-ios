@@ -16,6 +16,16 @@ class MoodCell: UICollectionViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                makeSelected()
+            } else {
+                makeUnselected()
+            }
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCell()
@@ -23,6 +33,16 @@ class MoodCell: UICollectionViewCell {
     
     public func configure(with data: _Mood) {
         titleLabel.text = data.title
+    }
+    
+    public func makeSelected() {
+        self.backgroundColor = .cellText
+        self.titleLabel.textColor = .base
+    }
+    
+    public func makeUnselected() {
+        self.backgroundColor = .base
+        self.titleLabel.textColor = .cellText
     }
     
     private func setupCell() {

@@ -16,4 +16,12 @@ public extension UIColor {
     static var cellText: UIColor {
         return UIColor(named: #function)!
     }
+    
+    static var button: UIColor {
+        return UIColor(named: #function)!
+    }
+    
+    static var sliderTrack: UIColor {
+        return UIColor(named: #function)!
+    }
 }

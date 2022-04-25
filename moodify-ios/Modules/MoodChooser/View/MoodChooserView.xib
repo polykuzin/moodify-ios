@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -34,82 +33,26 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="back_button"/>
                 </button>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="lgH-SD-wTh">
-                    <rect key="frame" x="15" y="149" width="384" height="256"/>
-                    <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crybaby" translatesAutoresizingMaskIntoConstraints="NO" id="ULh-hY-YFm">
-                            <rect key="frame" x="77" y="0.0" width="230" height="230"/>
-                        </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eq1-C9-9Jc">
-                            <rect key="frame" x="172.5" y="233" width="39.5" height="23"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                            <color key="textColor" red="0.18431372549019609" green="0.23921568627450979" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                </stackView>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="wmA-JD-agD">
-                    <rect key="frame" x="33" y="460" width="348" height="31"/>
-                    <color key="minimumTrackTintColor" red="0.3411764705882353" green="0.52156862745098043" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <color key="maximumTrackTintColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </slider>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which words discribe your feelings best?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npc-cG-tbv">
-                    <rect key="frame" x="40" y="530" width="334" height="20.5"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                    <color key="textColor" red="0.18431372549019609" green="0.23921568627450979" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ivp-Tf-9tN">
-                    <rect key="frame" x="20" y="565.5" width="374" height="221.5"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="deT-KG-jGz" customClass="BaseTableView" customModule="CoreTableView">
+                    <rect key="frame" x="0.0" y="118" width="414" height="778"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="5" id="CGy-cC-5cJ">
-                        <size key="itemSize" width="120" height="37"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbx-td-R9W">
-                    <rect key="frame" x="15" y="802" width="384" height="50"/>
-                    <color key="backgroundColor" name="button"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="TFc-30-H3f"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Next"/>
-                </button>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="pyz-Nj-Ml9" firstAttribute="centerY" secondItem="aJB-A1-A31" secondAttribute="centerY" id="055-pF-0nh"/>
-                <constraint firstItem="lgH-SD-wTh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="3B2-1Y-1GN"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ivp-Tf-9tN" secondAttribute="trailing" constant="20" id="6Uo-e7-GR8"/>
-                <constraint firstItem="Ivp-Tf-9tN" firstAttribute="top" secondItem="npc-cG-tbv" secondAttribute="bottom" constant="15" id="AE2-lF-N2U"/>
+                <constraint firstItem="deT-KG-jGz" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="8ci-ke-C1p"/>
+                <constraint firstAttribute="bottom" secondItem="deT-KG-jGz" secondAttribute="bottom" id="DdC-y8-YgL"/>
                 <constraint firstItem="pyz-Nj-Ml9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="GVn-dG-Lq0"/>
-                <constraint firstItem="Ivp-Tf-9tN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Gwg-7U-m3L"/>
-                <constraint firstItem="Xbx-td-R9W" firstAttribute="top" secondItem="Ivp-Tf-9tN" secondAttribute="bottom" constant="15" id="Ibv-2d-cQB"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Xbx-td-R9W" secondAttribute="trailing" constant="15" id="JkX-zS-1uw"/>
                 <constraint firstItem="aJB-A1-A31" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="70" id="VyF-Xn-Am0"/>
-                <constraint firstItem="lgH-SD-wTh" firstAttribute="top" secondItem="aJB-A1-A31" secondAttribute="bottom" constant="43" id="WBZ-bQ-aqB"/>
-                <constraint firstItem="npc-cG-tbv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Y1g-0H-Om8"/>
+                <constraint firstItem="deT-KG-jGz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dam-U7-11w"/>
                 <constraint firstItem="aJB-A1-A31" firstAttribute="leading" secondItem="pyz-Nj-Ml9" secondAttribute="trailing" constant="52.5" id="dmE-G5-Ma5"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wmA-JD-agD" secondAttribute="trailing" constant="35" id="g1V-r1-TE9"/>
-                <constraint firstItem="npc-cG-tbv" firstAttribute="top" secondItem="wmA-JD-agD" secondAttribute="bottom" constant="40" id="kA0-Y8-edZ"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Xbx-td-R9W" secondAttribute="bottom" constant="10" id="kcn-wu-7yR"/>
-                <constraint firstItem="wmA-JD-agD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="35" id="oAV-hg-ULR"/>
-                <constraint firstItem="Xbx-td-R9W" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="p1c-YY-fz7"/>
+                <constraint firstItem="deT-KG-jGz" firstAttribute="top" secondItem="pyz-Nj-Ml9" secondAttribute="bottom" constant="10" id="kzc-Bs-gHv"/>
                 <constraint firstItem="aJB-A1-A31" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rmi-4u-GFn"/>
-                <constraint firstItem="wmA-JD-agD" firstAttribute="top" secondItem="lgH-SD-wTh" secondAttribute="bottom" constant="55" id="sJO-if-rUi"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lgH-SD-wTh" secondAttribute="trailing" constant="15" id="vuA-Wk-qbI"/>
             </constraints>
             <connections>
-                <outlet property="babyImage" destination="ULh-hY-YFm" id="4I1-fs-wmn"/>
-                <outlet property="babyMoodLabel" destination="eq1-C9-9Jc" id="3zq-N7-iYh"/>
-                <outlet property="moodCollection" destination="Ivp-Tf-9tN" id="et0-0T-4xa"/>
-                <outlet property="moodCollectionLayout" destination="CGy-cC-5cJ" id="ZrC-oz-ROy"/>
-                <outlet property="nextButton" destination="Xbx-td-R9W" id="RnU-VH-m79"/>
+                <outlet property="tableView" destination="deT-KG-jGz" id="0zt-f8-Tcv"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
@@ -117,10 +60,6 @@
     <resources>
         <image name="back_button" width="40" height="40"/>
         <image name="cherkash" width="123" height="7"/>
-        <image name="crybaby" width="230" height="230"/>
-        <namedColor name="button">
-            <color red="0.34099999070167542" green="0.5220000147819519" blue="0.86299997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

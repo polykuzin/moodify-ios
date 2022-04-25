@@ -7,8 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		683D00ED2815B1B800457827 /* MainMoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683D00EB2815B1B800457827 /* MainMoodCell.swift */; };
+		683D00EE2815B1B800457827 /* MainMoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683D00EC2815B1B800457827 /* MainMoodCell.xib */; };
+		683D00F12815B1E400457827 /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683D00EF2815B1E400457827 /* SliderCell.swift */; };
+		683D00F22815B1E400457827 /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683D00F02815B1E400457827 /* SliderCell.xib */; };
 		6845E9462810D94100B99024 /* MoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6845E9442810D94100B99024 /* MoodCell.swift */; };
 		6845E9472810D94100B99024 /* MoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6845E9452810D94100B99024 /* MoodCell.xib */; };
+		68A9C1682815B7B600FD264A /* Ext+UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A9C1672815B7B600FD264A /* Ext+UITableViewCell.swift */; };
+		68A9C1712815CCC900FD264A /* MoodDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A9C16F2815CCC900FD264A /* MoodDescriptionCell.swift */; };
+		68A9C1722815CCC900FD264A /* MoodDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A9C1702815CCC900FD264A /* MoodDescriptionCell.xib */; };
+		68A9C1752815DB9A00FD264A /* MoodsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A9C1732815DB9A00FD264A /* MoodsCell.swift */; };
+		68A9C1762815DB9A00FD264A /* MoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A9C1742815DB9A00FD264A /* MoodsCell.xib */; };
+		68A9C1792815E4E900FD264A /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A9C1772815E4E900FD264A /* ButtonCell.swift */; };
+		68A9C17A2815E4E900FD264A /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A9C1782815E4E900FD264A /* ButtonCell.xib */; };
+		68A9C17C2817491C00FD264A /* MoodSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A9C17B2817491C00FD264A /* MoodSlider.swift */; };
 		68C5A0342812192F00AC5F18 /* CoreTableView in Frameworks */ = {isa = PBXBuildFile; productRef = 68C5A0332812192F00AC5F18 /* CoreTableView */; };
 		68C5A03628121DF900AC5F18 /* MoodChooserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5A03528121DF900AC5F18 /* MoodChooserManager.swift */; };
 		68FCA6F32810911A004EDCED /* MoodChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FCA6F22810911A004EDCED /* MoodChooserView.swift */; };
@@ -53,8 +65,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		683D00EB2815B1B800457827 /* MainMoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMoodCell.swift; sourceTree = "<group>"; };
+		683D00EC2815B1B800457827 /* MainMoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMoodCell.xib; sourceTree = "<group>"; };
+		683D00EF2815B1E400457827 /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
+		683D00F02815B1E400457827 /* SliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCell.xib; sourceTree = "<group>"; };
 		6845E9442810D94100B99024 /* MoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCell.swift; sourceTree = "<group>"; };
 		6845E9452810D94100B99024 /* MoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodCell.xib; sourceTree = "<group>"; };
+		68A9C1672815B7B600FD264A /* Ext+UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UITableViewCell.swift"; sourceTree = "<group>"; };
+		68A9C16F2815CCC900FD264A /* MoodDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDescriptionCell.swift; sourceTree = "<group>"; };
+		68A9C1702815CCC900FD264A /* MoodDescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodDescriptionCell.xib; sourceTree = "<group>"; };
+		68A9C1732815DB9A00FD264A /* MoodsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodsCell.swift; sourceTree = "<group>"; };
+		68A9C1742815DB9A00FD264A /* MoodsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodsCell.xib; sourceTree = "<group>"; };
+		68A9C1772815E4E900FD264A /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		68A9C1782815E4E900FD264A /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
+		68A9C17B2817491C00FD264A /* MoodSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSlider.swift; sourceTree = "<group>"; };
 		68C5A03528121DF900AC5F18 /* MoodChooserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodChooserManager.swift; sourceTree = "<group>"; };
 		68FCA6F22810911A004EDCED /* MoodChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodChooserView.swift; sourceTree = "<group>"; };
 		68FCA6F428109126004EDCED /* MoodChooserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodChooserView.xib; sourceTree = "<group>"; };
@@ -114,10 +138,36 @@
 		6845E9432810D91E00B99024 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				68A9C1692815CB3C00FD264A /* Table */,
+				68A9C16A2815CB4D00FD264A /* Collection */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		68A9C1692815CB3C00FD264A /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				683D00EB2815B1B800457827 /* MainMoodCell.swift */,
+				683D00EC2815B1B800457827 /* MainMoodCell.xib */,
+				683D00EF2815B1E400457827 /* SliderCell.swift */,
+				683D00F02815B1E400457827 /* SliderCell.xib */,
+				68A9C16F2815CCC900FD264A /* MoodDescriptionCell.swift */,
+				68A9C1702815CCC900FD264A /* MoodDescriptionCell.xib */,
+				68A9C1732815DB9A00FD264A /* MoodsCell.swift */,
+				68A9C1742815DB9A00FD264A /* MoodsCell.xib */,
+				68A9C1772815E4E900FD264A /* ButtonCell.swift */,
+				68A9C1782815E4E900FD264A /* ButtonCell.xib */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		68A9C16A2815CB4D00FD264A /* Collection */ = {
+			isa = PBXGroup;
+			children = (
 				6845E9442810D94100B99024 /* MoodCell.swift */,
 				6845E9452810D94100B99024 /* MoodCell.xib */,
 			);
-			path = Cell;
+			path = Collection;
 			sourceTree = "<group>";
 		};
 		68FCA6EE281090BC004EDCED /* MoodChooser */ = {
@@ -154,6 +204,7 @@
 				6845E9432810D91E00B99024 /* Cell */,
 				68FCA6F22810911A004EDCED /* MoodChooserView.swift */,
 				68FCA6F428109126004EDCED /* MoodChooserView.xib */,
+				68A9C17B2817491C00FD264A /* MoodSlider.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,6 +286,7 @@
 				6DBDF3DF27EF91BF00CEEB08 /* Ext+UICollectionViewCell.swift */,
 				6D748FF527D64D0D006CBA91 /* Ext+UIView.swift */,
 				6D74901427D65F3B006CBA91 /* SafeIndex.swift */,
+				68A9C1672815B7B600FD264A /* Ext+UITableViewCell.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -442,6 +494,7 @@
 			files = (
 				6DBDF3C027EF841C00CEEB08 /* OnBoardingView.xib in Resources */,
 				6DBDF3C427EF873800CEEB08 /* OnBoarding.strings in Resources */,
+				683D00F22815B1E400457827 /* SliderCell.xib in Resources */,
 				6DBDF3D327EF90E700CEEB08 /* OnBoardingCollectionCell.xib in Resources */,
 				6D748FD727D64919006CBA91 /* UI_Colors.xcassets in Resources */,
 				68FCA6F528109126004EDCED /* MoodChooserView.xib in Resources */,
@@ -449,10 +502,14 @@
 				6DBDF3C227EF872D00CEEB08 /* OnBoarding.xcassets in Resources */,
 				6DBDF3A627EF6FEB00CEEB08 /* SplashView.xib in Resources */,
 				6845E9472810D94100B99024 /* MoodCell.xib in Resources */,
+				68A9C1762815DB9A00FD264A /* MoodsCell.xib in Resources */,
 				6DBDF39A27EF655A00CEEB08 /* LaunchView.storyboard in Resources */,
 				6DBDF39C27EF664D00CEEB08 /* Splash.xcassets in Resources */,
 				68FCA6F728109207004EDCED /* MoodChooser.strings in Resources */,
 				6DBDF39E27EF665A00CEEB08 /* Splash.strings in Resources */,
+				68A9C1722815CCC900FD264A /* MoodDescriptionCell.xib in Resources */,
+				683D00EE2815B1B800457827 /* MainMoodCell.xib in Resources */,
+				68A9C17A2815E4E900FD264A /* ButtonCell.xib in Resources */,
 				6D748FBE27D63FF4006CBA91 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,18 +525,25 @@
 				6DBDF3E727EFC1F400CEEB08 /* OnBoardingStateManager.swift in Sources */,
 				6DBDF3B527EF805000CEEB08 /* AppStorage.swift in Sources */,
 				6D748FE527D64B49006CBA91 /* Localize.swift in Sources */,
+				68A9C1682815B7B600FD264A /* Ext+UITableViewCell.swift in Sources */,
 				68FCA6FB281094B3004EDCED /* MoodChooserController.swift in Sources */,
+				68A9C1752815DB9A00FD264A /* MoodsCell.swift in Sources */,
 				6D748FE627D64B49006CBA91 /* IBDesignable+Localize.swift in Sources */,
 				6D748FE327D64B49006CBA91 /* String+LocalizeBundle.swift in Sources */,
 				6D748FD927D64934006CBA91 /* UI_Typography.swift in Sources */,
 				6D748FB527D63FF2006CBA91 /* AppDelegate.swift in Sources */,
 				6D748FE227D64B49006CBA91 /* String+LocalizedBundleTableName.swift in Sources */,
 				6D748FF927D64D2B006CBA91 /* BaseController.swift in Sources */,
+				68A9C1792815E4E900FD264A /* ButtonCell.swift in Sources */,
 				6DBDF3BB27EF81FE00CEEB08 /* OnBoardingController.swift in Sources */,
 				6DBDF3BE27EF841400CEEB08 /* OnBoardingView.swift in Sources */,
 				6DBDF3E027EF91BF00CEEB08 /* Ext+UICollectionViewCell.swift in Sources */,
 				6DBDF3A827EF722E00CEEB08 /* SplashController.swift in Sources */,
 				6DBDF3B327EF7CAE00CEEB08 /* SplashStateManager.swift in Sources */,
+				68A9C17C2817491C00FD264A /* MoodSlider.swift in Sources */,
+				683D00F12815B1E400457827 /* SliderCell.swift in Sources */,
+				683D00ED2815B1B800457827 /* MainMoodCell.swift in Sources */,
+				68A9C1712815CCC900FD264A /* MoodDescriptionCell.swift in Sources */,
 				68C5A03628121DF900AC5F18 /* MoodChooserManager.swift in Sources */,
 				6DBDF3A427EF6FDD00CEEB08 /* SplashView.swift in Sources */,
 				6D748FF627D64D0D006CBA91 /* Ext+UIView.swift in Sources */,
@@ -628,6 +692,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -655,6 +720,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
