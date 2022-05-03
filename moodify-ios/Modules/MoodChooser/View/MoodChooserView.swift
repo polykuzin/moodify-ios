@@ -22,8 +22,9 @@ class MoodChooserView: UIView {
         }
         
         struct MoodSlider: _MoodSlider {
-            var position: Int
+            var position: Float
             var height: CGFloat
+            var onMood: ((Float) -> ())?
         }
         
         struct MoodDescription: _MoodDescription {

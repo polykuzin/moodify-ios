@@ -18,6 +18,9 @@ class MoodChooserController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let manager = MoodChooserManager()
+        manager.onMood = { [weak self] mood in
+            self?.nestedView.configure(with: manager.makeMoodState(with: mood))
+        }
         self.nestedView.configure(with: manager.makeUnhappyState())
     }
 }
