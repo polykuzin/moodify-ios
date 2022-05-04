@@ -61,6 +61,13 @@ class SliderCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+//        let steps = previousStep
+//        for i in 0..<Int(steps) {
+//            stepsStack.arrangedSubviews[i].backgroundColor = .button
+//        }
+//        for i in Int(steps)..<5 {
+//            stepsStack.arrangedSubviews[i].backgroundColor = .sliderTrack
+//        }
     }
     
     public func configure(with data: _MoodSlider) {

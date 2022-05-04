@@ -13,6 +13,8 @@ final class MoodChooserManager {
     typealias MoodState = MoodChooserView.ViewState
     
     var onMood: ((Float) -> ())?
+    var onSelectMood: ((_Mood) -> ())?
+    var onRemoveMood: ((_Mood) -> ())?
     
     public func makeUnhappyState() -> [State] {
         let moods = [
@@ -38,11 +40,23 @@ final class MoodChooserManager {
         let rows = CGFloat(moods.count / 3)
         let cellWidth: CGFloat = 45
         let height = rows * cellWidth + CGFloat((moods.count / 2 - 1) * 12)
-        let moodsState = MoodState.Moods(moods: moods, height: CGFloat(height)).toElement()
+        let moodsState = MoodState.Moods(
+            moods: moods,
+            onSelectMood: { [weak self] mood in
+                self?.onSelectMood?(mood)
+            },
+            onRemoveMood: { [weak self] mood in
+                self?.onRemoveMood?(mood)
+            },
+            height: CGFloat(height)
+        ).toElement()
         
-        let nextButton = makeButton(with: nil)
         let section = SectionState(header: nil, footer: nil)
-        let state = [State(model: section, elements: [moodState, sliderState, moodDesc, moodsState, nextButton])]
+        let state = [
+            State(model: section,
+                  elements: [moodState, sliderState, moodDesc, moodsState]
+                 )
+        ]
         return state
     }
     
@@ -70,11 +84,19 @@ final class MoodChooserManager {
         let rows = CGFloat(moods.count / 3)
         let cellWidth: CGFloat = 45
         let height = rows * cellWidth + CGFloat((moods.count / 2 - 1) * 12)
-        let moodsState = MoodState.Moods(moods: moods, height: CGFloat(height)).toElement()
+        let moodsState = MoodState.Moods(
+            moods: moods,
+            onSelectMood: { [weak self] mood in
+                self?.onSelectMood?(mood)
+            },
+            onRemoveMood: { [weak self] mood in
+                self?.onRemoveMood?(mood)
+            },
+            height: CGFloat(height)
+        ).toElement()
         
-        let nextButton = makeButton(with: nil)
         let section = SectionState(header: nil, footer: nil)
-        let state = [State(model: section, elements: [moodState, sliderState, moodDesc, moodsState, nextButton])]
+        let state = [State(model: section, elements: [moodState, sliderState, moodDesc, moodsState])]
         return state
     }
     
@@ -102,11 +124,19 @@ final class MoodChooserManager {
         let rows = CGFloat(moods.count / 3)
         let cellWidth: CGFloat = 45
         let height = rows * cellWidth + CGFloat((moods.count / 2 - 1) * 12)
-        let moodsState = MoodState.Moods(moods: moods, height: CGFloat(height)).toElement()
+        let moodsState = MoodState.Moods(
+            moods: moods,
+            onSelectMood: { [weak self] mood in
+                self?.onSelectMood?(mood)
+            },
+            onRemoveMood: { [weak self] mood in
+                self?.onRemoveMood?(mood)
+            },
+            height: CGFloat(height)
+        ).toElement()
         
-        let nextButton = makeButton(with: nil)
         let section = SectionState(header: nil, footer: nil)
-        let state = [State(model: section, elements: [moodState, sliderState, moodDesc, moodsState, nextButton])]
+        let state = [State(model: section, elements: [moodState, sliderState, moodDesc, moodsState])]
         return state
     }
     
@@ -134,11 +164,19 @@ final class MoodChooserManager {
         let rows = CGFloat(moods.count / 4)
         let cellWidth: CGFloat = 45
         let height = rows * cellWidth + CGFloat((moods.count / 2 - 1) * 12)
-        let moodsState = MoodState.Moods(moods: moods, height: CGFloat(height)).toElement()
+        let moodsState = MoodState.Moods(
+            moods: moods,
+            onSelectMood: { [weak self] mood in
+                self?.onSelectMood?(mood)
+            },
+            onRemoveMood: { [weak self] mood in
+                self?.onRemoveMood?(mood)
+            },
+            height: CGFloat(height)
+        ).toElement()
         
-        let nextButton = makeButton(with: nil)
         let section = SectionState(header: nil, footer: nil)
-        let state = [State(model: section, elements: [moodState, sliderState, moodDesc, moodsState, nextButton])]
+        let state = [State(model: section, elements: [moodState, sliderState, moodDesc, moodsState])]
         return state
     }
     
@@ -166,11 +204,19 @@ final class MoodChooserManager {
         let rows = CGFloat(moods.count / 3)
         let cellWidth: CGFloat = 45
         let height = rows * cellWidth + CGFloat((moods.count / 2 - 1) * 12)
-        let moodsState = MoodState.Moods(moods: moods, height: CGFloat(height)).toElement()
+        let moodsState = MoodState.Moods(
+            moods: moods,
+            onSelectMood: { [weak self] mood in
+                self?.onSelectMood?(mood)
+            },
+            onRemoveMood: { [weak self] mood in
+                self?.onRemoveMood?(mood)
+            },
+            height: CGFloat(height)
+        ).toElement()
         
-        let nextButton = makeButton(with: nil)
         let section = SectionState(header: nil, footer: nil)
-        let state = [State(model: section, elements: [moodState, sliderState, moodDesc, moodsState, nextButton])]
+        let state = [State(model: section, elements: [moodState, sliderState, moodDesc, moodsState])]
         return state
     }
     
@@ -198,11 +244,6 @@ final class MoodChooserManager {
     
     private func makeMoodDesc(with desc: String) -> Element {
         let state = MoodState.MoodDescription(description: desc, height: 78)
-        return state.toElement()
-    }
-    
-    private func makeButton(with action: (() -> ())?) -> Element {
-        let state = MoodState.OnNext(onSelect: nil, height: 78)
         return state.toElement()
     }
 }

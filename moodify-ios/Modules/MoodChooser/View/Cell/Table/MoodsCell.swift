@@ -10,6 +10,8 @@ import CoreTableView
 
 protocol _Moods: CellData {
     var moods: [_Mood] { get set }
+    var onSelectMood: ((_Mood) -> ())? { get set }
+    var onRemoveMood: ((_Mood) -> ())? { get set }
 }
 
 extension _Moods {
@@ -45,6 +47,8 @@ class MoodsCell: UITableViewCell {
     }
     
     var selectedMoods: [_Mood] = []
+    var onSelectMood: ((_Mood) -> ())?
+    var onRemoveMood: ((_Mood) -> ())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -53,6 +57,8 @@ class MoodsCell: UITableViewCell {
     
     public func configure(with data: _Moods) {
         self.viewState = data.moods
+        self.onSelectMood = data.onSelectMood
+        self.onRemoveMood = data.onRemoveMood
     }
     
     private func setupView() {
@@ -82,9 +88,11 @@ extension MoodsCell: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.selectedMoods.append(viewState[indexPath.row])
+        self.onSelectMood?(viewState[indexPath.row])
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         self.selectedMoods.removeAll { $0.title == viewState[indexPath.row].title }
+        self.onRemoveMood?(viewState[indexPath.row])
     }
 }

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,44 +15,68 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aJB-A1-A31">
-                    <rect key="frame" x="127" y="70" width="160" height="36"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aJB-A1-A31">
+                    <rect key="frame" x="127" y="70" width="160" height="50"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you feel?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRm-O1-8Gq">
-                            <rect key="frame" x="0.0" y="0.0" width="160" height="24"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="How do you feel?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRm-O1-8Gq">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="43"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                             <color key="textColor" red="0.18431372549019609" green="0.23921568627450979" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cherkash" translatesAutoresizingMaskIntoConstraints="NO" id="uOQ-z2-x1N">
-                            <rect key="frame" x="0.0" y="29" width="160" height="7"/>
+                            <rect key="frame" x="18.5" y="43" width="123" height="7"/>
                         </imageView>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="aFW-O7-yXv"/>
+                    </constraints>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyz-Nj-Ml9">
-                    <rect key="frame" x="20" y="68" width="54.5" height="40"/>
+                    <rect key="frame" x="20" y="75" width="40" height="40"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" image="back_button"/>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="deT-KG-jGz" customClass="BaseTableView" customModule="CoreTableView">
-                    <rect key="frame" x="0.0" y="118" width="414" height="778"/>
+                    <rect key="frame" x="0.0" y="125" width="414" height="771"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIA-mb-4lO">
+                    <rect key="frame" x="15" y="796" width="384" height="55"/>
+                    <color key="backgroundColor" name="button"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="wjw-c0-G5P"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" name="AccentColor"/>
+                    </state>
+                    <connections>
+                        <action selector="handleNext:" destination="iN0-l3-epB" eventType="touchUpInside" id="B9S-dv-Bwj"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="pyz-Nj-Ml9" firstAttribute="centerY" secondItem="aJB-A1-A31" secondAttribute="centerY" id="055-pF-0nh"/>
+                <constraint firstAttribute="bottom" secondItem="deT-KG-jGz" secondAttribute="bottom" id="5bP-qy-icn"/>
                 <constraint firstItem="deT-KG-jGz" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="8ci-ke-C1p"/>
-                <constraint firstAttribute="bottom" secondItem="deT-KG-jGz" secondAttribute="bottom" id="DdC-y8-YgL"/>
+                <constraint firstItem="JIA-mb-4lO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="CAJ-K1-vHC"/>
                 <constraint firstItem="pyz-Nj-Ml9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="GVn-dG-Lq0"/>
+                <constraint firstItem="JIA-mb-4lO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="HIY-XC-pAq"/>
                 <constraint firstItem="aJB-A1-A31" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="70" id="VyF-Xn-Am0"/>
                 <constraint firstItem="deT-KG-jGz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dam-U7-11w"/>
-                <constraint firstItem="aJB-A1-A31" firstAttribute="leading" secondItem="pyz-Nj-Ml9" secondAttribute="trailing" constant="52.5" id="dmE-G5-Ma5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JIA-mb-4lO" secondAttribute="trailing" constant="15" id="j8C-3H-wsZ"/>
                 <constraint firstItem="deT-KG-jGz" firstAttribute="top" secondItem="pyz-Nj-Ml9" secondAttribute="bottom" constant="10" id="kzc-Bs-gHv"/>
                 <constraint firstItem="aJB-A1-A31" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rmi-4u-GFn"/>
+                <constraint firstAttribute="bottom" secondItem="JIA-mb-4lO" secondAttribute="bottom" constant="45" id="tSP-lH-fk2"/>
             </constraints>
             <connections>
+                <outlet property="cherkashImage" destination="uOQ-z2-x1N" id="Z8f-Xl-oNT"/>
+                <outlet property="mainButton" destination="JIA-mb-4lO" id="2DJ-P9-0Gk"/>
+                <outlet property="mainTitle" destination="aRm-O1-8Gq" id="k9X-nW-FnQ"/>
                 <outlet property="tableView" destination="deT-KG-jGz" id="0zt-f8-Tcv"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
@@ -60,6 +85,12 @@
     <resources>
         <image name="back_button" width="40" height="40"/>
         <image name="cherkash" width="123" height="7"/>
+        <namedColor name="AccentColor">
+            <color red="0.97299998998641968" green="0.99599999189376831" blue="0.98400002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="button">
+            <color red="0.34099999070167542" green="0.5220000147819519" blue="0.86299997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -10,10 +10,14 @@ import CoreTableView
 
 class MoodChooserView: UIView {
     
-    @IBOutlet weak var tableView: BaseTableView!
+    var onNext: (() -> ())?
     
-    enum ViewState {
-        case unhappy(MainMood)
+    @IBOutlet private weak var mainTitle: UILabel!
+    @IBOutlet private weak var tableView: BaseTableView!
+    @IBOutlet private weak var cherkashImage: UIImageView!
+    @IBOutlet private weak var mainButton: UIButton!
+    
+    struct ViewState {
         
         struct MainMood: _MainMood {
             var title: String
@@ -34,25 +38,27 @@ class MoodChooserView: UIView {
         
         struct Moods: _Moods {
             var moods: [_Mood]
+            var onSelectMood: ((_Mood) -> ())?
+            var onRemoveMood: ((_Mood) -> ())?
             var height: CGFloat
         }
         
         struct Mood: _Mood {
             var title: String
-            var isSelected: Bool = false
-        }
-        
-        struct OnNext: _OnNext {
-            var onSelect: (() -> ())?
-            var height: CGFloat
         }
     }
     
     public func configure(with state: [State]) {
         self.tableView.viewStateInput = state
+        self.tableView.shouldUseReload = true
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.mainButton.layer.cornerRadius = 12
+    }
+    
+    @IBAction func handleNext(_ sender: UIButton) {
+        self.onNext?()
     }
 }

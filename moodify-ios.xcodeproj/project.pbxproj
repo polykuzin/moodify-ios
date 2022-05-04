@@ -18,8 +18,6 @@
 		68A9C1722815CCC900FD264A /* MoodDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A9C1702815CCC900FD264A /* MoodDescriptionCell.xib */; };
 		68A9C1752815DB9A00FD264A /* MoodsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A9C1732815DB9A00FD264A /* MoodsCell.swift */; };
 		68A9C1762815DB9A00FD264A /* MoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A9C1742815DB9A00FD264A /* MoodsCell.xib */; };
-		68A9C1792815E4E900FD264A /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A9C1772815E4E900FD264A /* ButtonCell.swift */; };
-		68A9C17A2815E4E900FD264A /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A9C1782815E4E900FD264A /* ButtonCell.xib */; };
 		68C5A0342812192F00AC5F18 /* CoreTableView in Frameworks */ = {isa = PBXBuildFile; productRef = 68C5A0332812192F00AC5F18 /* CoreTableView */; };
 		68C5A03628121DF900AC5F18 /* MoodChooserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5A03528121DF900AC5F18 /* MoodChooserManager.swift */; };
 		68FCA6F32810911A004EDCED /* MoodChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FCA6F22810911A004EDCED /* MoodChooserView.swift */; };
@@ -75,8 +73,6 @@
 		68A9C1702815CCC900FD264A /* MoodDescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodDescriptionCell.xib; sourceTree = "<group>"; };
 		68A9C1732815DB9A00FD264A /* MoodsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodsCell.swift; sourceTree = "<group>"; };
 		68A9C1742815DB9A00FD264A /* MoodsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodsCell.xib; sourceTree = "<group>"; };
-		68A9C1772815E4E900FD264A /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
-		68A9C1782815E4E900FD264A /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		68C5A03528121DF900AC5F18 /* MoodChooserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodChooserManager.swift; sourceTree = "<group>"; };
 		68FCA6F22810911A004EDCED /* MoodChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodChooserView.swift; sourceTree = "<group>"; };
 		68FCA6F428109126004EDCED /* MoodChooserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodChooserView.xib; sourceTree = "<group>"; };
@@ -153,8 +149,6 @@
 				68A9C1702815CCC900FD264A /* MoodDescriptionCell.xib */,
 				68A9C1732815DB9A00FD264A /* MoodsCell.swift */,
 				68A9C1742815DB9A00FD264A /* MoodsCell.xib */,
-				68A9C1772815E4E900FD264A /* ButtonCell.swift */,
-				68A9C1782815E4E900FD264A /* ButtonCell.xib */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -506,7 +500,6 @@
 				6DBDF39E27EF665A00CEEB08 /* Splash.strings in Resources */,
 				68A9C1722815CCC900FD264A /* MoodDescriptionCell.xib in Resources */,
 				683D00EE2815B1B800457827 /* MainMoodCell.xib in Resources */,
-				68A9C17A2815E4E900FD264A /* ButtonCell.xib in Resources */,
 				6D748FBE27D63FF4006CBA91 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,7 +524,6 @@
 				6D748FB527D63FF2006CBA91 /* AppDelegate.swift in Sources */,
 				6D748FE227D64B49006CBA91 /* String+LocalizedBundleTableName.swift in Sources */,
 				6D748FF927D64D2B006CBA91 /* BaseController.swift in Sources */,
-				68A9C1792815E4E900FD264A /* ButtonCell.swift in Sources */,
 				6DBDF3BB27EF81FE00CEEB08 /* OnBoardingController.swift in Sources */,
 				6DBDF3BE27EF841400CEEB08 /* OnBoardingView.swift in Sources */,
 				6DBDF3E027EF91BF00CEEB08 /* Ext+UICollectionViewCell.swift in Sources */,
