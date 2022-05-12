@@ -12,9 +12,8 @@ class MoodChooserView: UIView {
     
     var onNext: (() -> ())?
     
-    @IBOutlet private weak var mainTitle: UILabel!
+    @IBOutlet private weak var moodBar: MoodBar!
     @IBOutlet private weak var tableView: BaseTableView!
-    @IBOutlet private weak var cherkashImage: UIImageView!
     @IBOutlet private weak var mainButton: UIButton!
     
     struct ViewState {
@@ -55,6 +54,8 @@ class MoodChooserView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.moodBar.title = "How do you feel?"
+        self.moodBar.line = .small
         self.mainButton.layer.cornerRadius = 12
     }
     

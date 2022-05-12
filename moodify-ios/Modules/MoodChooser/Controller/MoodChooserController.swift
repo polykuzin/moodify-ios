@@ -19,8 +19,10 @@ class MoodChooserController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         let manager = MoodChooserManager()
         manager.onMood = { [weak self] mood in
+            self?.selectedMoods = []
             self?.nestedView.configure(with: manager.makeMoodState(with: mood))
         }
         manager.onSelectMood = { [weak self] mood in
@@ -30,7 +32,12 @@ class MoodChooserController: UIViewController {
             self?.selectedMoods.removeAll { $0.title == mood.title }
         }
         nestedView.onNext = { [weak self] in
-            print(self?.selectedMoods)
+            guard let self = self,
+                  let navigation = self.navigationController
+            else { return }
+            let vc = MoodSaverController()
+            vc.moods = self.selectedMoods
+            navigation.pushViewController(vc, animated: true)
         }
         self.nestedView.configure(with: manager.makeUnhappyState())
     }

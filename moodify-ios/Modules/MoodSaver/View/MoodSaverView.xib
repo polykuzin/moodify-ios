@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MoodSaverView" customModule="moodify_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="PWL-fP-7cp" customClass="BaseTableView" customModule="CoreTableView">
+                    <rect key="frame" x="0.0" y="125" width="414" height="771"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FgR-XD-8fY" customClass="MoodBar" customModule="moodify_ios" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="70" width="414" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="lQF-E7-smZ"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ai7-cx-3Iv">
+                    <rect key="frame" x="15" y="796" width="384" height="55"/>
+                    <color key="backgroundColor" name="button"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="uzo-Uo-VNs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Save">
+                        <color key="titleColor" name="AccentColor"/>
+                    </state>
+                    <connections>
+                        <action selector="handleSave:" destination="iN0-l3-epB" eventType="touchUpInside" id="lpZ-X6-6YP"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ai7-cx-3Iv" secondAttribute="trailing" constant="15" id="5MZ-rv-Qfx"/>
+                <constraint firstItem="FgR-XD-8fY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="8dQ-AD-Rx1"/>
+                <constraint firstItem="FgR-XD-8fY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9PU-bc-o1U"/>
+                <constraint firstItem="PWL-fP-7cp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="R07-nV-3Qa"/>
+                <constraint firstAttribute="bottom" secondItem="PWL-fP-7cp" secondAttribute="bottom" id="SlV-TU-uq2"/>
+                <constraint firstAttribute="bottom" secondItem="ai7-cx-3Iv" secondAttribute="bottom" constant="45" id="cCO-yI-kaT"/>
+                <constraint firstItem="ai7-cx-3Iv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hay-A7-Ues"/>
+                <constraint firstItem="ai7-cx-3Iv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="imX-5k-HxP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FgR-XD-8fY" secondAttribute="trailing" id="jRL-PV-Wnn"/>
+                <constraint firstItem="FgR-XD-8fY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="70" id="mJg-Su-zhU"/>
+                <constraint firstItem="PWL-fP-7cp" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="mSp-Q4-Otg"/>
+                <constraint firstItem="PWL-fP-7cp" firstAttribute="top" secondItem="FgR-XD-8fY" secondAttribute="bottom" constant="5" id="vHN-6e-jp0"/>
+            </constraints>
+            <connections>
+                <outlet property="moodBar" destination="FgR-XD-8fY" id="CK2-Eu-CaE"/>
+                <outlet property="saveButton" destination="ai7-cx-3Iv" id="Xqx-Bw-oH8"/>
+                <outlet property="tableView" destination="PWL-fP-7cp" id="7BB-QL-lee"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.97299998998641968" green="0.99599999189376831" blue="0.98400002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="button">
+            <color red="0.34099999070167542" green="0.5220000147819519" blue="0.86299997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

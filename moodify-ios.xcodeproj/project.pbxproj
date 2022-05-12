@@ -13,6 +13,17 @@
 		683D00F22815B1E400457827 /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683D00F02815B1E400457827 /* SliderCell.xib */; };
 		6845E9462810D94100B99024 /* MoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6845E9442810D94100B99024 /* MoodCell.swift */; };
 		6845E9472810D94100B99024 /* MoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6845E9452810D94100B99024 /* MoodCell.xib */; };
+		6878022A282CDEEE003FA9A0 /* MoodSaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68780229282CDEEE003FA9A0 /* MoodSaverView.swift */; };
+		6878022C282CDF0E003FA9A0 /* MoodSaverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6878022B282CDF0E003FA9A0 /* MoodSaverView.xib */; };
+		6878022E282CE07A003FA9A0 /* MoodSaverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6878022D282CE07A003FA9A0 /* MoodSaverController.swift */; };
+		68A23296282CEDF20044733B /* MoodBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A23295282CEDF20044733B /* MoodBar.swift */; };
+		68A23298282CEE030044733B /* MoodBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A23297282CEE030044733B /* MoodBar.xib */; };
+		68A2329A282D04230044733B /* MoodSaverManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A23299282D04230044733B /* MoodSaverManager.swift */; };
+		68A2329D282D07A40044733B /* MoodTotalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A2329B282D07A40044733B /* MoodTotalCell.swift */; };
+		68A2329E282D07A40044733B /* MoodTotalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A2329C282D07A40044733B /* MoodTotalCell.xib */; };
+		68A232A0282D082C0044733B /* MoodSaver.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68A2329F282D082C0044733B /* MoodSaver.xcassets */; };
+		68A232A3282D0DD90044733B /* FeelingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A232A1282D0DD80044733B /* FeelingsCell.swift */; };
+		68A232A4282D0DD90044733B /* FeelingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A232A2282D0DD90044733B /* FeelingsCell.xib */; };
 		68A9C1682815B7B600FD264A /* Ext+UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A9C1672815B7B600FD264A /* Ext+UITableViewCell.swift */; };
 		68A9C1712815CCC900FD264A /* MoodDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A9C16F2815CCC900FD264A /* MoodDescriptionCell.swift */; };
 		68A9C1722815CCC900FD264A /* MoodDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A9C1702815CCC900FD264A /* MoodDescriptionCell.xib */; };
@@ -68,6 +79,17 @@
 		683D00F02815B1E400457827 /* SliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCell.xib; sourceTree = "<group>"; };
 		6845E9442810D94100B99024 /* MoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCell.swift; sourceTree = "<group>"; };
 		6845E9452810D94100B99024 /* MoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodCell.xib; sourceTree = "<group>"; };
+		68780229282CDEEE003FA9A0 /* MoodSaverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSaverView.swift; sourceTree = "<group>"; };
+		6878022B282CDF0E003FA9A0 /* MoodSaverView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodSaverView.xib; sourceTree = "<group>"; };
+		6878022D282CE07A003FA9A0 /* MoodSaverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSaverController.swift; sourceTree = "<group>"; };
+		68A23295282CEDF20044733B /* MoodBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodBar.swift; sourceTree = "<group>"; };
+		68A23297282CEE030044733B /* MoodBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodBar.xib; sourceTree = "<group>"; };
+		68A23299282D04230044733B /* MoodSaverManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSaverManager.swift; sourceTree = "<group>"; };
+		68A2329B282D07A40044733B /* MoodTotalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTotalCell.swift; sourceTree = "<group>"; };
+		68A2329C282D07A40044733B /* MoodTotalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodTotalCell.xib; sourceTree = "<group>"; };
+		68A2329F282D082C0044733B /* MoodSaver.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MoodSaver.xcassets; sourceTree = "<group>"; };
+		68A232A1282D0DD80044733B /* FeelingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingsCell.swift; sourceTree = "<group>"; };
+		68A232A2282D0DD90044733B /* FeelingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeelingsCell.xib; sourceTree = "<group>"; };
 		68A9C1672815B7B600FD264A /* Ext+UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UITableViewCell.swift"; sourceTree = "<group>"; };
 		68A9C16F2815CCC900FD264A /* MoodDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDescriptionCell.swift; sourceTree = "<group>"; };
 		68A9C1702815CCC900FD264A /* MoodDescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodDescriptionCell.xib; sourceTree = "<group>"; };
@@ -136,6 +158,63 @@
 				68A9C16A2815CB4D00FD264A /* Collection */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		68780225282CDE8E003FA9A0 /* MoodSaver */ = {
+			isa = PBXGroup;
+			children = (
+				68A2329F282D082C0044733B /* MoodSaver.xcassets */,
+				68780228282CDEB1003FA9A0 /* View */,
+				68780227282CDEAC003FA9A0 /* Manager */,
+				68780226282CDEA3003FA9A0 /* Controller */,
+			);
+			path = MoodSaver;
+			sourceTree = "<group>";
+		};
+		68780226282CDEA3003FA9A0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6878022D282CE07A003FA9A0 /* MoodSaverController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		68780227282CDEAC003FA9A0 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				68A23299282D04230044733B /* MoodSaverManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		68780228282CDEB1003FA9A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68780236282CED31003FA9A0 /* Cell */,
+				68780229282CDEEE003FA9A0 /* MoodSaverView.swift */,
+				6878022B282CDF0E003FA9A0 /* MoodSaverView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68780236282CED31003FA9A0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				68A2329B282D07A40044733B /* MoodTotalCell.swift */,
+				68A2329C282D07A40044733B /* MoodTotalCell.xib */,
+				68A232A1282D0DD80044733B /* FeelingsCell.swift */,
+				68A232A2282D0DD90044733B /* FeelingsCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		68780237282CED89003FA9A0 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				68A23295282CEDF20044733B /* MoodBar.swift */,
+				68A23297282CEE030044733B /* MoodBar.xib */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		68A9C1692815CB3C00FD264A /* Table */ = {
@@ -234,6 +313,7 @@
 				6DBDF39627EF64AE00CEEB08 /* _Launch */,
 				6DBDF3B627EF81A900CEEB08 /* OnBoarding */,
 				68FCA6EE281090BC004EDCED /* MoodChooser */,
+				68780225282CDE8E003FA9A0 /* MoodSaver */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -241,6 +321,7 @@
 		6D748FC927D646E1006CBA91 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				68780237282CED89003FA9A0 /* Navigation */,
 				6DBDF3B427EF805000CEEB08 /* AppStorage.swift */,
 				6D748FBD27D63FF4006CBA91 /* Assets.xcassets */,
 				6D748FF727D64D1C006CBA91 /* Base */,
@@ -483,16 +564,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68A2329E282D07A40044733B /* MoodTotalCell.xib in Resources */,
+				68A23298282CEE030044733B /* MoodBar.xib in Resources */,
 				6DBDF3C027EF841C00CEEB08 /* OnBoardingView.xib in Resources */,
 				6DBDF3C427EF873800CEEB08 /* OnBoarding.strings in Resources */,
 				683D00F22815B1E400457827 /* SliderCell.xib in Resources */,
 				6DBDF3D327EF90E700CEEB08 /* OnBoardingCollectionCell.xib in Resources */,
+				68A232A0282D082C0044733B /* MoodSaver.xcassets in Resources */,
 				6D748FD727D64919006CBA91 /* UI_Colors.xcassets in Resources */,
+				6878022C282CDF0E003FA9A0 /* MoodSaverView.xib in Resources */,
 				68FCA6F528109126004EDCED /* MoodChooserView.xib in Resources */,
 				68FCA6F928109216004EDCED /* MoodChooser.xcassets in Resources */,
 				6DBDF3C227EF872D00CEEB08 /* OnBoarding.xcassets in Resources */,
 				6DBDF3A627EF6FEB00CEEB08 /* SplashView.xib in Resources */,
 				6845E9472810D94100B99024 /* MoodCell.xib in Resources */,
+				68A232A4282D0DD90044733B /* FeelingsCell.xib in Resources */,
 				68A9C1762815DB9A00FD264A /* MoodsCell.xib in Resources */,
 				6DBDF39A27EF655A00CEEB08 /* LaunchView.storyboard in Resources */,
 				6DBDF39C27EF664D00CEEB08 /* Splash.xcassets in Resources */,
@@ -514,7 +600,9 @@
 				6DBDF3E927EFC8FC00CEEB08 /* Ext+UIApplication.swift in Sources */,
 				6DBDF3E727EFC1F400CEEB08 /* OnBoardingStateManager.swift in Sources */,
 				6DBDF3B527EF805000CEEB08 /* AppStorage.swift in Sources */,
+				6878022A282CDEEE003FA9A0 /* MoodSaverView.swift in Sources */,
 				6D748FE527D64B49006CBA91 /* Localize.swift in Sources */,
+				68A2329A282D04230044733B /* MoodSaverManager.swift in Sources */,
 				68A9C1682815B7B600FD264A /* Ext+UITableViewCell.swift in Sources */,
 				68FCA6FB281094B3004EDCED /* MoodChooserController.swift in Sources */,
 				68A9C1752815DB9A00FD264A /* MoodsCell.swift in Sources */,
@@ -530,8 +618,12 @@
 				6DBDF3A827EF722E00CEEB08 /* SplashController.swift in Sources */,
 				6DBDF3B327EF7CAE00CEEB08 /* SplashStateManager.swift in Sources */,
 				683D00F12815B1E400457827 /* SliderCell.swift in Sources */,
+				68A23296282CEDF20044733B /* MoodBar.swift in Sources */,
 				683D00ED2815B1B800457827 /* MainMoodCell.swift in Sources */,
+				68A232A3282D0DD90044733B /* FeelingsCell.swift in Sources */,
+				6878022E282CE07A003FA9A0 /* MoodSaverController.swift in Sources */,
 				68A9C1712815CCC900FD264A /* MoodDescriptionCell.swift in Sources */,
+				68A2329D282D07A40044733B /* MoodTotalCell.swift in Sources */,
 				68C5A03628121DF900AC5F18 /* MoodChooserManager.swift in Sources */,
 				6DBDF3A427EF6FDD00CEEB08 /* SplashView.swift in Sources */,
 				6D748FF627D64D0D006CBA91 /* Ext+UIView.swift in Sources */,
