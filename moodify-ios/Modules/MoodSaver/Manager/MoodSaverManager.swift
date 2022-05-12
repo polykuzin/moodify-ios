@@ -41,9 +41,8 @@ final class MoodSaverManager {
     private func makeFeelingsState(with moods: [_Mood]) -> State {
         var height: CGFloat = 100
         if moods.count > 3 {
-            let rows = CGFloat(moods.count / 3)
-            let cellWidth: CGFloat = 45
-            height = height + rows * cellWidth + CGFloat((moods.count / 2 - 1) * 12)
+            let rows = ceil(CGFloat(moods.count) / 3)
+            height = height + rows * 21 + (rows - 1) * 14
         }
         let feelings = MoodSave.Feelings(height: CGFloat(height), feelings: moods).toElement()
         let sectionState = SectionState(header: nil, footer: nil)
