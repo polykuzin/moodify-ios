@@ -10,15 +10,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="86" id="KGk-i7-Jjw" customClass="FeelingsCell" customModule="moodify_ios" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="FeelingsCell" customModule="moodify_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feelings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0d-Sn-NbS">
                         <rect key="frame" x="16" y="13" width="68.5" height="21"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="kRi-4Q-GgN"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -30,10 +34,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="OOt-tr-j70">
-                        <rect key="frame" x="16" y="46" width="288" height="29"/>
+                        <rect key="frame" x="16" y="46" width="288" height="40"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="29" id="gWq-0T-txg"/>
+                            <constraint firstAttribute="height" constant="40" id="gWq-0T-txg"/>
                         </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hbz-No-zHI">
                             <size key="itemSize" width="128" height="128"/>
@@ -44,14 +48,15 @@
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="OOt-tr-j70" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1Ez-2S-mTZ"/>
-                    <constraint firstItem="BPC-LI-SET" firstAttribute="top" secondItem="J0d-Sn-NbS" secondAttribute="bottom" constant="30" id="2y5-8C-FbN"/>
+                    <constraint firstAttribute="bottom" secondItem="OOt-tr-j70" secondAttribute="bottom" constant="14" id="1B0-Rn-N3V"/>
+                    <constraint firstItem="OOt-tr-j70" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="9eL-M2-SHS"/>
+                    <constraint firstItem="OOt-tr-j70" firstAttribute="top" secondItem="J0d-Sn-NbS" secondAttribute="bottom" constant="12" id="DLe-0h-KRE"/>
                     <constraint firstItem="J0d-Sn-NbS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="H9H-V4-pZ1"/>
                     <constraint firstItem="BPC-LI-SET" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Nlc-j1-5cM"/>
+                    <constraint firstAttribute="trailing" secondItem="OOt-tr-j70" secondAttribute="trailing" constant="16" id="QtK-pr-Qe5"/>
                     <constraint firstItem="J0d-Sn-NbS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="Xjm-Aq-xmI"/>
-                    <constraint firstAttribute="trailing" secondItem="OOt-tr-j70" secondAttribute="trailing" constant="16" id="dWi-UB-MA1"/>
-                    <constraint firstAttribute="bottom" secondItem="BPC-LI-SET" secondAttribute="bottom" constant="5" id="izK-wI-NPE"/>
-                    <constraint firstItem="OOt-tr-j70" firstAttribute="top" secondItem="J0d-Sn-NbS" secondAttribute="bottom" constant="12" id="kab-yz-l6Z"/>
+                    <constraint firstItem="BPC-LI-SET" firstAttribute="top" secondItem="J0d-Sn-NbS" secondAttribute="bottom" constant="30" id="kUW-FH-5vU"/>
+                    <constraint firstAttribute="bottom" secondItem="BPC-LI-SET" secondAttribute="bottom" constant="19" id="qLS-40-Zby"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -62,7 +67,7 @@
                 <outlet property="emptyTitle" destination="BPC-LI-SET" id="jl7-B8-giv"/>
                 <outlet property="moodCollection" destination="OOt-tr-j70" id="ghB-gR-RWD"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="135.26785714285714"/>
+            <point key="canvasLocation" x="137.68115942028987" y="138.95089285714286"/>
         </tableViewCell>
     </objects>
     <resources>

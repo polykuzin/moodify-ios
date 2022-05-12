@@ -46,10 +46,10 @@ class FeelingsCell: UITableViewCell {
                     self.moodCollection.reloadData()
                     let rows = CGFloat(moods.count / 3)
                     let cellWidth = UIScreen.main.bounds.width / 3
-                    let height = rows * cellWidth + CGFloat((moods.count / 3 - 1) * 8)
+                    let height = 100 + rows * cellWidth + CGFloat((moods.count / 3 - 1) * 8)
                     self.collectionViewHeight.constant = height
                     self.layoutIfNeeded()
-                } 
+                }
             }
         }
     }
@@ -80,6 +80,7 @@ extension FeelingsCell: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoodCell.reuseId, for: indexPath) as? MoodCell
         else { return .init() }
         cell.configure(with: moods[indexPath.row])
+        cell.makeSelected()
         return cell
     }
 }
