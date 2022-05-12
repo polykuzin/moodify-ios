@@ -12,11 +12,14 @@ final class MoodSaverManager {
     
     typealias MoodSave = MoodSaverView.ViewState
     
-    public func makeState(with moods: [_Mood]) -> MoodSave.FullState {
+    var onAddImage: (() -> ())?
+    
+    public func makeState(with moods: [_Mood], and photos: [UIImage] = []) -> MoodSave.FullState {
         let titleState = makeTitleState()
         let moodTotalState = makeMoodTotalState()
         let feelingsState = makeFeelingsState(with: moods)
-        return MoodSave.FullState(titleState: titleState, tableState: [moodTotalState, feelingsState])
+        let photosState = makePhotosState(with: photos)
+        return MoodSave.FullState(titleState: titleState, tableState: [moodTotalState, feelingsState, photosState])
     }
     
     private func makeTitleState() -> MoodSave.NavigationState {
@@ -45,6 +48,13 @@ final class MoodSaverManager {
         let feelings = MoodSave.Feelings(height: CGFloat(height), feelings: moods).toElement()
         let sectionState = SectionState(header: nil, footer: nil)
         let state = State(model: sectionState, elements: [feelings])
+        return state
+    }
+    
+    private func makePhotosState(with photos: [UIImage]) -> State {
+        let photos = MoodSave.Photos(height: 180, photos: photos, addImage: onAddImage).toElement()
+        let sectionState = SectionState(header: nil, footer: nil)
+        let state = State(model: sectionState, elements: [photos])
         return state
     }
 }

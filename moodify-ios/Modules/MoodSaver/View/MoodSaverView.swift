@@ -35,6 +35,12 @@ class MoodSaverView: UIView {
             var height: CGFloat
             var feelings: [_Mood]
         }
+        
+        struct Photos: _Photos {
+            var height: CGFloat
+            var photos: [UIImage]
+            var addImage: (() -> ())?
+        }
     }
 
     override func awakeFromNib() {
@@ -46,6 +52,7 @@ class MoodSaverView: UIView {
     public func configure(with state: ViewState.FullState) {
         self.moodBar.title = state.titleState.title
         self.tableView.viewStateInput = state.tableState
+        self.tableView.shouldUseReload = true
     }
     
     @IBAction func handleSave(_ sender: UIButton) {
