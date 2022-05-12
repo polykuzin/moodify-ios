@@ -57,6 +57,7 @@ class MoodChooserView: UIView {
         self.moodBar.title = "How do you feel?"
         self.moodBar.line = .small
         self.mainButton.layer.cornerRadius = 12
+        self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
     }
     
     @IBAction func handleNext(_ sender: UIButton) {

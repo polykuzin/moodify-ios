@@ -47,6 +47,7 @@ class MoodSaverView: UIView {
         super.awakeFromNib()
         self.moodBar.line = .big
         self.saveButton.layer.cornerRadius = 12
+        self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
     }
     
     public func configure(with state: ViewState.FullState) {

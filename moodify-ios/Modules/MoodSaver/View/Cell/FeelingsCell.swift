@@ -45,10 +45,7 @@ class FeelingsCell: UITableViewCell {
                 if moods.count > 3 {
                     self.moodCollection.reloadData()
                     let rows = ceil(CGFloat(moods.count) / 3)
-                    print("ROWS:", rows)
                     let height = rows * 35 + (rows - 1) * 14
-                    print(height)
-                    print(collectionViewHeight.constant)
                     self.collectionViewHeight.constant = height
                     self.layoutIfNeeded()
                 }
