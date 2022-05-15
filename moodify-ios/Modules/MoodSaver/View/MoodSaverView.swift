@@ -10,6 +10,8 @@ import CoreTableView
 
 class MoodSaverView: UIView {
     
+    var onSave: ((ViewState.FullState?) -> ())?
+    
     @IBOutlet weak var moodBar: MoodBar!
     @IBOutlet private weak var saveButton: UIButton!
     @IBOutlet private weak var tableView: BaseTableView!
@@ -42,6 +44,8 @@ class MoodSaverView: UIView {
             var addImage: (() -> ())?
         }
     }
+    
+    var viewState: ViewState.FullState?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -51,12 +55,13 @@ class MoodSaverView: UIView {
     }
     
     public func configure(with state: ViewState.FullState) {
+        self.viewState = state
         self.moodBar.title = state.titleState.title
         self.tableView.viewStateInput = state.tableState
         self.tableView.shouldUseReload = true
     }
     
     @IBAction func handleSave(_ sender: UIButton) {
-        
+        self.onSave?(viewState)
     }
 }

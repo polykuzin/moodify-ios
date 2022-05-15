@@ -18,6 +18,14 @@ class MoodChooserView: UIView {
     
     struct ViewState {
         
+        enum MoodType: String {
+            case unhappy
+            case sad
+            case normal
+            case good
+            case happy
+        }
+        
         struct MainMood: _MainMood {
             var title: String
             var height: CGFloat

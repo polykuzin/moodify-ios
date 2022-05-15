@@ -7,19 +7,21 @@
 
 import UIKit
 import YPImagePicker
+import CoreData
 
 class MoodSaverController: UIViewController  {
     
     let nestedView = MoodSaverView.loadFromNib()
     let manager = MoodSaverManager()
     
+    var mainMood: MoodChooserView.ViewState.MoodType = .unhappy
     var moods: [_Mood] = []
     var photos: [UIImage] = []
     
     override func loadView() {
         self.view = nestedView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -49,6 +51,21 @@ class MoodSaverController: UIViewController  {
                 self.nestedView.configure(with: self.manager.makeState(with: self.moods, and: self.photos))
             }
             self.present(picker, animated: true)
+        }
+        self.nestedView.onSave = { [weak self] viewState in
+            guard let self = self,
+                  let appDelegate = UIApplication.shared.delegate as? AppDelegate
+            else {
+                return
+            }
+            
+            let managedContext = appDelegate.persistentContainer.viewContext
+            let mood = Mood(context: managedContext)
+            mood.date = Date()
+            mood.mood = self.mainMood.rawValue
+            mood.feelings = self.moods.map { $0.title }
+            mood.images = self.photos.map { $0.pngData() ?? Data() }
+            appDelegate.saveContext()
         }
     }
 }
