@@ -56,7 +56,7 @@ class MoodSaverView: UIView {
     
     public func configure(with state: ViewState.FullState) {
         self.viewState = state
-        self.moodBar.title = state.titleState.title
+        self.moodBar.title = .moodSave(state.titleState.title)
         self.tableView.viewStateInput = state.tableState
         self.tableView.shouldUseReload = true
     }

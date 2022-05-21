@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
-        let navigation = UINavigationController(rootViewController: MoodChooserController())
+        let navigation = UINavigationController(rootViewController: MainPageController())
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()
     }

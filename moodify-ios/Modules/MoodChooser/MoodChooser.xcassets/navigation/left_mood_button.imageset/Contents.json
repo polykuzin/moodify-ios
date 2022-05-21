@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "left_mood_button.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

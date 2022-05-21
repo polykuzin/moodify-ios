@@ -37,6 +37,15 @@
 		68A9C1762815DB9A00FD264A /* MoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A9C1742815DB9A00FD264A /* MoodsCell.xib */; };
 		68C5A0342812192F00AC5F18 /* CoreTableView in Frameworks */ = {isa = PBXBuildFile; productRef = 68C5A0332812192F00AC5F18 /* CoreTableView */; };
 		68C5A03628121DF900AC5F18 /* MoodChooserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5A03528121DF900AC5F18 /* MoodChooserManager.swift */; };
+		68D631C52839661E0085FFEF /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D631C42839661E0085FFEF /* MainPageView.swift */; };
+		68D631C72839662C0085FFEF /* MainPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68D631C62839662C0085FFEF /* MainPageView.xib */; };
+		68D631C9283967120085FFEF /* MainPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D631C8283967120085FFEF /* MainPageController.swift */; };
+		68D631CD283970A10085FFEF /* MainImageTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D631CB283970A10085FFEF /* MainImageTextCell.swift */; };
+		68D631CE283970A10085FFEF /* MainImageTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68D631CC283970A10085FFEF /* MainImageTextCell.xib */; };
+		68D631D0283974910085FFEF /* MainPage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68D631CF283974910085FFEF /* MainPage.xcassets */; };
+		68D631D2283976F60085FFEF /* MainPageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D631D1283976F60085FFEF /* MainPageManager.swift */; };
+		68D631D5283979330085FFEF /* FullStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D631D3283979330085FFEF /* FullStatCell.swift */; };
+		68D631D6283979330085FFEF /* FullStatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68D631D4283979330085FFEF /* FullStatCell.xib */; };
 		68E3755828311F9C0000BD71 /* Mood+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3755628311F9C0000BD71 /* Mood+CoreDataClass.swift */; };
 		68E3755928311F9C0000BD71 /* Mood+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E3755728311F9C0000BD71 /* Mood+CoreDataProperties.swift */; };
 		68FCA6F32810911A004EDCED /* MoodChooserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FCA6F22810911A004EDCED /* MoodChooserView.swift */; };
@@ -109,6 +118,15 @@
 		68A9C1732815DB9A00FD264A /* MoodsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodsCell.swift; sourceTree = "<group>"; };
 		68A9C1742815DB9A00FD264A /* MoodsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodsCell.xib; sourceTree = "<group>"; };
 		68C5A03528121DF900AC5F18 /* MoodChooserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodChooserManager.swift; sourceTree = "<group>"; };
+		68D631C42839661E0085FFEF /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
+		68D631C62839662C0085FFEF /* MainPageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainPageView.xib; sourceTree = "<group>"; };
+		68D631C8283967120085FFEF /* MainPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageController.swift; sourceTree = "<group>"; };
+		68D631CB283970A10085FFEF /* MainImageTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainImageTextCell.swift; sourceTree = "<group>"; };
+		68D631CC283970A10085FFEF /* MainImageTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainImageTextCell.xib; sourceTree = "<group>"; };
+		68D631CF283974910085FFEF /* MainPage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MainPage.xcassets; sourceTree = "<group>"; };
+		68D631D1283976F60085FFEF /* MainPageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageManager.swift; sourceTree = "<group>"; };
+		68D631D3283979330085FFEF /* FullStatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullStatCell.swift; sourceTree = "<group>"; };
+		68D631D4283979330085FFEF /* FullStatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullStatCell.xib; sourceTree = "<group>"; };
 		68E3755628311F9C0000BD71 /* Mood+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mood+CoreDataClass.swift"; sourceTree = "<group>"; };
 		68E3755728311F9C0000BD71 /* Mood+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mood+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		68FCA6F22810911A004EDCED /* MoodChooserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodChooserView.swift; sourceTree = "<group>"; };
@@ -269,6 +287,54 @@
 			path = Collection;
 			sourceTree = "<group>";
 		};
+		68D631C0283965EA0085FFEF /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				68D631C3283966020085FFEF /* View */,
+				68D631C2283965FC0085FFEF /* Manager */,
+				68D631C1283965F70085FFEF /* Controller */,
+				68D631CF283974910085FFEF /* MainPage.xcassets */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		68D631C1283965F70085FFEF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				68D631C8283967120085FFEF /* MainPageController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		68D631C2283965FC0085FFEF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				68D631D1283976F60085FFEF /* MainPageManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		68D631C3283966020085FFEF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68D631CA283970660085FFEF /* Cell */,
+				68D631C42839661E0085FFEF /* MainPageView.swift */,
+				68D631C62839662C0085FFEF /* MainPageView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68D631CA283970660085FFEF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				68D631CB283970A10085FFEF /* MainImageTextCell.swift */,
+				68D631CC283970A10085FFEF /* MainImageTextCell.xib */,
+				68D631D3283979330085FFEF /* FullStatCell.swift */,
+				68D631D4283979330085FFEF /* FullStatCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		68E3755A283121C70000BD71 /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +414,7 @@
 		6D748FC827D646DA006CBA91 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				68D631C0283965EA0085FFEF /* MainPage */,
 				6DBDF39627EF64AE00CEEB08 /* _Launch */,
 				6DBDF3B627EF81A900CEEB08 /* OnBoarding */,
 				68FCA6EE281090BC004EDCED /* MoodChooser */,
@@ -607,11 +674,13 @@
 			files = (
 				68A2329E282D07A40044733B /* MoodTotalCell.xib in Resources */,
 				68A23298282CEE030044733B /* MoodBar.xib in Resources */,
+				68D631C72839662C0085FFEF /* MainPageView.xib in Resources */,
 				6DBDF3C027EF841C00CEEB08 /* OnBoardingView.xib in Resources */,
 				6DBDF3C427EF873800CEEB08 /* OnBoarding.strings in Resources */,
 				68A232A8282D34A60044733B /* PhotosCell.xib in Resources */,
 				683D00F22815B1E400457827 /* SliderCell.xib in Resources */,
 				6DBDF3D327EF90E700CEEB08 /* OnBoardingCollectionCell.xib in Resources */,
+				68D631D6283979330085FFEF /* FullStatCell.xib in Resources */,
 				68A232A0282D082C0044733B /* MoodSaver.xcassets in Resources */,
 				6D748FD727D64919006CBA91 /* UI_Colors.xcassets in Resources */,
 				6835D630282D39DC002F658F /* PhotoCell.xib in Resources */,
@@ -623,7 +692,9 @@
 				6845E9472810D94100B99024 /* MoodCell.xib in Resources */,
 				68A232A4282D0DD90044733B /* FeelingsCell.xib in Resources */,
 				68A9C1762815DB9A00FD264A /* MoodsCell.xib in Resources */,
+				68D631D0283974910085FFEF /* MainPage.xcassets in Resources */,
 				6DBDF39A27EF655A00CEEB08 /* LaunchView.storyboard in Resources */,
+				68D631CE283970A10085FFEF /* MainImageTextCell.xib in Resources */,
 				6DBDF39C27EF664D00CEEB08 /* Splash.xcassets in Resources */,
 				68FCA6F728109207004EDCED /* MoodChooser.strings in Resources */,
 				6DBDF39E27EF665A00CEEB08 /* Splash.strings in Resources */,
@@ -648,15 +719,18 @@
 				68A2329A282D04230044733B /* MoodSaverManager.swift in Sources */,
 				68A9C1682815B7B600FD264A /* Ext+UITableViewCell.swift in Sources */,
 				68FCA6FB281094B3004EDCED /* MoodChooserController.swift in Sources */,
+				68D631CD283970A10085FFEF /* MainImageTextCell.swift in Sources */,
 				68E3755828311F9C0000BD71 /* Mood+CoreDataClass.swift in Sources */,
 				68A232A7282D34A60044733B /* PhotosCell.swift in Sources */,
 				68A9C1752815DB9A00FD264A /* MoodsCell.swift in Sources */,
 				6D748FE627D64B49006CBA91 /* IBDesignable+Localize.swift in Sources */,
 				6D748FE327D64B49006CBA91 /* String+LocalizeBundle.swift in Sources */,
+				68D631D5283979330085FFEF /* FullStatCell.swift in Sources */,
 				6D748FD927D64934006CBA91 /* UI_Typography.swift in Sources */,
 				6D748FB527D63FF2006CBA91 /* AppDelegate.swift in Sources */,
 				6D748FE227D64B49006CBA91 /* String+LocalizedBundleTableName.swift in Sources */,
 				6D748FF927D64D2B006CBA91 /* BaseController.swift in Sources */,
+				68D631C52839661E0085FFEF /* MainPageView.swift in Sources */,
 				6DBDF3BB27EF81FE00CEEB08 /* OnBoardingController.swift in Sources */,
 				6DBDF3BE27EF841400CEEB08 /* OnBoardingView.swift in Sources */,
 				6DBDF3E027EF91BF00CEEB08 /* Ext+UICollectionViewCell.swift in Sources */,
@@ -680,8 +754,10 @@
 				6D74902A27D65F3B006CBA91 /* SafeIndex.swift in Sources */,
 				6D748FB727D63FF2006CBA91 /* SceneDelegate.swift in Sources */,
 				6D748FE427D64B49006CBA91 /* String+LocalizeTableName.swift in Sources */,
+				68D631C9283967120085FFEF /* MainPageController.swift in Sources */,
 				6845E9462810D94100B99024 /* MoodCell.swift in Sources */,
 				6D74902827D65F3B006CBA91 /* Ext+String.swift in Sources */,
+				68D631D2283976F60085FFEF /* MainPageManager.swift in Sources */,
 				6DBDF3D227EF90E700CEEB08 /* OnBoardingCollectionCell.swift in Sources */,
 				6D748FFB27D64D43006CBA91 /* BaseView.swift in Sources */,
 			);

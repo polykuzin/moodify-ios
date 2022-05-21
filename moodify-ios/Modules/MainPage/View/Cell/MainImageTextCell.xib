@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="488" id="KGk-i7-Jjw" customClass="MainImageTextCell" customModule="moodify_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="488"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="390" height="488"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-90" translatesAutoresizingMaskIntoConstraints="NO" id="rwU-uv-m29">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="488"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_page_baby" translatesAutoresizingMaskIntoConstraints="NO" id="HCE-NQ-fVv">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="398"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="398" id="s9T-51-pL5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you feel? Add your mood" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIK-IA-2vC">
+                                <rect key="frame" x="58" y="308" width="274" height="180"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" red="0.18431372549019609" green="0.23921568627450979" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HCE-NQ-fVv" secondAttribute="trailing" id="7Fv-OS-arE"/>
+                            <constraint firstItem="HCE-NQ-fVv" firstAttribute="leading" secondItem="rwU-uv-m29" secondAttribute="leading" id="ICz-EA-BKh"/>
+                            <constraint firstItem="HCE-NQ-fVv" firstAttribute="top" secondItem="rwU-uv-m29" secondAttribute="top" id="WgK-4I-3dP"/>
+                            <constraint firstItem="EIK-IA-2vC" firstAttribute="leading" secondItem="rwU-uv-m29" secondAttribute="leading" constant="58" id="tCK-fP-9h0"/>
+                            <constraint firstAttribute="trailing" secondItem="EIK-IA-2vC" secondAttribute="trailing" constant="58" id="uC6-se-cWs"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="rwU-uv-m29" secondAttribute="trailing" id="66B-pA-gmb"/>
+                    <constraint firstAttribute="bottom" secondItem="rwU-uv-m29" secondAttribute="bottom" id="iFc-g4-NLX"/>
+                    <constraint firstItem="rwU-uv-m29" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="wxL-YZ-1ff"/>
+                    <constraint firstItem="rwU-uv-m29" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="xE5-xD-4lS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="160.1449275362319" y="122.54464285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="main_page_baby" width="408" height="418"/>
+    </resources>
+</document>
