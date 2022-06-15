@@ -89,6 +89,7 @@ class MoodBar: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.backgroundColor = .clear
     }
     
     @IBAction func handleBack(_ sender: UIButton) {
