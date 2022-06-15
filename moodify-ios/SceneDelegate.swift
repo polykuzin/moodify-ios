@@ -15,8 +15,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
-        let navigation = UINavigationController(rootViewController: MainPageController())
-        window?.rootViewController = navigation
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let rootVC = storyboard.instantiateViewController(identifier: "Main") as? MoodTabBarController
+        else { return }
+        let rootNC = UINavigationController(rootViewController: rootVC)
+        window?.rootViewController = rootNC
         window?.makeKeyAndVisible()
     }
 }
