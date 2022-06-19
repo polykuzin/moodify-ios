@@ -19,11 +19,13 @@ class MoodBar: UIView {
         case home
         case moodChoose
         case moodSave(String)
+        case settings
     }
     
     enum BarType {
         case main
         case nested
+        case emtpy
     }
     
     @IBOutlet private weak var contentView: UIView!
@@ -48,6 +50,10 @@ class MoodBar: UIView {
             case .moodSave(let title):
                 self.line = .big
                 self.mainTitle.text = title
+            case .settings:
+                self.line = .medium
+                self.mainTitle.text = "Settings"
+                self.mainTitle.font = UIFont.systemFont(ofSize: 24, weight: .bold)
             }
         }
     }
@@ -62,6 +68,8 @@ class MoodBar: UIView {
             case .nested:
                 self.streakCountLabel.isHidden = true
                 self.backButton.setImage(.init(named: "back_button"), for: .normal)
+            case .emtpy:
+                self.backButton.isHidden = true
             }
         }
     }
@@ -112,7 +120,11 @@ class MoodBar: UIView {
             case .moodSave(_):
                 guard let navigation = MoodBar.navigation else { return }
                 navigation.popViewController(animated: true)
+            default:
+                print()
             }
+        default:
+            print()
         }
     }
 }

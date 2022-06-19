@@ -41,7 +41,7 @@ extension MoodTabBarController {
         let moodController = navigation
         moodController.tabBarItem = UITabBarItem(title: nil, image: .init(named: "add_button_unselected"), selectedImage: .init(named: "add_button_selected"))
         
-        let settingsController = UIViewController()
+        let settingsController = SettingsController()
         settingsController.tabBarItem = UITabBarItem(title: "SETTINGS", image: .init(named: "settings_button"), tag: 2)
         
         viewControllers = [homeController, moodController, settingsController]
