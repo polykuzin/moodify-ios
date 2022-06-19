@@ -24,14 +24,19 @@ class MoodSaverController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.tabBar.isHidden = true
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         setupView()
         self.nestedView.configure(with: manager.makeState(with: moods))
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
     private func setupView() {
         self.navigationItem.hidesBackButton = true
-        self.nestedView.moodBar.navigation = self.navigationController
         self.manager.onAddImage = { [weak self] in
             guard let self = self else { return }
             var config = YPImagePickerConfiguration()
@@ -66,6 +71,8 @@ class MoodSaverController: UIViewController  {
             mood.feelings = self.moods.map { $0.title }
             mood.images = self.photos.map { $0.pngData() ?? Data() }
             appDelegate.saveContext()
+            
+            self.tabBarController?.selectedIndex = 0
         }
     }
 }

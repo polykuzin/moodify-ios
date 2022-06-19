@@ -20,4 +20,9 @@ class MainPageController: UIViewController {
         super.viewDidLoad()
         self.nestedView.configure(with: manager.makeMainPageState())
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
 }

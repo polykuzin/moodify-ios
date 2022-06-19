@@ -49,7 +49,7 @@ class MoodSaverView: UIView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.moodBar.line = .big
+        self.moodBar.barType = .nested
         self.saveButton.layer.cornerRadius = 12
         self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
     }

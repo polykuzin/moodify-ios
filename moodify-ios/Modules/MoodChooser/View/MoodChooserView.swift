@@ -62,8 +62,8 @@ class MoodChooserView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.moodBar.barType = .nested
         self.moodBar.title = .moodChoose
-        self.moodBar.line = .medium
         self.mainButton.layer.cornerRadius = 12
         self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
     }

@@ -36,7 +36,6 @@ class MainPageView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.moodBar.title = .home
-        self.moodBar.line = .medium
         self.moodBar.barType = .main
         
         self.insetsLayoutMarginsFromSafeArea = false

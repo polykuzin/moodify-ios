@@ -32,34 +32,27 @@ class MoodBar: UIView {
     @IBOutlet private weak var backButton: UIButton!
     @IBOutlet private weak var streakCountLabel: UILabel!
     
-    var navigation: UINavigationController?
+    static var tabBar: UITabBarController?
+    static var navigation: UINavigationController?
     
-    var title: LabelTitle? {
+    public var title: LabelTitle = .home {
         didSet {
             switch title {
             case .home:
+                self.line = .medium
                 self.mainTitle.text = "HOME"
                 self.mainTitle.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-            default:
-                print()
+            case .moodChoose:
+                self.line = .medium
+                self.mainTitle.text = "How do you feel?"
+            case .moodSave(let title):
+                self.line = .big
+                self.mainTitle.text = title
             }
         }
     }
     
-    var line: LineType = .small {
-        didSet {
-            switch line {
-            case .small:
-                self.lineImage.image = .init(named: "small_cherkash")
-            case .medium:
-                self.lineImage.image = .init(named: "cherkash")
-            case .big:
-                self.lineImage.image = .init(named: "big_cherkash")
-            }
-        }
-    }
-    
-    var barType: BarType = .main {
+    public var barType: BarType = .main {
         didSet {
             switch barType {
             case .main:
@@ -69,6 +62,19 @@ class MoodBar: UIView {
             case .nested:
                 self.streakCountLabel.isHidden = true
                 self.backButton.setImage(.init(named: "back_button"), for: .normal)
+            }
+        }
+    }
+    
+    private var line: LineType = .small {
+        didSet {
+            switch line {
+            case .small:
+                self.lineImage.image = .init(named: "small_cherkash")
+            case .medium:
+                self.lineImage.image = .init(named: "cherkash")
+            case .big:
+                self.lineImage.image = .init(named: "big_cherkash")
             }
         }
     }
@@ -97,8 +103,16 @@ class MoodBar: UIView {
         case .main:
             print(1)
         case .nested:
-            guard let navigation = navigation else { return }
-            navigation.popViewController(animated: true)
+            switch title {
+            case .home:
+                print()
+            case .moodChoose:
+                guard let tabBar = MoodBar.tabBar else { return }
+                tabBar.selectedIndex = 0
+            case .moodSave(_):
+                guard let navigation = MoodBar.navigation else { return }
+                navigation.popViewController(animated: true)
+            }
         }
     }
 }

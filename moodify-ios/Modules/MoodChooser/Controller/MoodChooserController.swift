@@ -57,4 +57,9 @@ class MoodChooserController: UIViewController {
         }
         self.nestedView.configure(with: manager.makeUnhappyState())
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
+    }
 }

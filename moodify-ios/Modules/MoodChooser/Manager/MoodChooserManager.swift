@@ -35,7 +35,7 @@ final class MoodChooserManager {
             moodImage: UIImage(named: "crybaby")
         ).toElement()
         let sliderState = makeMoodSlider(with: 1)
-        let moodDesc = makeMoodDesc(with: "describe_mood".localized(using: "MoodChooser"))
+        let moodDesc = makeMoodDesc(with: "Which words describe your feelings best?")
         
         let rows = CGFloat(moods.count / 3)
         let cellWidth: CGFloat = 45
@@ -79,7 +79,7 @@ final class MoodChooserManager {
             moodImage: UIImage(named: "sadbaby")
         ).toElement()
         let sliderState = makeMoodSlider(with: 2)
-        let moodDesc = makeMoodDesc(with: "describe_mood".localized(using: "MoodChooser"))
+        let moodDesc = makeMoodDesc(with: "Which words describe your feelings best?".localized(using: "MoodChooser"))
         
         let rows = CGFloat(moods.count / 3)
         let cellWidth: CGFloat = 45
@@ -119,7 +119,7 @@ final class MoodChooserManager {
             moodImage: UIImage(named: "normalbaby")
         ).toElement()
         let sliderState = makeMoodSlider(with: 3)
-        let moodDesc = makeMoodDesc(with: "describe_mood".localized(using: "MoodChooser"))
+        let moodDesc = makeMoodDesc(with: "Which words describe your feelings best?")
         
         let rows = CGFloat(moods.count / 3)
         let cellWidth: CGFloat = 45
@@ -159,7 +159,7 @@ final class MoodChooserManager {
             moodImage: UIImage(named: "goodbaby")
         ).toElement()
         let sliderState = makeMoodSlider(with: 4)
-        let moodDesc = makeMoodDesc(with: "describe_mood".localized(using: "MoodChooser"))
+        let moodDesc = makeMoodDesc(with: "Which words describe your feelings best?")
         
         let rows = CGFloat(moods.count / 4)
         let cellWidth: CGFloat = 45
@@ -199,7 +199,7 @@ final class MoodChooserManager {
             moodImage: UIImage(named: "happybaby")
         ).toElement()
         let sliderState = makeMoodSlider(with: 5)
-        let moodDesc = makeMoodDesc(with: "describe_mood".localized(using: "MoodChooser"))
+        let moodDesc = makeMoodDesc(with: "Which words describe your feelings best?")
         
         let rows = CGFloat(moods.count / 3)
         let cellWidth: CGFloat = 45
