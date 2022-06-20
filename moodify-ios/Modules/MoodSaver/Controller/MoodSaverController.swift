@@ -25,13 +25,12 @@ class MoodSaverController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        self.nestedView.configure(with: manager.makeState(with: moods))
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = true
-        self.nestedView.configure(with: manager.makeState(with: moods))
-        print(nestedView.moodBar.title, nestedView.moodBar.barType)
     }
     
     private func setupView() {
