@@ -13,6 +13,10 @@ public extension UIColor {
         return UIColor(named: #function)!
     }
     
+    static var mainText: UIColor {
+        return UIColor(named: #function)!
+    }
+    
     static var cellText: UIColor {
         return UIColor(named: #function)!
     }

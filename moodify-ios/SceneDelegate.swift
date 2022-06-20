@@ -18,8 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let rootVC = storyboard.instantiateViewController(identifier: "Main") as? MoodTabBarController
         else { return }
-        let rootNC = UINavigationController(rootViewController: rootVC)
-        window?.rootViewController = rootNC
+        window?.rootViewController = rootVC
         window?.makeKeyAndVisible()
     }
 }

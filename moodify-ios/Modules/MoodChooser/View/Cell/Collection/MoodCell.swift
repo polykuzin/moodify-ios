@@ -41,7 +41,7 @@ class MoodCell: UICollectionViewCell {
     }
     
     public func makeUnselected() {
-        self.backgroundColor = .base
+        self.backgroundColor = .clear
         self.titleLabel.textColor = .cellText
     }
     
