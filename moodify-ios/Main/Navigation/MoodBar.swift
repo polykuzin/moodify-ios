@@ -23,7 +23,7 @@ class MoodBar: UIView {
     }
     
     enum BarType {
-        case main
+        case main(Int)
         case nested
         case emtpy
     }
@@ -58,11 +58,11 @@ class MoodBar: UIView {
         }
     }
     
-    public var barType: BarType = .main {
+    public var barType: BarType = .main(1) {
         didSet {
             switch barType {
-            case .main:
-                self.streakCountLabel.text = "1"
+            case .main(let streak):
+                self.streakCountLabel.text = "\(streak)"
                 self.streakCountLabel.isHidden = false
                 self.backButton.setImage(.init(named: "left_mood_button"), for: .normal)
             case .nested:
@@ -108,7 +108,7 @@ class MoodBar: UIView {
     
     @IBAction func handleBack(_ sender: UIButton) {
         switch barType {
-        case .main:
+        case .main(_):
             print(1)
         case .nested:
             switch title {

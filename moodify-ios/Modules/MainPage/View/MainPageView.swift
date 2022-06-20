@@ -15,6 +15,11 @@ class MainPageView: UIView {
     
     struct ViewState {
         
+        struct PageState {
+            var streak: Int
+            var tableState: [State]
+        }
+        
         struct MainImageText: _MainImageText {
             
         }
@@ -36,7 +41,7 @@ class MainPageView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.moodBar.title = .home
-        self.moodBar.barType = .main
+        self.moodBar.barType = .main(1)
         
         self.insetsLayoutMarginsFromSafeArea = false
     
@@ -56,8 +61,9 @@ class MainPageView: UIView {
         self.insertSubview(backgroundView, at: 0)
     }
     
-    public func configure(with state: [State]) {
-        self.tableView.viewStateInput = state
+    public func configure(with state: ViewState.PageState) {
+        self.moodBar.barType = .main(state.streak)
+        self.tableView.viewStateInput = state.tableState
         self.tableView.shouldUseReload = true
     }
 }
