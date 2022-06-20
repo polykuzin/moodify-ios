@@ -33,7 +33,8 @@ extension MoodTabBarController {
     
     private func setupTabBarItems() {
         let homeController = MainPageController()
-        homeController.tabBarItem = UITabBarItem(title: "HOME", image: .init(named: "home_button"), tag: 0)
+        homeController.tabBarItem = UITabBarItem(title: "HOME", image: .init(named: "home_button_unselected"), tag: 0)
+        homeController.tabBarItem.selectedImage = .init(named: "home_button_selected")
         
         let moodNavigation = MoodNavigationController(rootViewController: MoodChooserController())
         MoodBar.navigation = moodNavigation
@@ -41,7 +42,8 @@ extension MoodTabBarController {
         moodNavigation.tabBarItem = UITabBarItem(title: nil, image: .init(named: "add_button_unselected"), selectedImage: .init(named: "add_button_selected"))
         
         let settingsController = SettingsController()
-        settingsController.tabBarItem = UITabBarItem(title: "SETTINGS", image: .init(named: "settings_button"), tag: 2)
+        settingsController.tabBarItem = UITabBarItem(title: "SETTINGS", image: .init(named: "settings_button_unselected"), tag: 2)
+        settingsController.tabBarItem.selectedImage = .init(named: "settings_button_selected")
         
         viewControllers = [homeController, moodNavigation, settingsController]
     }
