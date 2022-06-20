@@ -11,6 +11,6 @@ class MoodNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.titleView = MoodBar()
+        self.navigationBar.isHidden = true
     }
 }

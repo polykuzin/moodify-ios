@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,7 +26,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos of the day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jL-Rc-dCX">
                                 <rect key="frame" x="27" y="0.0" width="150.5" height="21.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="mainText"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -40,7 +40,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is no images yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSf-dF-zqZ">
                                 <rect key="frame" x="0.0" y="77" width="151.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="mainText"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -98,7 +98,10 @@
         <image name="clip" width="19" height="19"/>
         <image name="no_images" width="75" height="75"/>
         <namedColor name="button">
-            <color red="0.34099999070167542" green="0.5220000147819519" blue="0.86299997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.33725490196078434" green="0.52156862745098043" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainText">
+            <color red="0.18431372549019609" green="0.23921568627450979" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

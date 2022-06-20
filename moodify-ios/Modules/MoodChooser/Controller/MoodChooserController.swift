@@ -9,6 +9,7 @@ import UIKit
 
 class MoodChooserController: UIViewController {
     
+    let manager = MoodChooserManager()
     let nestedView = MoodChooserView.loadFromNib()
     
     var mainMood: Float = 0
@@ -20,23 +21,22 @@ class MoodChooserController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        let manager = MoodChooserManager()
-        manager.onMood = { [weak self] mood in
-            self?.selectedMoods = []
-            self?.mainMood = mood
-            self?.nestedView.configure(with: manager.makeMoodState(with: mood))
+        self.manager.onMood = { [weak self] mood in
+            guard let self = self else { return }
+            self.selectedMoods = []
+            self.mainMood = mood
+            self.nestedView.configure(with: self.manager.makeMoodState(with: mood))
         }
-        manager.onSelectMood = { [weak self] mood in
-            self?.selectedMoods.append(mood as! MoodChooserView.ViewState.Mood)
+        self.manager.onSelectMood = { [weak self] mood in
+            guard let self = self else { return }
+            self.selectedMoods.append(mood as! MoodChooserView.ViewState.Mood)
         }
-        manager.onRemoveMood = { [weak self] mood in
-            self?.selectedMoods.removeAll { $0.title == mood.title }
+        self.manager.onRemoveMood = { [weak self] mood in
+            guard let self = self else { return }
+            self.selectedMoods.removeAll { $0.title == mood.title }
         }
-        nestedView.onNext = { [weak self] in
-            guard let self = self,
-                  let navigation = self.navigationController
-            else { return }
+        self.nestedView.onNext = { [weak self] in
+            guard let self = self, let navigation = self.navigationController else { return }
             let vc = MoodSaverController()
             vc.moods = self.selectedMoods
             switch Int(self.mainMood) {
