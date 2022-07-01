@@ -27,8 +27,6 @@
 		684BB562286F694200600DE7 /* SecondStepOnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 684BB560286F694200600DE7 /* SecondStepOnboardingCell.xib */; };
 		684BB565286F699C00600DE7 /* ThirdStepOnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684BB563286F699C00600DE7 /* ThirdStepOnboardingCell.swift */; };
 		684BB566286F699C00600DE7 /* ThirdStepOnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 684BB564286F699C00600DE7 /* ThirdStepOnboardingCell.xib */; };
-		684BB569286F69CE00600DE7 /* FourthStepOnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684BB567286F69CE00600DE7 /* FourthStepOnboardingCell.swift */; };
-		684BB56A286F69CE00600DE7 /* FourthStepOnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 684BB568286F69CE00600DE7 /* FourthStepOnboardingCell.xib */; };
 		6878022A282CDEEE003FA9A0 /* MoodSaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68780229282CDEEE003FA9A0 /* MoodSaverView.swift */; };
 		6878022C282CDF0E003FA9A0 /* MoodSaverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6878022B282CDF0E003FA9A0 /* MoodSaverView.xib */; };
 		6878022E282CE07A003FA9A0 /* MoodSaverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6878022D282CE07A003FA9A0 /* MoodSaverController.swift */; };
@@ -136,8 +134,6 @@
 		684BB560286F694200600DE7 /* SecondStepOnboardingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondStepOnboardingCell.xib; sourceTree = "<group>"; };
 		684BB563286F699C00600DE7 /* ThirdStepOnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdStepOnboardingCell.swift; sourceTree = "<group>"; };
 		684BB564286F699C00600DE7 /* ThirdStepOnboardingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdStepOnboardingCell.xib; sourceTree = "<group>"; };
-		684BB567286F69CE00600DE7 /* FourthStepOnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthStepOnboardingCell.swift; sourceTree = "<group>"; };
-		684BB568286F69CE00600DE7 /* FourthStepOnboardingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourthStepOnboardingCell.xib; sourceTree = "<group>"; };
 		68780229282CDEEE003FA9A0 /* MoodSaverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSaverView.swift; sourceTree = "<group>"; };
 		6878022B282CDF0E003FA9A0 /* MoodSaverView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodSaverView.xib; sourceTree = "<group>"; };
 		6878022D282CE07A003FA9A0 /* MoodSaverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSaverController.swift; sourceTree = "<group>"; };
@@ -713,8 +709,6 @@
 				684BB560286F694200600DE7 /* SecondStepOnboardingCell.xib */,
 				684BB563286F699C00600DE7 /* ThirdStepOnboardingCell.swift */,
 				684BB564286F699C00600DE7 /* ThirdStepOnboardingCell.xib */,
-				684BB567286F69CE00600DE7 /* FourthStepOnboardingCell.swift */,
-				684BB568286F69CE00600DE7 /* FourthStepOnboardingCell.xib */,
 			);
 			path = OnBoardingCollectionCell;
 			sourceTree = "<group>";
@@ -807,7 +801,6 @@
 				6D748FD727D64919006CBA91 /* UI_Colors.xcassets in Resources */,
 				68C51FF8285FB78500F0BF19 /* Settings.xcassets in Resources */,
 				68030F2D285A6A5600929823 /* Main.storyboard in Resources */,
-				684BB56A286F69CE00600DE7 /* FourthStepOnboardingCell.xib in Resources */,
 				68C51FF0285FB1E500F0BF19 /* SettingsHeaderCell.xib in Resources */,
 				6835D630282D39DC002F658F /* PhotoCell.xib in Resources */,
 				6878022C282CDF0E003FA9A0 /* MoodSaverView.xib in Resources */,
@@ -873,7 +866,6 @@
 				68D631C52839661E0085FFEF /* MainPageView.swift in Sources */,
 				6DBDF3BB27EF81FE00CEEB08 /* OnBoardingController.swift in Sources */,
 				6DBDF3BE27EF841400CEEB08 /* OnBoardingView.swift in Sources */,
-				684BB569286F69CE00600DE7 /* FourthStepOnboardingCell.swift in Sources */,
 				6DBDF3E027EF91BF00CEEB08 /* Ext+UICollectionViewCell.swift in Sources */,
 				6DBDF3A827EF722E00CEEB08 /* SplashController.swift in Sources */,
 				6DBDF3B327EF7CAE00CEEB08 /* SplashStateManager.swift in Sources */,

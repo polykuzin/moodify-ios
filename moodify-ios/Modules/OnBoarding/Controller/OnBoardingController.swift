@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 final class OnBoardingController : BaseController {
     
@@ -14,6 +15,21 @@ final class OnBoardingController : BaseController {
     override func loadView() {
         self.view = nestedView
         let manager = OnBoardingStateManager()
-        nestedView.configure(with: manager.makeState())
+        self.nestedView.onAllowNotifications = { [weak self] in
+            guard let self = self else { return }
+            self.requestNotifications()
+        }
+        self.nestedView.configure(with: manager.makeState())
+    }
+    
+    private func requestNotifications() {
+        let notificationCenter = UNUserNotificationCenter.current()
+        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
+        
+        notificationCenter.requestAuthorization(options: options) { (didAllow, error) in
+            if didAllow {
+                print("Уведомления круто!")
+            }
+        }
     }
 }

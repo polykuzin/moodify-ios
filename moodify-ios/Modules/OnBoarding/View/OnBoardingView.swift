@@ -14,6 +14,8 @@ protocol _Step {
 
 final class OnBoardingView : BaseView {
     
+    public var onAllowNotifications: (() -> ())?
+    
     @IBOutlet private weak var continueButton : UIButton!
     @IBOutlet private weak var collectionView : UICollectionView!
     
@@ -30,11 +32,6 @@ final class OnBoardingView : BaseView {
         }
         
         struct ThirdStep: _ThirdStep {
-            var title: String
-            var description: String
-        }
-        
-        struct FourthStep: _FourthStep {
             var title: String
             var description: String
         }
@@ -55,7 +52,6 @@ final class OnBoardingView : BaseView {
         collectionView.register(FirstStepOnBoardingCell.nib, forCellWithReuseIdentifier: FirstStepOnBoardingCell.reuseId)
         collectionView.register(SecondStepOnboardingCell.nib, forCellWithReuseIdentifier: SecondStepOnboardingCell.reuseId)
         collectionView.register(ThirdStepOnboardingCell.nib, forCellWithReuseIdentifier: ThirdStepOnboardingCell.reuseId)
-        collectionView.register(FourthStepOnboardingCell.nib, forCellWithReuseIdentifier: FourthStepOnboardingCell.reuseId)
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.bounds
@@ -65,10 +61,10 @@ final class OnBoardingView : BaseView {
         ]
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint(x: 0, y: 1)
-
+        
         let backgroundView = UIView(frame: self.bounds)
         backgroundView.layer.insertSublayer(gradientLayer, at: 0)
-
+        
         self.insertSubview(backgroundView, at: 0)
     }
     
@@ -78,6 +74,9 @@ final class OnBoardingView : BaseView {
     
     @IBAction private func onContinueSelect() {
         self.scrollToNextCell()
+        if let _ = collectionView.visibleCells.first as? SecondStepOnboardingCell {
+            self.onAllowNotifications?()
+        }
     }
 }
 
@@ -89,11 +88,12 @@ extension OnBoardingView : UICollectionViewDelegate {
         let height = guide.layoutFrame.size.height
         let cellSize = CGSize(width: width, height: height - 70)
         let contentOffset = collectionView.contentOffset
-
+        
         if collectionView.contentSize.width <= collectionView.contentOffset.x + cellSize.width {
-            // NOTIFICATIONS!
-            let r = CGRect(x: 0, y: contentOffset.y, width: cellSize.width, height: cellSize.height)
-            collectionView.scrollRectToVisible(r, animated: true)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            guard let rootVC = storyboard.instantiateViewController(identifier: "Main") as? MoodTabBarController
+            else { return }
+            UIApplication.shared.keyWindow?.rootViewController = rootVC
         } else {
             let r = CGRect(x: contentOffset.x + cellSize.width, y: contentOffset.y, width: cellSize.width, height: cellSize.height)
             collectionView.scrollRectToVisible(r, animated: true);
@@ -124,9 +124,6 @@ extension OnBoardingView : UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ThirdStepOnboardingCell.reuseId, for: indexPath) as? ThirdStepOnboardingCell
             else { return .init() }
             cell.configure(with: data as! ViewState.ThirdStep)
-            return cell
-        case is ViewState.FourthStep:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FourthStepOnboardingCell.reuseId, for: indexPath)
             return cell
         default:
             return .init()
