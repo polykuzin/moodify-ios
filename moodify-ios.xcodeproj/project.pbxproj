@@ -20,6 +20,15 @@
 		683D00F22815B1E400457827 /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683D00F02815B1E400457827 /* SliderCell.xib */; };
 		6845E9462810D94100B99024 /* MoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6845E9442810D94100B99024 /* MoodCell.swift */; };
 		6845E9472810D94100B99024 /* MoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6845E9452810D94100B99024 /* MoodCell.xib */; };
+		684BB557286F38C100600DE7 /* OnBoarding.strings in Resources */ = {isa = PBXBuildFile; fileRef = 684BB559286F38C100600DE7 /* OnBoarding.strings */; };
+		684BB55D286F3A8700600DE7 /* FirstStepOnBoardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684BB55B286F3A8700600DE7 /* FirstStepOnBoardingCell.swift */; };
+		684BB55E286F3A8700600DE7 /* FirstStepOnBoardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 684BB55C286F3A8700600DE7 /* FirstStepOnBoardingCell.xib */; };
+		684BB561286F694200600DE7 /* SecondStepOnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684BB55F286F694200600DE7 /* SecondStepOnboardingCell.swift */; };
+		684BB562286F694200600DE7 /* SecondStepOnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 684BB560286F694200600DE7 /* SecondStepOnboardingCell.xib */; };
+		684BB565286F699C00600DE7 /* ThirdStepOnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684BB563286F699C00600DE7 /* ThirdStepOnboardingCell.swift */; };
+		684BB566286F699C00600DE7 /* ThirdStepOnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 684BB564286F699C00600DE7 /* ThirdStepOnboardingCell.xib */; };
+		684BB569286F69CE00600DE7 /* FourthStepOnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684BB567286F69CE00600DE7 /* FourthStepOnboardingCell.swift */; };
+		684BB56A286F69CE00600DE7 /* FourthStepOnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 684BB568286F69CE00600DE7 /* FourthStepOnboardingCell.xib */; };
 		6878022A282CDEEE003FA9A0 /* MoodSaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68780229282CDEEE003FA9A0 /* MoodSaverView.swift */; };
 		6878022C282CDF0E003FA9A0 /* MoodSaverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6878022B282CDF0E003FA9A0 /* MoodSaverView.xib */; };
 		6878022E282CE07A003FA9A0 /* MoodSaverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6878022D282CE07A003FA9A0 /* MoodSaverController.swift */; };
@@ -101,9 +110,6 @@
 		6DBDF3BE27EF841400CEEB08 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBDF3BD27EF841400CEEB08 /* OnBoardingView.swift */; };
 		6DBDF3C027EF841C00CEEB08 /* OnBoardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DBDF3BF27EF841C00CEEB08 /* OnBoardingView.xib */; };
 		6DBDF3C227EF872D00CEEB08 /* OnBoarding.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DBDF3C127EF872D00CEEB08 /* OnBoarding.xcassets */; };
-		6DBDF3C427EF873800CEEB08 /* OnBoarding.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DBDF3C327EF873800CEEB08 /* OnBoarding.strings */; };
-		6DBDF3D227EF90E700CEEB08 /* OnBoardingCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBDF3D027EF90E700CEEB08 /* OnBoardingCollectionCell.swift */; };
-		6DBDF3D327EF90E700CEEB08 /* OnBoardingCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DBDF3D127EF90E700CEEB08 /* OnBoardingCollectionCell.xib */; };
 		6DBDF3E027EF91BF00CEEB08 /* Ext+UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBDF3DF27EF91BF00CEEB08 /* Ext+UICollectionViewCell.swift */; };
 		6DBDF3E727EFC1F400CEEB08 /* OnBoardingStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBDF3E627EFC1F400CEEB08 /* OnBoardingStateManager.swift */; };
 		6DBDF3E927EFC8FC00CEEB08 /* Ext+UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBDF3E827EFC8FC00CEEB08 /* Ext+UIApplication.swift */; };
@@ -122,6 +128,16 @@
 		683D00F02815B1E400457827 /* SliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCell.xib; sourceTree = "<group>"; };
 		6845E9442810D94100B99024 /* MoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCell.swift; sourceTree = "<group>"; };
 		6845E9452810D94100B99024 /* MoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodCell.xib; sourceTree = "<group>"; };
+		684BB558286F38C100600DE7 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/OnBoarding.strings; sourceTree = "<group>"; };
+		684BB55A286F38C400600DE7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OnBoarding.strings; sourceTree = "<group>"; };
+		684BB55B286F3A8700600DE7 /* FirstStepOnBoardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStepOnBoardingCell.swift; sourceTree = "<group>"; };
+		684BB55C286F3A8700600DE7 /* FirstStepOnBoardingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstStepOnBoardingCell.xib; sourceTree = "<group>"; };
+		684BB55F286F694200600DE7 /* SecondStepOnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStepOnboardingCell.swift; sourceTree = "<group>"; };
+		684BB560286F694200600DE7 /* SecondStepOnboardingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondStepOnboardingCell.xib; sourceTree = "<group>"; };
+		684BB563286F699C00600DE7 /* ThirdStepOnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdStepOnboardingCell.swift; sourceTree = "<group>"; };
+		684BB564286F699C00600DE7 /* ThirdStepOnboardingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdStepOnboardingCell.xib; sourceTree = "<group>"; };
+		684BB567286F69CE00600DE7 /* FourthStepOnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthStepOnboardingCell.swift; sourceTree = "<group>"; };
+		684BB568286F69CE00600DE7 /* FourthStepOnboardingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourthStepOnboardingCell.xib; sourceTree = "<group>"; };
 		68780229282CDEEE003FA9A0 /* MoodSaverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSaverView.swift; sourceTree = "<group>"; };
 		6878022B282CDF0E003FA9A0 /* MoodSaverView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodSaverView.xib; sourceTree = "<group>"; };
 		6878022D282CE07A003FA9A0 /* MoodSaverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSaverController.swift; sourceTree = "<group>"; };
@@ -205,9 +221,6 @@
 		6DBDF3BD27EF841400CEEB08 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		6DBDF3BF27EF841C00CEEB08 /* OnBoardingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingView.xib; sourceTree = "<group>"; };
 		6DBDF3C127EF872D00CEEB08 /* OnBoarding.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = OnBoarding.xcassets; sourceTree = "<group>"; };
-		6DBDF3C327EF873800CEEB08 /* OnBoarding.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = OnBoarding.strings; sourceTree = "<group>"; };
-		6DBDF3D027EF90E700CEEB08 /* OnBoardingCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionCell.swift; sourceTree = "<group>"; };
-		6DBDF3D127EF90E700CEEB08 /* OnBoardingCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingCollectionCell.xib; sourceTree = "<group>"; };
 		6DBDF3DF27EF91BF00CEEB08 /* Ext+UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UICollectionViewCell.swift"; sourceTree = "<group>"; };
 		6DBDF3E627EFC1F400CEEB08 /* OnBoardingStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingStateManager.swift; sourceTree = "<group>"; };
 		6DBDF3E827EFC8FC00CEEB08 /* Ext+UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIApplication.swift"; sourceTree = "<group>"; };
@@ -656,7 +669,7 @@
 		6DBDF3B627EF81A900CEEB08 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
-				6DBDF3C327EF873800CEEB08 /* OnBoarding.strings */,
+				684BB559286F38C100600DE7 /* OnBoarding.strings */,
 				6DBDF3C127EF872D00CEEB08 /* OnBoarding.xcassets */,
 				6DBDF3B827EF81DC00CEEB08 /* Controller */,
 				6DBDF3E527EFC1DD00CEEB08 /* Manager */,
@@ -694,8 +707,14 @@
 		6DBDF3C627EF8FED00CEEB08 /* OnBoardingCollectionCell */ = {
 			isa = PBXGroup;
 			children = (
-				6DBDF3D027EF90E700CEEB08 /* OnBoardingCollectionCell.swift */,
-				6DBDF3D127EF90E700CEEB08 /* OnBoardingCollectionCell.xib */,
+				684BB55B286F3A8700600DE7 /* FirstStepOnBoardingCell.swift */,
+				684BB55C286F3A8700600DE7 /* FirstStepOnBoardingCell.xib */,
+				684BB55F286F694200600DE7 /* SecondStepOnboardingCell.swift */,
+				684BB560286F694200600DE7 /* SecondStepOnboardingCell.xib */,
+				684BB563286F699C00600DE7 /* ThirdStepOnboardingCell.swift */,
+				684BB564286F699C00600DE7 /* ThirdStepOnboardingCell.xib */,
+				684BB567286F69CE00600DE7 /* FourthStepOnboardingCell.swift */,
+				684BB568286F69CE00600DE7 /* FourthStepOnboardingCell.xib */,
 			);
 			path = OnBoardingCollectionCell;
 			sourceTree = "<group>";
@@ -778,16 +797,17 @@
 				68A23298282CEE030044733B /* MoodBar.xib in Resources */,
 				68D631C72839662C0085FFEF /* MainPageView.xib in Resources */,
 				6DBDF3C027EF841C00CEEB08 /* OnBoardingView.xib in Resources */,
-				6DBDF3C427EF873800CEEB08 /* OnBoarding.strings in Resources */,
+				684BB557286F38C100600DE7 /* OnBoarding.strings in Resources */,
+				684BB55E286F3A8700600DE7 /* FirstStepOnBoardingCell.xib in Resources */,
 				68C51FEA285FAF1400F0BF19 /* SettingsView.xib in Resources */,
 				68A232A8282D34A60044733B /* PhotosCell.xib in Resources */,
 				683D00F22815B1E400457827 /* SliderCell.xib in Resources */,
-				6DBDF3D327EF90E700CEEB08 /* OnBoardingCollectionCell.xib in Resources */,
 				68D631D6283979330085FFEF /* FullStatCell.xib in Resources */,
 				68A232A0282D082C0044733B /* MoodSaver.xcassets in Resources */,
 				6D748FD727D64919006CBA91 /* UI_Colors.xcassets in Resources */,
 				68C51FF8285FB78500F0BF19 /* Settings.xcassets in Resources */,
 				68030F2D285A6A5600929823 /* Main.storyboard in Resources */,
+				684BB56A286F69CE00600DE7 /* FourthStepOnboardingCell.xib in Resources */,
 				68C51FF0285FB1E500F0BF19 /* SettingsHeaderCell.xib in Resources */,
 				6835D630282D39DC002F658F /* PhotoCell.xib in Resources */,
 				6878022C282CDF0E003FA9A0 /* MoodSaverView.xib in Resources */,
@@ -795,6 +815,7 @@
 				68FCA6F928109216004EDCED /* MoodChooser.xcassets in Resources */,
 				68D631DA283A458E0085FFEF /* JournalCell.xib in Resources */,
 				6DBDF3C227EF872D00CEEB08 /* OnBoarding.xcassets in Resources */,
+				684BB566286F699C00600DE7 /* ThirdStepOnboardingCell.xib in Resources */,
 				6DBDF3A627EF6FEB00CEEB08 /* SplashView.xib in Resources */,
 				6845E9472810D94100B99024 /* MoodCell.xib in Resources */,
 				68A232A4282D0DD90044733B /* FeelingsCell.xib in Resources */,
@@ -802,6 +823,7 @@
 				68D631D0283974910085FFEF /* MainPage.xcassets in Resources */,
 				6DBDF39A27EF655A00CEEB08 /* LaunchView.storyboard in Resources */,
 				68D631CE283970A10085FFEF /* MainImageTextCell.xib in Resources */,
+				684BB562286F694200600DE7 /* SecondStepOnboardingCell.xib in Resources */,
 				68030F31285A6C0D00929823 /* Navigation.xcassets in Resources */,
 				68D631DE283A4B190085FFEF /* DailyMotivationCell.xib in Resources */,
 				6DBDF39C27EF664D00CEEB08 /* Splash.xcassets in Resources */,
@@ -827,6 +849,7 @@
 				6DBDF3B527EF805000CEEB08 /* AppStorage.swift in Sources */,
 				68D631D9283A458E0085FFEF /* JournalCell.swift in Sources */,
 				6878022A282CDEEE003FA9A0 /* MoodSaverView.swift in Sources */,
+				684BB561286F694200600DE7 /* SecondStepOnboardingCell.swift in Sources */,
 				6D748FE527D64B49006CBA91 /* Localize.swift in Sources */,
 				68A2329A282D04230044733B /* MoodSaverManager.swift in Sources */,
 				68A9C1682815B7B600FD264A /* Ext+UITableViewCell.swift in Sources */,
@@ -838,6 +861,7 @@
 				68A9C1752815DB9A00FD264A /* MoodsCell.swift in Sources */,
 				68030F33285A6F3F00929823 /* MoodTabBar.swift in Sources */,
 				68D631DD283A4B190085FFEF /* DailyMotivationCell.swift in Sources */,
+				684BB565286F699C00600DE7 /* ThirdStepOnboardingCell.swift in Sources */,
 				6D748FE627D64B49006CBA91 /* IBDesignable+Localize.swift in Sources */,
 				6D748FE327D64B49006CBA91 /* String+LocalizeBundle.swift in Sources */,
 				68D631D5283979330085FFEF /* FullStatCell.swift in Sources */,
@@ -849,6 +873,7 @@
 				68D631C52839661E0085FFEF /* MainPageView.swift in Sources */,
 				6DBDF3BB27EF81FE00CEEB08 /* OnBoardingController.swift in Sources */,
 				6DBDF3BE27EF841400CEEB08 /* OnBoardingView.swift in Sources */,
+				684BB569286F69CE00600DE7 /* FourthStepOnboardingCell.swift in Sources */,
 				6DBDF3E027EF91BF00CEEB08 /* Ext+UICollectionViewCell.swift in Sources */,
 				6DBDF3A827EF722E00CEEB08 /* SplashController.swift in Sources */,
 				6DBDF3B327EF7CAE00CEEB08 /* SplashStateManager.swift in Sources */,
@@ -866,6 +891,7 @@
 				6DBDF3A427EF6FDD00CEEB08 /* SplashView.swift in Sources */,
 				6D748FF627D64D0D006CBA91 /* Ext+UIView.swift in Sources */,
 				68FCA6F32810911A004EDCED /* MoodChooserView.swift in Sources */,
+				684BB55D286F3A8700600DE7 /* FirstStepOnBoardingCell.swift in Sources */,
 				6D748FD427D64867006CBA91 /* UI_Colors.swift in Sources */,
 				6D74902A27D65F3B006CBA91 /* SafeIndex.swift in Sources */,
 				6D748FB727D63FF2006CBA91 /* SceneDelegate.swift in Sources */,
@@ -876,7 +902,6 @@
 				6D74902827D65F3B006CBA91 /* Ext+String.swift in Sources */,
 				68D631D2283976F60085FFEF /* MainPageManager.swift in Sources */,
 				68C51FEF285FB1E500F0BF19 /* SettingsHeaderCell.swift in Sources */,
-				6DBDF3D227EF90E700CEEB08 /* OnBoardingCollectionCell.swift in Sources */,
 				68BE1F93285F63CD00236AA8 /* MoodNavigationController.swift in Sources */,
 				68C51FF5285FB55700F0BF19 /* SettingsCell.swift in Sources */,
 				68C51FF2285FB3C400F0BF19 /* SettingsManager.swift in Sources */,
@@ -888,6 +913,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		684BB559286F38C100600DE7 /* OnBoarding.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				684BB558286F38C100600DE7 /* ru */,
+				684BB55A286F38C400600DE7 /* en */,
+			);
+			name = OnBoarding.strings;
+			sourceTree = "<group>";
+		};
 		68FEDCDF286F239E00BC7B4F /* MoodChooser.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

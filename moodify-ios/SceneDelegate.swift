@@ -15,10 +15,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let rootVC = storyboard.instantiateViewController(identifier: "Main") as? MoodTabBarController
-        else { return }
-        window?.rootViewController = rootVC
+        let showOnBoarding = UserDefaults.standard.bool(forKey: "first_run")
+        if !showOnBoarding {
+            let rootVC = OnBoardingController()
+            window?.rootViewController = rootVC
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            guard let rootVC = storyboard.instantiateViewController(identifier: "Main") as? MoodTabBarController
+            else { return }
+            window?.rootViewController = rootVC
+        }
         window?.makeKeyAndVisible()
     }
 }

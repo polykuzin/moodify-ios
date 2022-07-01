@@ -9,31 +9,21 @@ import UIKit
 
 final class OnBoardingStateManager {
     
+    typealias StepState = OnBoardingView.ViewState
+    
     public func makeState() -> [_Step] {
-        struct Step : _Step {
-            var title: String
-            var descr: String
-            var image: UIImage
-        }
-        let first = Step(
+        let first = StepState.FirstStep(
             title: "1st_step_title".localized(using: "OnBoarding"),
-            descr: "1st_step_descr".localized(using: "OnBoarding"),
-            image: UIImage(named: "1st_step_image")!
+            description: "1st_step_descr".localized(using: "OnBoarding")
         )
-        let second = Step(
+        let second = StepState.SecondStep(
             title: "2nd_step_title".localized(using: "OnBoarding"),
-            descr: "2nd_step_descr".localized(using: "OnBoarding"),
-            image: UIImage(named: "2nd_step_image")!
+            description: "2nd_step_descr".localized(using: "OnBoarding")
         )
-        let third = Step(
+        let third = StepState.ThirdStep(
             title: "3rd_step_title".localized(using: "OnBoarding"),
-            descr: "3rd_step_descr".localized(using: "OnBoarding"),
-            image: UIImage(named: "3rd_step_image")!
+            description: "3rd_step_descr".localized(using: "OnBoarding")
         )
-        return [
-            first,
-            second,
-            third
-        ]
+        return [first, second, third]
     }
 }
