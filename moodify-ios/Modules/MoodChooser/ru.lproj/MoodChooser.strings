@@ -1,0 +1,14 @@
+/* 
+  MoodChooser.strings
+  moodify-ios
+
+  Created by Andrey Rusinovich on 20.04.2022.
+  
+*/
+"unhappy" = "UNHAPPY";
+"sad"     = "SAD";
+"normal"  = "NORMAL";
+"good"    = "GOOD";
+"happy"   = "HAPPY";
+
+"describe_mood" = "Which words describe your feelings best?";

@@ -17,203 +17,59 @@ final class MoodChooserManager {
     var onRemoveMood: ((_Mood) -> ())?
     
     public func makeUnhappyState() -> [State] {
-        let moods = [
-            MoodState.Mood(title: "scared 😦"),
-            MoodState.Mood(title: "disgusted 🤮"),
-            MoodState.Mood(title: "lost 😦"),
-            MoodState.Mood(title: "angry 😡"),
-            MoodState.Mood(title: "frustrated 😖"),
-            MoodState.Mood(title: "depressed 😞"),
-            MoodState.Mood(title: "horryfied 🤬"),
-            MoodState.Mood(title: "devastated 😭"),
-            MoodState.Mood(title: "empty 😶"),
-            MoodState.Mood(title: "paranoid 😱")
-        ]
-        let moodState = MoodState.MainMood(
-            title: "unhappy".localized(using: "MoodChooser"),
-            height: 324,
-            moodImage: UIImage(named: "crybaby")
-        ).toElement()
+        let moods = MoodService.unhappyMoods
+        let mainMoodState = makeMainMood(with: "unhappy", and: "crybaby")
         let sliderState = makeMoodSlider(with: 1)
         let moodDesc = makeMoodDesc(with: "Which words describe your feelings best?")
-        
-        let rows = CGFloat(moods.count / 3)
-        let cellWidth: CGFloat = 45
-        let height = rows * cellWidth + CGFloat((moods.count / 2 - 1) * 12)
-        let moodsState = MoodState.Moods(
-            moods: moods,
-            onSelectMood: { [weak self] mood in
-                self?.onSelectMood?(mood)
-            },
-            onRemoveMood: { [weak self] mood in
-                self?.onRemoveMood?(mood)
-            },
-            height: CGFloat(height)
-        ).toElement()
+        let moodsState = makeMoods(with: moods)
         
         let section = SectionState(header: nil, footer: nil)
-        let state = [
-            State(model: section,
-                  elements: [moodState, sliderState, moodDesc, moodsState]
-                 )
-        ]
+        let state = [State(model: section, elements: [mainMoodState, sliderState, moodDesc, moodsState])]
         return state
     }
     
     public func makeSadState() -> [State] {
-        let moods = [
-            MoodState.Mood(title: "sentimental 😢"),
-            MoodState.Mood(title: "envious 😒"),
-            MoodState.Mood(title: "confused 🤨"),
-            MoodState.Mood(title: "nostalgic 😐"),
-            MoodState.Mood(title: "bored 😑"),
-            MoodState.Mood(title: "miserable 😥"),
-            MoodState.Mood(title: "painful 😣"),
-            MoodState.Mood(title: "lonely 😢"),
-            MoodState.Mood(title: "anxious 😟"),
-            MoodState.Mood(title: "paranoid 😱")
-        ]
-        let moodState = MoodState.MainMood(
-            title: "sad".localized(using: "MoodChooser"),
-            height: 324,
-            moodImage: UIImage(named: "sadbaby")
-        ).toElement()
+        let moods = MoodService.sadMoods
+        let mainMoodState = makeMainMood(with: "sad", and: "sadbaby")
         let sliderState = makeMoodSlider(with: 2)
         let moodDesc = makeMoodDesc(with: "Which words describe your feelings best?".localized(using: "MoodChooser"))
-        
-        let rows = CGFloat(moods.count / 3)
-        let cellWidth: CGFloat = 45
-        let height = rows * cellWidth + CGFloat((moods.count / 2 - 1) * 12)
-        let moodsState = MoodState.Moods(
-            moods: moods,
-            onSelectMood: { [weak self] mood in
-                self?.onSelectMood?(mood)
-            },
-            onRemoveMood: { [weak self] mood in
-                self?.onRemoveMood?(mood)
-            },
-            height: CGFloat(height)
-        ).toElement()
+        let moodsState = makeMoods(with: moods)
         
         let section = SectionState(header: nil, footer: nil)
-        let state = [State(model: section, elements: [moodState, sliderState, moodDesc, moodsState])]
+        let state = [State(model: section, elements: [mainMoodState, sliderState, moodDesc, moodsState])]
         return state
     }
     
     public func makeNormalState() -> [State] {
-        let moods = [
-            MoodState.Mood(title: "sentimental 😢"),
-            MoodState.Mood(title: "envious 😒"),
-            MoodState.Mood(title: "confused 🤨"),
-            MoodState.Mood(title: "nostalgic 😐"),
-            MoodState.Mood(title: "bored 😑"),
-            MoodState.Mood(title: "miserable 😥"),
-            MoodState.Mood(title: "painful 😣"),
-            MoodState.Mood(title: "lonely 😢"),
-            MoodState.Mood(title: "anxious 😟"),
-            MoodState.Mood(title: "paranoid 😱")
-        ]
-        let moodState = MoodState.MainMood(
-            title: "normal".localized(using: "MoodChooser"),
-            height: 324,
-            moodImage: UIImage(named: "normalbaby")
-        ).toElement()
+        let moods = MoodService.normalMoods
+        let mainMoodState = makeMainMood(with: "normal", and: "normalbaby")
         let sliderState = makeMoodSlider(with: 3)
         let moodDesc = makeMoodDesc(with: "Which words describe your feelings best?")
-        
-        let rows = CGFloat(moods.count / 3)
-        let cellWidth: CGFloat = 45
-        let height = rows * cellWidth + CGFloat((moods.count / 2 - 1) * 12)
-        let moodsState = MoodState.Moods(
-            moods: moods,
-            onSelectMood: { [weak self] mood in
-                self?.onSelectMood?(mood)
-            },
-            onRemoveMood: { [weak self] mood in
-                self?.onRemoveMood?(mood)
-            },
-            height: CGFloat(height)
-        ).toElement()
+        let moodsState = makeMoods(with: moods)
         
         let section = SectionState(header: nil, footer: nil)
-        let state = [State(model: section, elements: [moodState, sliderState, moodDesc, moodsState])]
+        let state = [State(model: section, elements: [mainMoodState, sliderState, moodDesc, moodsState])]
         return state
     }
     
     public func makeGoodState() -> [State] {
-        let moods = [
-            MoodState.Mood(title: "sentimental 😢"),
-            MoodState.Mood(title: "envious 😒"),
-            MoodState.Mood(title: "confused 🤨"),
-            MoodState.Mood(title: "nostalgic 😐"),
-            MoodState.Mood(title: "bored 😑"),
-            MoodState.Mood(title: "miserable 😥"),
-            MoodState.Mood(title: "painful 😣"),
-            MoodState.Mood(title: "lonely 😢"),
-            MoodState.Mood(title: "anxious 😟"),
-            MoodState.Mood(title: "paranoid 😱")
-        ]
-        let moodState = MoodState.MainMood(
-            title: "good".localized(using: "MoodChooser"),
-            height: 324,
-            moodImage: UIImage(named: "goodbaby")
-        ).toElement()
+        let moods = MoodService.goodMoods
+        let mainMoodState = makeMainMood(with: "good", and: "goodbaby")
         let sliderState = makeMoodSlider(with: 4)
         let moodDesc = makeMoodDesc(with: "Which words describe your feelings best?")
-        
-        let rows = CGFloat(moods.count / 4)
-        let cellWidth: CGFloat = 45
-        let height = rows * cellWidth + CGFloat((moods.count / 2 - 1) * 12)
-        let moodsState = MoodState.Moods(
-            moods: moods,
-            onSelectMood: { [weak self] mood in
-                self?.onSelectMood?(mood)
-            },
-            onRemoveMood: { [weak self] mood in
-                self?.onRemoveMood?(mood)
-            },
-            height: CGFloat(height)
-        ).toElement()
+        let moodsState = makeMoods(with: moods)
         
         let section = SectionState(header: nil, footer: nil)
-        let state = [State(model: section, elements: [moodState, sliderState, moodDesc, moodsState])]
+        let state = [State(model: section, elements: [mainMoodState, sliderState, moodDesc, moodsState])]
         return state
     }
     
     public func makeHappyState() -> [State] {
-        let moods = [
-            MoodState.Mood(title: "sentimental 😢"),
-            MoodState.Mood(title: "envious 😒"),
-            MoodState.Mood(title: "confused 🤨"),
-            MoodState.Mood(title: "nostalgic 😐"),
-            MoodState.Mood(title: "bored 😑"),
-            MoodState.Mood(title: "miserable 😥"),
-            MoodState.Mood(title: "painful 😣"),
-            MoodState.Mood(title: "lonely 😢"),
-            MoodState.Mood(title: "anxious 😟"),
-            MoodState.Mood(title: "paranoid 😱")
-        ]
-        let moodState = MoodState.MainMood(
-            title: "happy".localized(using: "MoodChooser"),
-            height: 324,
-            moodImage: UIImage(named: "happybaby")
-        ).toElement()
+        let moods = MoodService.happyMoods
+        let moodState = makeMainMood(with: "happy", and: "happybaby")
         let sliderState = makeMoodSlider(with: 5)
         let moodDesc = makeMoodDesc(with: "Which words describe your feelings best?")
-        
-        let rows = CGFloat(moods.count / 3)
-        let cellWidth: CGFloat = 45
-        let height = rows * cellWidth + CGFloat((moods.count / 2 - 1) * 12)
-        let moodsState = MoodState.Moods(
-            moods: moods,
-            onSelectMood: { [weak self] mood in
-                self?.onSelectMood?(mood)
-            },
-            onRemoveMood: { [weak self] mood in
-                self?.onRemoveMood?(mood)
-            },
-            height: CGFloat(height)
-        ).toElement()
+        let moodsState = makeMoods(with: moods)
         
         let section = SectionState(header: nil, footer: nil)
         let state = [State(model: section, elements: [moodState, sliderState, moodDesc, moodsState])]
@@ -235,6 +91,32 @@ final class MoodChooserManager {
         default:
             return makeUnhappyState()
         }
+    }
+    
+    private func makeMainMood(with title: String, and image: String) -> Element {
+        let moodState = MoodState.MainMood(
+            title: title.localized(using: "MoodChooser"),
+            height: 324,
+            moodImage: UIImage(named: image)
+        ).toElement()
+        return moodState
+    }
+    
+    private func makeMoods(with moods: [_Mood]) -> Element {
+        let rows = CGFloat(moods.count / 3)
+        let cellWidth: CGFloat = 45
+        let height = rows * cellWidth + CGFloat((moods.count / 2 - 1) * 12)
+        let moodsState = MoodState.Moods(
+            moods: moods,
+            onSelectMood: { [weak self] mood in
+                self?.onSelectMood?(mood)
+            },
+            onRemoveMood: { [weak self] mood in
+                self?.onRemoveMood?(mood)
+            },
+            height: CGFloat(height)
+        ).toElement()
+        return moodsState
     }
     
     private func makeMoodSlider(with position: Float) -> Element {
