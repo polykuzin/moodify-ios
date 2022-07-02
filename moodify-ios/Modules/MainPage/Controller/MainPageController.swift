@@ -21,11 +21,17 @@ class MainPageController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.manager.onShowJournal = { [weak self] in
+            guard let self = self, let navigation = self.navigationController else { return }
+            let vc = JournalController()
+            navigation.pushViewController(vc, animated: true)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.reloadDatabase()
+        MoodBar.navigation = self.navigationController
         self.tabBarController?.tabBar.isHidden = false
         self.nestedView.configure(with: manager.makeMainPageState(with: moods.count))
     }

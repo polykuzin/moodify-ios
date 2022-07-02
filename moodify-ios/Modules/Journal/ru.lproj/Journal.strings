@@ -1,0 +1,10 @@
+/* 
+  Journal.strings
+  moodify-ios
+
+  Created by Andrey Rusinovich on 02.07.2022.
+  
+*/
+
+"distribution_title" = "Mood distribution";
+"distribution_descr" = "The mood you have more often";

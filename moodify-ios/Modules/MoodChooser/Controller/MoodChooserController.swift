@@ -60,6 +60,7 @@ class MoodChooserController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        MoodBar.navigation = self.navigationController
         self.tabBarController?.tabBar.isHidden = true
     }
 }

@@ -32,7 +32,7 @@ extension UIWindow {
 extension MoodTabBarController {
     
     private func setupTabBarItems() {
-        let homeController = MainPageController()
+        let homeController = MoodNavigationController(rootViewController: MainPageController())
         homeController.tabBarItem = UITabBarItem(title: "HOME", image: .init(named: "home_button_unselected"), tag: 0)
         homeController.tabBarItem.selectedImage = .init(named: "home_button_selected")
         

@@ -59,6 +59,17 @@
 		68C51FFA285FC19000F0BF19 /* Ext+UITableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C51FF9285FC19000F0BF19 /* Ext+UITableViewHeaderFooterView.swift */; };
 		68C5A0342812192F00AC5F18 /* CoreTableView in Frameworks */ = {isa = PBXBuildFile; productRef = 68C5A0332812192F00AC5F18 /* CoreTableView */; };
 		68C5A03628121DF900AC5F18 /* MoodChooserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5A03528121DF900AC5F18 /* MoodChooserManager.swift */; };
+		68C7D93128708653006883EA /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7D93028708653006883EA /* JournalView.swift */; };
+		68C7D9332870865D006883EA /* JournalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68C7D9322870865D006883EA /* JournalView.xib */; };
+		68C7D9352870872D006883EA /* JournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7D9342870872D006883EA /* JournalController.swift */; };
+		68C7D93728708750006883EA /* JournalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7D93628708750006883EA /* JournalManager.swift */; };
+		68C7D93D28708BC5006883EA /* DistributionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7D93B28708BC5006883EA /* DistributionHeaderCell.swift */; };
+		68C7D93E28708BC5006883EA /* DistributionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68C7D93C28708BC5006883EA /* DistributionHeaderCell.xib */; };
+		68C7D94128708FB3006883EA /* Journal.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68C7D94328708FB3006883EA /* Journal.strings */; };
+		68C7D94728709135006883EA /* DistributionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7D94528709135006883EA /* DistributionCell.swift */; };
+		68C7D94828709135006883EA /* DistributionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68C7D94628709135006883EA /* DistributionCell.xib */; };
+		68C7D94C28709352006883EA /* MoodDistributionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7D94A28709352006883EA /* MoodDistributionCell.swift */; };
+		68C7D94D28709352006883EA /* MoodDistributionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68C7D94B28709352006883EA /* MoodDistributionCell.xib */; };
 		68D631C52839661E0085FFEF /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D631C42839661E0085FFEF /* MainPageView.swift */; };
 		68D631C72839662C0085FFEF /* MainPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68D631C62839662C0085FFEF /* MainPageView.xib */; };
 		68D631C9283967120085FFEF /* MainPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D631C8283967120085FFEF /* MainPageController.swift */; };
@@ -165,6 +176,18 @@
 		68C51FF7285FB78500F0BF19 /* Settings.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Settings.xcassets; sourceTree = "<group>"; };
 		68C51FF9285FC19000F0BF19 /* Ext+UITableViewHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UITableViewHeaderFooterView.swift"; sourceTree = "<group>"; };
 		68C5A03528121DF900AC5F18 /* MoodChooserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodChooserManager.swift; sourceTree = "<group>"; };
+		68C7D93028708653006883EA /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
+		68C7D9322870865D006883EA /* JournalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JournalView.xib; sourceTree = "<group>"; };
+		68C7D9342870872D006883EA /* JournalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalController.swift; sourceTree = "<group>"; };
+		68C7D93628708750006883EA /* JournalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalManager.swift; sourceTree = "<group>"; };
+		68C7D93B28708BC5006883EA /* DistributionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributionHeaderCell.swift; sourceTree = "<group>"; };
+		68C7D93C28708BC5006883EA /* DistributionHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DistributionHeaderCell.xib; sourceTree = "<group>"; };
+		68C7D94228708FB3006883EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Journal.strings; sourceTree = "<group>"; };
+		68C7D94428708FB6006883EA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Journal.strings; sourceTree = "<group>"; };
+		68C7D94528709135006883EA /* DistributionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributionCell.swift; sourceTree = "<group>"; };
+		68C7D94628709135006883EA /* DistributionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DistributionCell.xib; sourceTree = "<group>"; };
+		68C7D94A28709352006883EA /* MoodDistributionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDistributionCell.swift; sourceTree = "<group>"; };
+		68C7D94B28709352006883EA /* MoodDistributionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodDistributionCell.xib; sourceTree = "<group>"; };
 		68D631C42839661E0085FFEF /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		68D631C62839662C0085FFEF /* MainPageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainPageView.xib; sourceTree = "<group>"; };
 		68D631C8283967120085FFEF /* MainPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageController.swift; sourceTree = "<group>"; };
@@ -390,6 +413,64 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		68C7D92C2870861C006883EA /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				68C7D92D28708621006883EA /* View */,
+				68C7D92E28708626006883EA /* Manager */,
+				68C7D92F2870862B006883EA /* Controller */,
+				68C7D94328708FB3006883EA /* Journal.strings */,
+			);
+			path = Journal;
+			sourceTree = "<group>";
+		};
+		68C7D92D28708621006883EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68C7D93828708B43006883EA /* Cell */,
+				68C7D93028708653006883EA /* JournalView.swift */,
+				68C7D9322870865D006883EA /* JournalView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68C7D92E28708626006883EA /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				68C7D93628708750006883EA /* JournalManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		68C7D92F2870862B006883EA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				68C7D9342870872D006883EA /* JournalController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		68C7D93828708B43006883EA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				68C7D94928709329006883EA /* Collection */,
+				68C7D93B28708BC5006883EA /* DistributionHeaderCell.swift */,
+				68C7D93C28708BC5006883EA /* DistributionHeaderCell.xib */,
+				68C7D94528709135006883EA /* DistributionCell.swift */,
+				68C7D94628709135006883EA /* DistributionCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		68C7D94928709329006883EA /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				68C7D94A28709352006883EA /* MoodDistributionCell.swift */,
+				68C7D94B28709352006883EA /* MoodDistributionCell.xib */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
 		68D631C0283965EA0085FFEF /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -522,6 +603,7 @@
 		6D748FC827D646DA006CBA91 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				68C7D92C2870861C006883EA /* Journal */,
 				68C51FE2285FAC9B00F0BF19 /* Settings */,
 				68D631C0283965EA0085FFEF /* MainPage */,
 				6DBDF39627EF64AE00CEEB08 /* _Launch */,
@@ -793,6 +875,8 @@
 				6DBDF3C027EF841C00CEEB08 /* OnBoardingView.xib in Resources */,
 				684BB557286F38C100600DE7 /* OnBoarding.strings in Resources */,
 				684BB55E286F3A8700600DE7 /* FirstStepOnBoardingCell.xib in Resources */,
+				68C7D94128708FB3006883EA /* Journal.strings in Resources */,
+				68C7D93E28708BC5006883EA /* DistributionHeaderCell.xib in Resources */,
 				68C51FEA285FAF1400F0BF19 /* SettingsView.xib in Resources */,
 				68A232A8282D34A60044733B /* PhotosCell.xib in Resources */,
 				683D00F22815B1E400457827 /* SliderCell.xib in Resources */,
@@ -809,8 +893,11 @@
 				68D631DA283A458E0085FFEF /* JournalCell.xib in Resources */,
 				6DBDF3C227EF872D00CEEB08 /* OnBoarding.xcassets in Resources */,
 				684BB566286F699C00600DE7 /* ThirdStepOnboardingCell.xib in Resources */,
+				68C7D9332870865D006883EA /* JournalView.xib in Resources */,
+				68C7D94828709135006883EA /* DistributionCell.xib in Resources */,
 				6DBDF3A627EF6FEB00CEEB08 /* SplashView.xib in Resources */,
 				6845E9472810D94100B99024 /* MoodCell.xib in Resources */,
+				68C7D94D28709352006883EA /* MoodDistributionCell.xib in Resources */,
 				68A232A4282D0DD90044733B /* FeelingsCell.xib in Resources */,
 				68A9C1762815DB9A00FD264A /* MoodsCell.xib in Resources */,
 				68D631D0283974910085FFEF /* MainPage.xcassets in Resources */,
@@ -844,6 +931,8 @@
 				6878022A282CDEEE003FA9A0 /* MoodSaverView.swift in Sources */,
 				684BB561286F694200600DE7 /* SecondStepOnboardingCell.swift in Sources */,
 				6D748FE527D64B49006CBA91 /* Localize.swift in Sources */,
+				68C7D9352870872D006883EA /* JournalController.swift in Sources */,
+				68C7D94728709135006883EA /* DistributionCell.swift in Sources */,
 				68A2329A282D04230044733B /* MoodSaverManager.swift in Sources */,
 				68A9C1682815B7B600FD264A /* Ext+UITableViewCell.swift in Sources */,
 				68FCA6FB281094B3004EDCED /* MoodChooserController.swift in Sources */,
@@ -862,14 +951,18 @@
 				6D748FB527D63FF2006CBA91 /* AppDelegate.swift in Sources */,
 				6D748FE227D64B49006CBA91 /* String+LocalizedBundleTableName.swift in Sources */,
 				6D748FF927D64D2B006CBA91 /* BaseController.swift in Sources */,
+				68C7D94C28709352006883EA /* MoodDistributionCell.swift in Sources */,
 				68C51FEC285FAFDA00F0BF19 /* SettingsController.swift in Sources */,
 				68D631C52839661E0085FFEF /* MainPageView.swift in Sources */,
 				6DBDF3BB27EF81FE00CEEB08 /* OnBoardingController.swift in Sources */,
 				6DBDF3BE27EF841400CEEB08 /* OnBoardingView.swift in Sources */,
+				68C7D93D28708BC5006883EA /* DistributionHeaderCell.swift in Sources */,
 				6DBDF3E027EF91BF00CEEB08 /* Ext+UICollectionViewCell.swift in Sources */,
 				6DBDF3A827EF722E00CEEB08 /* SplashController.swift in Sources */,
 				6DBDF3B327EF7CAE00CEEB08 /* SplashStateManager.swift in Sources */,
 				687DDF48282E91EC00556D99 /* DayMood.xcdatamodeld in Sources */,
+				68C7D93728708750006883EA /* JournalManager.swift in Sources */,
+				68C7D93128708653006883EA /* JournalView.swift in Sources */,
 				683D00F12815B1E400457827 /* SliderCell.swift in Sources */,
 				68A23296282CEDF20044733B /* MoodBar.swift in Sources */,
 				683D00ED2815B1B800457827 /* MainMoodCell.swift in Sources */,
@@ -912,6 +1005,15 @@
 				684BB55A286F38C400600DE7 /* en */,
 			);
 			name = OnBoarding.strings;
+			sourceTree = "<group>";
+		};
+		68C7D94328708FB3006883EA /* Journal.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68C7D94228708FB3006883EA /* en */,
+				68C7D94428708FB6006883EA /* ru */,
+			);
+			name = Journal.strings;
 			sourceTree = "<group>";
 		};
 		68FEDCDF286F239E00BC7B4F /* MoodChooser.strings */ = {

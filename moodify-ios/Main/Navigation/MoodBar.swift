@@ -20,6 +20,7 @@ class MoodBar: UIView {
         case moodChoose
         case moodSave(String)
         case settings
+        case statistic
     }
     
     enum BarType {
@@ -53,6 +54,10 @@ class MoodBar: UIView {
             case .settings:
                 self.line = .medium
                 self.mainTitle.text = "Settings"
+                self.mainTitle.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+            case .statistic:
+                self.line = .medium
+                self.mainTitle.text = "STATS"
                 self.mainTitle.font = UIFont.systemFont(ofSize: 24, weight: .bold)
             }
         }
@@ -117,7 +122,7 @@ class MoodBar: UIView {
             case .moodChoose:
                 guard let tabBar = MoodBar.tabBar else { return }
                 tabBar.selectedIndex = 0
-            case .moodSave(_):
+            case .moodSave(_), .statistic:
                 guard let navigation = MoodBar.navigation else { return }
                 navigation.popViewController(animated: true)
             default:

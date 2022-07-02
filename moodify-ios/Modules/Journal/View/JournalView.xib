@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JournalView" customModule="moodify_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_background" translatesAutoresizingMaskIntoConstraints="NO" id="Vfv-1O-Zac">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oyo-Rh-ngI" customClass="MoodBar" customModule="moodify_ios" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="60" width="414" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="GL5-36-Aea"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="TJL-iC-Jif" customClass="BaseTableView" customModule="CoreTableView">
+                    <rect key="frame" x="0.0" y="115" width="414" height="781"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Vfv-1O-Zac" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="1rx-OQ-WJ8"/>
+                <constraint firstItem="Vfv-1O-Zac" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5zh-Q1-FGq"/>
+                <constraint firstItem="Oyo-Rh-ngI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7Z7-J6-Vqf"/>
+                <constraint firstItem="TJL-iC-Jif" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="BVb-Q9-xIB"/>
+                <constraint firstItem="TJL-iC-Jif" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="C1A-19-nZ8"/>
+                <constraint firstItem="TJL-iC-Jif" firstAttribute="top" secondItem="Oyo-Rh-ngI" secondAttribute="bottom" constant="5" id="D0Z-y5-YGX"/>
+                <constraint firstItem="Oyo-Rh-ngI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="Hfj-Ae-NlP"/>
+                <constraint firstAttribute="bottom" secondItem="Vfv-1O-Zac" secondAttribute="bottom" id="aBB-Gs-G0j"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Oyo-Rh-ngI" secondAttribute="trailing" id="axT-BK-14q"/>
+                <constraint firstItem="Vfv-1O-Zac" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jli-Ru-gRu"/>
+                <constraint firstAttribute="bottom" secondItem="TJL-iC-Jif" secondAttribute="bottom" id="xN5-Nx-bk9"/>
+            </constraints>
+            <connections>
+                <outlet property="moodBar" destination="Oyo-Rh-ngI" id="yVq-yd-dak"/>
+                <outlet property="tableView" destination="TJL-iC-Jif" id="agj-SN-gxB"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="main_background" width="390" height="844"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
