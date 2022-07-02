@@ -44,8 +44,8 @@ class FeelingsCell: UITableViewCell {
                 moodCollection.isHidden = false
                 if moods.count > 3 {
                     self.moodCollection.reloadData()
-                    let rows = ceil(CGFloat(moods.count) / 3)
-                    let height = rows * 35 + (rows - 1) * 14
+                    let rows = CGFloat(moods.count / 3) + 1
+                    let height = rows * 37 + CGFloat((moods.count / 3) * 15)
                     self.collectionViewHeight.constant = height
                     self.layoutIfNeeded()
                 }
@@ -59,8 +59,8 @@ class FeelingsCell: UITableViewCell {
     }
     
     private func setupView() {
+        self.moodCollection.delegate = self
         self.moodCollection.dataSource = self
-        self.collectionLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         self.moodCollection.register(MoodCell.nib, forCellWithReuseIdentifier: MoodCell.reuseId)
     }
     
@@ -81,5 +81,21 @@ extension FeelingsCell: UICollectionViewDataSource {
         cell.configure(with: moods[indexPath.row])
         cell.makeSelected()
         return cell
+    }
+}
+
+extension FeelingsCell: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = self.moodCollection.frame.width / 3.2
+        return CGSize(width: width, height: 37)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 11
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
 }
