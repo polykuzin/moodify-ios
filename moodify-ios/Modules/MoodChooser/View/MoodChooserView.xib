@@ -14,9 +14,12 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_background" translatesAutoresizingMaskIntoConstraints="NO" id="iXR-Dk-gCl">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="deT-KG-jGz" customClass="BaseTableView" customModule="CoreTableView">
                     <rect key="frame" x="0.0" y="115" width="414" height="781"/>
-                    <color key="backgroundColor" name="base"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIA-mb-4lO">
                     <rect key="frame" x="15" y="796" width="384" height="55"/>
@@ -48,13 +51,17 @@
                 <constraint firstAttribute="bottom" secondItem="deT-KG-jGz" secondAttribute="bottom" id="5bP-qy-icn"/>
                 <constraint firstItem="deT-KG-jGz" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="8ci-ke-C1p"/>
                 <constraint firstItem="JIA-mb-4lO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="CAJ-K1-vHC"/>
+                <constraint firstItem="iXR-Dk-gCl" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="HDH-r8-eY7"/>
                 <constraint firstItem="JIA-mb-4lO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="HIY-XC-pAq"/>
                 <constraint firstItem="Nmf-YQ-X9Y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="J8a-qn-haW"/>
                 <constraint firstItem="Nmf-YQ-X9Y" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="K4x-P8-o8c"/>
+                <constraint firstAttribute="bottom" secondItem="iXR-Dk-gCl" secondAttribute="bottom" id="V9e-Ku-DJh"/>
                 <constraint firstItem="deT-KG-jGz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dam-U7-11w"/>
                 <constraint firstItem="deT-KG-jGz" firstAttribute="top" secondItem="Nmf-YQ-X9Y" secondAttribute="bottom" constant="5" id="hYl-zt-cSe"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JIA-mb-4lO" secondAttribute="trailing" constant="15" id="j8C-3H-wsZ"/>
+                <constraint firstItem="iXR-Dk-gCl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lj8-4X-eA7"/>
                 <constraint firstItem="Nmf-YQ-X9Y" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ohe-d8-QPW"/>
+                <constraint firstItem="iXR-Dk-gCl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="rZQ-fQ-vzR"/>
                 <constraint firstAttribute="bottom" secondItem="JIA-mb-4lO" secondAttribute="bottom" constant="45" id="tSP-lH-fk2"/>
             </constraints>
             <connections>
@@ -66,6 +73,7 @@
         </view>
     </objects>
     <resources>
+        <image name="main_background" width="390" height="844"/>
         <namedColor name="AccentColor">
             <color red="0.97299998998641968" green="0.99599999189376831" blue="0.98400002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

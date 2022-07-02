@@ -14,6 +14,9 @@
             <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_background" translatesAutoresizingMaskIntoConstraints="NO" id="uwW-r3-KmF">
+                    <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p8g-SJ-QB1" customClass="MoodBar" customModule="moodify_ios" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="60" width="428" height="50"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -32,10 +35,14 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="p8g-SJ-QB1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="0nO-DX-Ltk"/>
+                <constraint firstItem="uwW-r3-KmF" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Dy4-1U-Mgf"/>
+                <constraint firstAttribute="bottom" secondItem="uwW-r3-KmF" secondAttribute="bottom" id="KOO-zd-1HW"/>
                 <constraint firstAttribute="trailing" secondItem="Gan-cM-eso" secondAttribute="trailing" id="NFO-Vv-GQn"/>
                 <constraint firstItem="Gan-cM-eso" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="R7g-M1-oAE"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="p8g-SJ-QB1" secondAttribute="trailing" id="WQy-WG-4M3"/>
+                <constraint firstItem="uwW-r3-KmF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Z9K-5s-mqH"/>
                 <constraint firstItem="Gan-cM-eso" firstAttribute="top" secondItem="p8g-SJ-QB1" secondAttribute="bottom" constant="5" id="e9M-Zt-uzn"/>
+                <constraint firstItem="uwW-r3-KmF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gAk-hx-r7X"/>
                 <constraint firstItem="p8g-SJ-QB1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="u3M-Cp-fBG"/>
                 <constraint firstAttribute="bottom" secondItem="Gan-cM-eso" secondAttribute="bottom" id="xlk-9U-Y3v"/>
             </constraints>
@@ -43,10 +50,11 @@
                 <outlet property="moodBar" destination="p8g-SJ-QB1" id="Uf4-ER-ber"/>
                 <outlet property="tableView" destination="Gan-cM-eso" id="9Hd-7z-SFT"/>
             </connections>
-            <point key="canvasLocation" x="132" y="98"/>
+            <point key="canvasLocation" x="131.77570093457942" y="97.840172786177106"/>
         </view>
     </objects>
     <resources>
+        <image name="main_background" width="390" height="844"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
