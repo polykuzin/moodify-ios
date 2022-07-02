@@ -16,6 +16,7 @@ final class OnBoardingView : BaseView {
     
     public var onAllowNotifications: (() -> ())?
     
+    @IBOutlet private weak var pagesStack: UIStackView!
     @IBOutlet private weak var continueButton : UIButton!
     @IBOutlet private weak var collectionView : UICollectionView!
     
@@ -52,20 +53,9 @@ final class OnBoardingView : BaseView {
         collectionView.register(FirstStepOnBoardingCell.nib, forCellWithReuseIdentifier: FirstStepOnBoardingCell.reuseId)
         collectionView.register(SecondStepOnboardingCell.nib, forCellWithReuseIdentifier: SecondStepOnboardingCell.reuseId)
         collectionView.register(ThirdStepOnboardingCell.nib, forCellWithReuseIdentifier: ThirdStepOnboardingCell.reuseId)
-        
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = self.bounds
-        gradientLayer.colors = [
-            UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor,
-            UIColor(red: 234 / 255, green: 240 / 255, blue: 255 / 255, alpha: 1).cgColor,
-        ]
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 0, y: 1)
-        
-        let backgroundView = UIView(frame: self.bounds)
-        backgroundView.layer.insertSublayer(gradientLayer, at: 0)
-        
-        self.insertSubview(backgroundView, at: 0)
+        pagesStack.arrangedSubviews.forEach {
+            $0.layer.cornerRadius = $0.frame.height / 2
+        }
     }
     
     public func configure(with data: [_Step]) {
@@ -74,9 +64,44 @@ final class OnBoardingView : BaseView {
     
     @IBAction private func onContinueSelect() {
         self.scrollToNextCell()
-        if let _ = collectionView.visibleCells.first as? SecondStepOnboardingCell {
+        if let _ = collectionView.visibleCells.first as? FirstStepOnBoardingCell {
             self.onAllowNotifications?()
+            self.animatePageDot(for: 1)
+        } else if let _ = collectionView.visibleCells.first as? SecondStepOnboardingCell {
+            self.animatePageDot(for: 2)
         }
+    }
+    
+    private func animatePageDot(for index: Int) {
+        let shapeLayer = CAShapeLayer()
+        CATransaction.begin()
+        CATransaction.setCompletionBlock {
+            shapeLayer.removeFromSuperlayer()
+        }
+        let path = UIBezierPath()
+        let x = self.pagesStack.frame.origin.x
+        let y = self.pagesStack.frame.origin.y + 3
+        let startOffset = (self.pagesStack.spacing + 8) * CGFloat(index - 1)
+        let endOffset = (self.pagesStack.spacing + 8) * CGFloat(index)
+        path.move(to: CGPoint(x: x + startOffset, y: y))
+        path.addLine(to: CGPoint(x: x + endOffset, y: y))
+        shapeLayer.strokeColor = UIColor.button.cgColor
+        shapeLayer.lineWidth = 6
+        shapeLayer.lineCap = .round
+        shapeLayer.path = path.cgPath
+        self.layer.addSublayer(shapeLayer)
+        
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.fromValue = 0
+        animation.toValue = 1
+        animation.duration = 0.3
+        shapeLayer.add(animation, forKey: "line")
+        CATransaction.commit()
+        UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseOut, animations: {
+            self.pagesStack.arrangedSubviews[index].backgroundColor = .button
+        }, completion: { _ in
+            self.pagesStack.arrangedSubviews[index - 1].backgroundColor = .sliderTrack
+        })
     }
 }
 
@@ -137,7 +162,7 @@ extension OnBoardingView : UICollectionViewDelegateFlowLayout {
         let guide = self.safeAreaLayoutGuide
         let width =  UIScreen.main.bounds.width
         let height = guide.layoutFrame.size.height
-        return CGSize(width: width, height: height - 70)
+        return CGSize(width: width, height: height - 40)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

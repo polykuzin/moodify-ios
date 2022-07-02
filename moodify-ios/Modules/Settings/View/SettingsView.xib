@@ -15,14 +15,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w64-FM-umO" customClass="MoodBar" customModule="moodify_ios" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="70" width="414" height="50"/>
+                    <rect key="frame" x="0.0" y="60" width="414" height="50"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="sVp-Dt-Vpm"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="PpN-81-VDu" customClass="BaseTableView" customModule="CoreTableView">
-                    <rect key="frame" x="0.0" y="125" width="414" height="771"/>
+                    <rect key="frame" x="0.0" y="115" width="414" height="781"/>
                     <color key="backgroundColor" red="0.94117647059999998" green="0.96470588239999999" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
             </subviews>
@@ -35,7 +35,7 @@
                 <constraint firstAttribute="bottom" secondItem="PpN-81-VDu" secondAttribute="bottom" id="JRH-GE-nmB"/>
                 <constraint firstItem="PpN-81-VDu" firstAttribute="top" secondItem="w64-FM-umO" secondAttribute="bottom" constant="5" id="kJV-lm-vUt"/>
                 <constraint firstItem="PpN-81-VDu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pta-ad-iYV"/>
-                <constraint firstItem="w64-FM-umO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="70" id="sSm-h2-4qC"/>
+                <constraint firstItem="w64-FM-umO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="sSm-h2-4qC"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
