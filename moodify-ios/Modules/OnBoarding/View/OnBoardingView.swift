@@ -77,8 +77,8 @@ final class OnBoardingView : BaseView {
         let path = UIBezierPath()
         let x = self.pagesStack.frame.origin.x
         let y = self.pagesStack.frame.origin.y + 3
-        let startOffset = (self.pagesStack.spacing + 6) * CGFloat(index - 1)
-        let endOffset = (self.pagesStack.spacing + 6) * CGFloat(index)
+        let startOffset = (self.pagesStack.spacing + 8) * CGFloat(index - 1)
+        let endOffset = (self.pagesStack.spacing + 8) * CGFloat(index)
         path.move(to: CGPoint(x: x + startOffset, y: y))
         path.addLine(to: CGPoint(x: x + endOffset, y: y))
         shapeLayer.strokeColor = UIColor.button.cgColor
