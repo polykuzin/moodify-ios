@@ -10,12 +10,12 @@ import CoreTableView
 
 class JournalView: UIView {
     
-    @IBOutlet weak var moodBar: MoodBar!
-    @IBOutlet weak var tableView: BaseTableView!
+    @IBOutlet private weak var moodBar: MoodBar!
+    @IBOutlet private weak var tableView: BaseTableView!
     
     struct ViewState {
         
-        struct DistributionHeader: _DistributionHeader {
+        struct JournalHeader: _JournalHeader {
             var title: String
             var description: String
         }

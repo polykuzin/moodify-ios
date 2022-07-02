@@ -21,7 +21,8 @@ class MainPageView: UIView {
         }
         
         struct MainImageText: _MainImageText {
-            
+            var image: UIImage?
+            var title: String
         }
         
         struct FullStat: _FullStat {

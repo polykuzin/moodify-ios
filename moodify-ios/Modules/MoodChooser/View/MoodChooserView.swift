@@ -18,7 +18,7 @@ class MoodChooserView: UIView {
     
     struct ViewState {
         
-        enum MoodType: String {
+        enum MoodType: String, CaseIterable {
             case unhappy
             case sad
             case normal

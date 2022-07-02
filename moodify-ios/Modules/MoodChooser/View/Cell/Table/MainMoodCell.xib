@@ -20,7 +20,7 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="6hX-0j-Ozw">
                         <rect key="frame" x="106.5" y="34" width="230" height="255"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crybaby" translatesAutoresizingMaskIntoConstraints="NO" id="Rao-O2-3zG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unhappybaby" translatesAutoresizingMaskIntoConstraints="NO" id="Rao-O2-3zG">
                                 <rect key="frame" x="0.0" y="0.0" width="230" height="230"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="230" id="SMH-tu-FFU"/>
@@ -54,9 +54,9 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="crybaby" width="230" height="230"/>
+        <image name="unhappybaby" width="230" height="230"/>
         <namedColor name="mainText">
-            <color red="0.18431372549019609" green="0.23921568627450979" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18400000035762787" green="0.23899999260902405" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

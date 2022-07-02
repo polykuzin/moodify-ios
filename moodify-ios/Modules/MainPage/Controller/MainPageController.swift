@@ -33,7 +33,7 @@ class MainPageController: UIViewController {
         self.reloadDatabase()
         MoodBar.navigation = self.navigationController
         self.tabBarController?.tabBar.isHidden = false
-        self.nestedView.configure(with: manager.makeMainPageState(with: moods.count))
+        self.nestedView.configure(with: manager.makeMainPageState(with: moods.count, and: moods.last?.mood))
     }
     
     private func reloadDatabase() {

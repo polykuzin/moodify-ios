@@ -15,7 +15,7 @@ protocol _Distribution: CellData {
 extension _Distribution {
     
     var height: CGFloat {
-        return 631
+        return 647
     }
     
     func prepare(cell: UITableViewCell, for tableView: UITableView, indexPath: IndexPath) {
@@ -70,14 +70,14 @@ extension DistributionCell: UICollectionViewDataSource {
 extension DistributionCell: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: 207)
+        return CGSize(width: UIScreen.main.bounds.width / 2, height: 207)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 36
+        return 13
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 0
     }
 }

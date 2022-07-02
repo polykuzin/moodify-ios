@@ -18,7 +18,7 @@ final class MoodChooserManager {
     
     public func makeUnhappyState() -> [State] {
         let moods = MoodService.unhappyMoods
-        let mainMoodState = makeMainMood(with: "unhappy", and: "crybaby")
+        let mainMoodState = makeMainMood(with: "unhappy", and: "unhappybaby")
         let sliderState = makeMoodSlider(with: 1)
         let moodDesc = makeMoodDesc(with: "Which words describe your feelings best?")
         let moodsState = makeMoods(with: moods)

@@ -8,3 +8,5 @@
 
 "distribution_title" = "Mood distribution";
 "distribution_descr" = "The mood you have more often";
+"average_title" = "Average mood";
+"average_descr" = "Your average mood this month";
