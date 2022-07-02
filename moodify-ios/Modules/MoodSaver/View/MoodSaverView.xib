@@ -16,11 +16,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="PWL-fP-7cp" customClass="BaseTableView" customModule="CoreTableView">
-                    <rect key="frame" x="0.0" y="125" width="414" height="771"/>
+                    <rect key="frame" x="0.0" y="115" width="414" height="781"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FgR-XD-8fY" customClass="MoodBar" customModule="moodify_ios" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="70" width="414" height="50"/>
+                    <rect key="frame" x="0.0" y="60" width="414" height="50"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="lQF-E7-smZ"/>
@@ -54,7 +54,7 @@
                 <constraint firstItem="ai7-cx-3Iv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hay-A7-Ues"/>
                 <constraint firstItem="ai7-cx-3Iv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="imX-5k-HxP"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FgR-XD-8fY" secondAttribute="trailing" id="jRL-PV-Wnn"/>
-                <constraint firstItem="FgR-XD-8fY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="70" id="mJg-Su-zhU"/>
+                <constraint firstItem="FgR-XD-8fY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="mJg-Su-zhU"/>
                 <constraint firstItem="PWL-fP-7cp" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="mSp-Q4-Otg"/>
                 <constraint firstItem="PWL-fP-7cp" firstAttribute="top" secondItem="FgR-XD-8fY" secondAttribute="bottom" constant="5" id="vHN-6e-jp0"/>
             </constraints>

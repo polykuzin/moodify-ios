@@ -74,6 +74,10 @@ final class OnBoardingView : BaseView {
     
     private func animatePageDot(for index: Int) {
         let shapeLayer = CAShapeLayer()
+        CATransaction.begin()
+        CATransaction.setCompletionBlock {
+            shapeLayer.removeFromSuperlayer()
+        }
         let path = UIBezierPath()
         let x = self.pagesStack.frame.origin.x
         let y = self.pagesStack.frame.origin.y + 3
@@ -92,10 +96,10 @@ final class OnBoardingView : BaseView {
         animation.toValue = 1
         animation.duration = 0.3
         shapeLayer.add(animation, forKey: "line")
-        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+        CATransaction.commit()
+        UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseOut, animations: {
             self.pagesStack.arrangedSubviews[index].backgroundColor = .button
         }, completion: { _ in
-            shapeLayer.removeFromSuperlayer()
             self.pagesStack.arrangedSubviews[index - 1].backgroundColor = .sliderTrack
         })
     }

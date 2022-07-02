@@ -103,9 +103,8 @@ final class MoodChooserManager {
     }
     
     private func makeMoods(with moods: [_Mood]) -> Element {
-        let rows = CGFloat(moods.count / 3)
-        let cellWidth: CGFloat = 45
-        let height = rows * cellWidth + CGFloat((moods.count / 2 - 1) * 12)
+        let rows = CGFloat(moods.count / 3) + 1
+        let height = rows * 37 + CGFloat((moods.count / 3) * 15) 
         let moodsState = MoodState.Moods(
             moods: moods,
             onSelectMood: { [weak self] mood in

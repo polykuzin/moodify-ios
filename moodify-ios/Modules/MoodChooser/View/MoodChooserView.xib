@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="deT-KG-jGz" customClass="BaseTableView" customModule="CoreTableView">
-                    <rect key="frame" x="0.0" y="125" width="414" height="771"/>
+                    <rect key="frame" x="0.0" y="115" width="414" height="781"/>
                     <color key="backgroundColor" name="base"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIA-mb-4lO">
@@ -34,7 +34,7 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nmf-YQ-X9Y" customClass="MoodBar" customModule="moodify_ios" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="70" width="414" height="50"/>
+                    <rect key="frame" x="0.0" y="60" width="414" height="50"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="1cs-tU-OIV"/>
@@ -49,7 +49,7 @@
                 <constraint firstItem="deT-KG-jGz" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="8ci-ke-C1p"/>
                 <constraint firstItem="JIA-mb-4lO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="CAJ-K1-vHC"/>
                 <constraint firstItem="JIA-mb-4lO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="HIY-XC-pAq"/>
-                <constraint firstItem="Nmf-YQ-X9Y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="70" id="J8a-qn-haW"/>
+                <constraint firstItem="Nmf-YQ-X9Y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="J8a-qn-haW"/>
                 <constraint firstItem="Nmf-YQ-X9Y" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="K4x-P8-o8c"/>
                 <constraint firstItem="deT-KG-jGz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dam-U7-11w"/>
                 <constraint firstItem="deT-KG-jGz" firstAttribute="top" secondItem="Nmf-YQ-X9Y" secondAttribute="bottom" constant="5" id="hYl-zt-cSe"/>

@@ -10,33 +10,33 @@ import Foundation
 final class MoodService {
     
     static let unhappyMoods = [
-        MoodChooserView.ViewState.Mood(title: "scared 😦"),
-        MoodChooserView.ViewState.Mood(title: "disgusted 🤮"),
         MoodChooserView.ViewState.Mood(title: "lost 😦"),
         MoodChooserView.ViewState.Mood(title: "angry 😡"),
-        MoodChooserView.ViewState.Mood(title: "frustrated 😖"),
+        MoodChooserView.ViewState.Mood(title: "empty 😶"),
+        MoodChooserView.ViewState.Mood(title: "scared 😦"),
+        MoodChooserView.ViewState.Mood(title: "paranoid 😱"),
+        MoodChooserView.ViewState.Mood(title: "disgusted 🤮"),
         MoodChooserView.ViewState.Mood(title: "depressed 😞"),
         MoodChooserView.ViewState.Mood(title: "horryfied 🤬"),
         MoodChooserView.ViewState.Mood(title: "devastated 😭"),
-        MoodChooserView.ViewState.Mood(title: "empty 😶"),
-        MoodChooserView.ViewState.Mood(title: "paranoid 😱")
+        MoodChooserView.ViewState.Mood(title: "frustrated 😖")
     ]
     
     static let sadMoods = [
-        MoodChooserView.ViewState.Mood(title: "sentimental 😢"),
-        MoodChooserView.ViewState.Mood(title: "envious 😒"),
-        MoodChooserView.ViewState.Mood(title: "confused 🤨"),
-        MoodChooserView.ViewState.Mood(title: "nostalgic 😐"),
+        MoodChooserView.ViewState.Mood(title: "sad 😩"),
+        MoodChooserView.ViewState.Mood(title: "sick 🤧"),
         MoodChooserView.ViewState.Mood(title: "bored 😑"),
         MoodChooserView.ViewState.Mood(title: "tired 🙁"),
-        MoodChooserView.ViewState.Mood(title: "miserable 😥"),
-        MoodChooserView.ViewState.Mood(title: "painful 😣"),
         MoodChooserView.ViewState.Mood(title: "lonely 😢"),
         MoodChooserView.ViewState.Mood(title: "anxious 😟"),
-        MoodChooserView.ViewState.Mood(title: "insecure 😕"),
+        MoodChooserView.ViewState.Mood(title: "painful 😣"),
+        MoodChooserView.ViewState.Mood(title: "envious 😒"),
         MoodChooserView.ViewState.Mood(title: "annoyed 😬"),
-        MoodChooserView.ViewState.Mood(title: "sick 🤧"),
-        MoodChooserView.ViewState.Mood(title: "sad 😩"),
+        MoodChooserView.ViewState.Mood(title: "insecure 😕"),
+        MoodChooserView.ViewState.Mood(title: "confused 🤨"),
+        MoodChooserView.ViewState.Mood(title: "nostalgic 😐"),
+        MoodChooserView.ViewState.Mood(title: "miserable 😥"),
+        MoodChooserView.ViewState.Mood(title: "sentimental 😢"),
     ]
     
     static let normalMoods = [

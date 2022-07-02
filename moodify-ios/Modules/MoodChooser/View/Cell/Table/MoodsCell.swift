@@ -38,9 +38,8 @@ class MoodsCell: UITableViewCell {
     private var viewState: [_Mood] = [] {
         didSet {
             self.collectionView.reloadData()
-            let rows = CGFloat(viewState.count / 3)
-            let cellWidth = UIScreen.main.bounds.width / 3
-            let height = rows * cellWidth + CGFloat((viewState.count / 3 - 1) * 8)
+            let rows = CGFloat(viewState.count / 3) + 1
+            let height = rows * 37 + CGFloat((viewState.count / 3) * 11)
             self.collectionViewHeight.constant = height
             self.layoutIfNeeded()
         }
@@ -65,7 +64,6 @@ class MoodsCell: UITableViewCell {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.allowsMultipleSelection = true
-        self.collectionLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         self.collectionView.register(MoodCell.nib, forCellWithReuseIdentifier: MoodCell.reuseId)
     }
 }
@@ -94,5 +92,21 @@ extension MoodsCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         self.selectedMoods.removeAll { $0.title == viewState[indexPath.row].title }
         self.onRemoveMood?(viewState[indexPath.row])
+    }
+}
+
+extension MoodsCell: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = self.collectionView.frame.width / 3.2
+        return CGSize(width: width, height: 37)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 11
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
 }
