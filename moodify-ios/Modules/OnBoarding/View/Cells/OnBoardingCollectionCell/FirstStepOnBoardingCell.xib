@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -17,8 +17,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="390" height="635"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding_step_1" translatesAutoresizingMaskIntoConstraints="NO" id="zCu-DH-eZD">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="635"/>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do not panic!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYd-xA-Fg0">
-                        <rect key="frame" x="177" y="430.5" width="156" height="32"/>
+                        <rect key="frame" x="177" y="430.66666666666669" width="156" height="32"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="32" id="LIk-Ki-aaF"/>
                         </constraints>
@@ -27,10 +30,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFj-wZ-QLq">
-                        <rect key="frame" x="23" y="497.5" width="344" height="127.5"/>
+                        <rect key="frame" x="23" y="497.66666666666669" width="344" height="127.33333333333331"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you track your mood every day, you will understand what it depends on and the worries will go away!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="pDn-K9-aRT">
-                                <rect key="frame" x="16" y="16" width="312" height="95.5"/>
+                                <rect key="frame" x="16" y="15.999999999999943" width="312" height="95.333333333333329"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="textColor" name="base"/>
@@ -47,21 +50,25 @@
                         </constraints>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1st_step_image" translatesAutoresizingMaskIntoConstraints="NO" id="sbL-VN-BVx">
-                        <rect key="frame" x="-106" y="20.5" width="410" height="410"/>
+                        <rect key="frame" x="-106" y="20.666666666666657" width="410" height="410"/>
                     </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="zCu-DH-eZD" secondAttribute="bottom" id="6ua-Tq-a3T"/>
                 <constraint firstItem="sbL-VN-BVx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20.5" id="74K-b8-K45"/>
                 <constraint firstAttribute="trailing" secondItem="QYd-xA-Fg0" secondAttribute="trailing" constant="57" id="9rY-sJ-zNL"/>
                 <constraint firstItem="dFj-wZ-QLq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="23" id="Bgt-Gp-oEZ"/>
+                <constraint firstItem="zCu-DH-eZD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Xg3-xJ-Kce"/>
                 <constraint firstAttribute="trailing" secondItem="dFj-wZ-QLq" secondAttribute="trailing" constant="23" id="gTE-Sz-pbg"/>
                 <constraint firstItem="dFj-wZ-QLq" firstAttribute="top" secondItem="QYd-xA-Fg0" secondAttribute="bottom" constant="35" id="kDs-WI-ha6"/>
+                <constraint firstAttribute="trailing" secondItem="zCu-DH-eZD" secondAttribute="trailing" id="pu9-hZ-m0k"/>
                 <constraint firstAttribute="bottom" secondItem="dFj-wZ-QLq" secondAttribute="bottom" constant="10" id="qZA-CP-Rdk"/>
                 <constraint firstItem="sbL-VN-BVx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="-106" id="r31-CR-CEE"/>
                 <constraint firstItem="QYd-xA-Fg0" firstAttribute="top" secondItem="sbL-VN-BVx" secondAttribute="bottom" id="vTT-Gh-rCR"/>
+                <constraint firstItem="zCu-DH-eZD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ykU-5z-IXB"/>
             </constraints>
             <size key="customSize" width="390" height="639"/>
             <connections>
@@ -74,6 +81,7 @@
     </objects>
     <resources>
         <image name="1st_step_image" width="410" height="410"/>
+        <image name="onboarding_step_1" width="390" height="737"/>
         <namedColor name="base">
             <color red="0.97254901960784312" green="0.99607843137254903" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

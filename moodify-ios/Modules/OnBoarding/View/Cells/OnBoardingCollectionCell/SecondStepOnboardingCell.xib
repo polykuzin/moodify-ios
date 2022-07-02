@@ -75,7 +75,7 @@
                 <outlet property="titleLabel" destination="MFJ-AP-mVZ" id="134-eJ-1cV"/>
                 <outlet property="titleView" destination="QSQ-7b-pqf" id="apa-fZ-mLv"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="130.24553571428572"/>
+            <point key="canvasLocation" x="135.98130841121494" y="129.91360691144709"/>
         </collectionViewCell>
     </objects>
     <resources>

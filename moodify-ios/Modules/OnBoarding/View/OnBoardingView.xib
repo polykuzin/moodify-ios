@@ -14,8 +14,11 @@
             <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_background" translatesAutoresizingMaskIntoConstraints="NO" id="r8n-7o-Znj">
+                    <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXs-Jr-vLc">
-                    <rect key="frame" x="252" y="826" width="160" height="50"/>
+                    <rect key="frame" x="16" y="826" width="160" height="50"/>
                     <color key="backgroundColor" name="button"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="160" id="LIe-i5-0tZ"/>
@@ -37,7 +40,7 @@
                     </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-right" translatesAutoresizingMaskIntoConstraints="NO" id="9GU-au-F3F">
-                    <rect key="frame" x="372" y="839" width="24" height="24"/>
+                    <rect key="frame" x="136" y="839" width="24" height="24"/>
                     <color key="tintColor" name="base"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="KyH-5E-9eA"/>
@@ -45,7 +48,7 @@
                     </constraints>
                 </imageView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9AU-aO-agd">
-                    <rect key="frame" x="0.0" y="44" width="428" height="762"/>
+                    <rect key="frame" x="0.0" y="0.0" width="428" height="806"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tbQ-vN-q6n">
                         <size key="itemSize" width="128" height="128"/>
@@ -54,33 +57,73 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="xBJ-uw-2DJ">
+                    <rect key="frame" x="282" y="848" width="50" height="6"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBT-M1-ehc">
+                            <rect key="frame" x="0.0" y="0.0" width="6" height="6"/>
+                            <color key="backgroundColor" name="button"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="6" id="0nT-ZT-aug"/>
+                                <constraint firstAttribute="height" constant="6" id="8Hc-O1-HXa"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcq-hr-nkr">
+                            <rect key="frame" x="22" y="0.0" width="6" height="6"/>
+                            <color key="backgroundColor" name="sliderTrack"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="6" id="QeD-BH-6ql"/>
+                                <constraint firstAttribute="width" constant="6" id="YNo-wN-lhn"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dib-YB-VEl">
+                            <rect key="frame" x="44" y="0.0" width="6" height="6"/>
+                            <color key="backgroundColor" name="sliderTrack"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="6" id="Q7I-1p-hGo"/>
+                                <constraint firstAttribute="height" constant="6" id="yEQ-tH-qF1"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="base"/>
             <constraints>
+                <constraint firstItem="xBJ-uw-2DJ" firstAttribute="leading" secondItem="aXs-Jr-vLc" secondAttribute="trailing" constant="106" id="0K0-F0-y8y"/>
                 <constraint firstItem="9AU-aO-agd" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="1Xf-DG-Ibd"/>
+                <constraint firstItem="r8n-7o-Znj" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="28S-Mj-Mjl"/>
                 <constraint firstItem="9AU-aO-agd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="8id-01-nZi"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="aXs-Jr-vLc" secondAttribute="bottom" constant="16" id="DHa-5S-zTp"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aXs-Jr-vLc" secondAttribute="trailing" constant="16" id="J8A-LX-JZR"/>
-                <constraint firstItem="9AU-aO-agd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="aP6-z4-061"/>
+                <constraint firstItem="xBJ-uw-2DJ" firstAttribute="centerY" secondItem="aXs-Jr-vLc" secondAttribute="centerY" id="DTG-YN-oT0"/>
+                <constraint firstAttribute="bottom" secondItem="r8n-7o-Znj" secondAttribute="bottom" id="UZH-Cq-wFT"/>
+                <constraint firstItem="9AU-aO-agd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aP6-z4-061"/>
+                <constraint firstItem="aXs-Jr-vLc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="f8W-Zl-XNy"/>
                 <constraint firstItem="aXs-Jr-vLc" firstAttribute="centerY" secondItem="9GU-au-F3F" secondAttribute="centerY" id="fEJ-7s-7Zy"/>
+                <constraint firstItem="r8n-7o-Znj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="krS-A1-Nja"/>
                 <constraint firstItem="aXs-Jr-vLc" firstAttribute="top" secondItem="9AU-aO-agd" secondAttribute="bottom" constant="20" id="vtL-50-sg5"/>
+                <constraint firstItem="r8n-7o-Znj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xVK-D3-nJh"/>
                 <constraint firstItem="9GU-au-F3F" firstAttribute="trailing" secondItem="aXs-Jr-vLc" secondAttribute="trailing" constant="-16" id="z4a-bp-odo"/>
             </constraints>
             <connections>
                 <outlet property="collectionView" destination="9AU-aO-agd" id="N7H-6J-YFg"/>
                 <outlet property="continueButton" destination="aXs-Jr-vLc" id="hWA-tq-XPe"/>
+                <outlet property="pagesStack" destination="xBJ-uw-2DJ" id="88f-2h-ZXI"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
+            <point key="canvasLocation" x="137.38317757009344" y="91.360691144708426"/>
         </view>
     </objects>
     <resources>
         <image name="arrow-right" width="22" height="22"/>
+        <image name="main_background" width="390" height="844"/>
         <namedColor name="base">
             <color red="0.97254901960784312" green="0.99607843137254903" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="button">
             <color red="0.33725490196078434" green="0.52156862745098043" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="sliderTrack">
+            <color red="0.59200000762939453" green="0.59200000762939453" blue="0.59600001573562622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
