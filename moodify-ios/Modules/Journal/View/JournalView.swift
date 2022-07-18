@@ -29,6 +29,10 @@ class JournalView: UIView {
             var title: String
             var distribution: Int
         }
+        
+        struct MoodChart: _MoodChart {
+            
+        }
     }
     
     override func awakeFromNib() {

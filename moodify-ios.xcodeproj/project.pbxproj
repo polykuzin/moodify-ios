@@ -14,6 +14,12 @@
 		6835D62F282D39DC002F658F /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6835D62D282D39DC002F658F /* PhotoCell.swift */; };
 		6835D630282D39DC002F658F /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6835D62E282D39DC002F658F /* PhotoCell.xib */; };
 		6835D633282D449A002F658F /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 6835D632282D449A002F658F /* YPImagePicker */; };
+		68377D202884578C0064DFA0 /* MoodChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68377D1F2884578C0064DFA0 /* MoodChart.swift */; };
+		68377D22288457980064DFA0 /* MoodChart.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68377D21288457980064DFA0 /* MoodChart.xib */; };
+		68377D2528845BDE0064DFA0 /* MoodChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68377D2328845BDE0064DFA0 /* MoodChartCell.swift */; };
+		68377D2628845BDE0064DFA0 /* MoodChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68377D2428845BDE0064DFA0 /* MoodChartCell.xib */; };
+		68377D2A288497A10064DFA0 /* BigBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68377D28288497A10064DFA0 /* BigBarCell.swift */; };
+		68377D2B288497A10064DFA0 /* BigBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68377D29288497A10064DFA0 /* BigBarCell.xib */; };
 		683D00ED2815B1B800457827 /* MainMoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683D00EB2815B1B800457827 /* MainMoodCell.swift */; };
 		683D00EE2815B1B800457827 /* MainMoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683D00EC2815B1B800457827 /* MainMoodCell.xib */; };
 		683D00F12815B1E400457827 /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683D00EF2815B1E400457827 /* SliderCell.swift */; };
@@ -131,6 +137,12 @@
 		68030F32285A6F3F00929823 /* MoodTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTabBar.swift; sourceTree = "<group>"; };
 		6835D62D282D39DC002F658F /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		6835D62E282D39DC002F658F /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		68377D1F2884578C0064DFA0 /* MoodChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodChart.swift; sourceTree = "<group>"; };
+		68377D21288457980064DFA0 /* MoodChart.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodChart.xib; sourceTree = "<group>"; };
+		68377D2328845BDE0064DFA0 /* MoodChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodChartCell.swift; sourceTree = "<group>"; };
+		68377D2428845BDE0064DFA0 /* MoodChartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodChartCell.xib; sourceTree = "<group>"; };
+		68377D28288497A10064DFA0 /* BigBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBarCell.swift; sourceTree = "<group>"; };
+		68377D29288497A10064DFA0 /* BigBarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BigBarCell.xib; sourceTree = "<group>"; };
 		683D00EB2815B1B800457827 /* MainMoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMoodCell.swift; sourceTree = "<group>"; };
 		683D00EC2815B1B800457827 /* MainMoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMoodCell.xib; sourceTree = "<group>"; };
 		683D00EF2815B1E400457827 /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
@@ -258,6 +270,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68377D1E2884577E0064DFA0 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				68377D27288497730064DFA0 /* Bars */,
+				68377D1F2884578C0064DFA0 /* MoodChart.swift */,
+				68377D21288457980064DFA0 /* MoodChart.xib */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		68377D27288497730064DFA0 /* Bars */ = {
+			isa = PBXGroup;
+			children = (
+				68377D28288497A10064DFA0 /* BigBarCell.swift */,
+				68377D29288497A10064DFA0 /* BigBarCell.xib */,
+			);
+			path = Bars;
+			sourceTree = "<group>";
+		};
 		6845E9432810D91E00B99024 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +514,8 @@
 			children = (
 				68C7D94528709135006883EA /* DistributionCell.swift */,
 				68C7D94628709135006883EA /* DistributionCell.xib */,
+				68377D2328845BDE0064DFA0 /* MoodChartCell.swift */,
+				68377D2428845BDE0064DFA0 /* MoodChartCell.xib */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -633,6 +666,7 @@
 		6D748FC927D646E1006CBA91 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				68377D1E2884577E0064DFA0 /* Chart */,
 				68E3755A283121C70000BD71 /* Database */,
 				68780237282CED89003FA9A0 /* Navigation */,
 				6DBDF3B427EF805000CEEB08 /* AppStorage.swift */,
@@ -893,6 +927,7 @@
 				684BB55E286F3A8700600DE7 /* FirstStepOnBoardingCell.xib in Resources */,
 				68C7D94128708FB3006883EA /* Journal.strings in Resources */,
 				68C7D93E28708BC5006883EA /* JournalHeaderCell.xib in Resources */,
+				68377D22288457980064DFA0 /* MoodChart.xib in Resources */,
 				68C51FEA285FAF1400F0BF19 /* SettingsView.xib in Resources */,
 				68A232A8282D34A60044733B /* PhotosCell.xib in Resources */,
 				683D00F22815B1E400457827 /* SliderCell.xib in Resources */,
@@ -921,6 +956,7 @@
 				68D631CE283970A10085FFEF /* MainImageTextCell.xib in Resources */,
 				684BB562286F694200600DE7 /* SecondStepOnboardingCell.xib in Resources */,
 				68030F31285A6C0D00929823 /* Navigation.xcassets in Resources */,
+				68377D2B288497A10064DFA0 /* BigBarCell.xib in Resources */,
 				68D631DE283A4B190085FFEF /* DailyMotivationCell.xib in Resources */,
 				6DBDF39C27EF664D00CEEB08 /* Splash.xcassets in Resources */,
 				68C51FF6285FB55700F0BF19 /* SettingsCell.xib in Resources */,
@@ -929,6 +965,7 @@
 				68A9C1722815CCC900FD264A /* MoodDescriptionCell.xib in Resources */,
 				683D00EE2815B1B800457827 /* MainMoodCell.xib in Resources */,
 				6D748FBE27D63FF4006CBA91 /* Assets.xcassets in Resources */,
+				68377D2628845BDE0064DFA0 /* MoodChartCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -971,6 +1008,7 @@
 				68C51FEC285FAFDA00F0BF19 /* SettingsController.swift in Sources */,
 				68D631C52839661E0085FFEF /* MainPageView.swift in Sources */,
 				6DBDF3BB27EF81FE00CEEB08 /* OnBoardingController.swift in Sources */,
+				68377D2528845BDE0064DFA0 /* MoodChartCell.swift in Sources */,
 				6DBDF3BE27EF841400CEEB08 /* OnBoardingView.swift in Sources */,
 				68C7D93D28708BC5006883EA /* JournalHeaderCell.swift in Sources */,
 				6DBDF3E027EF91BF00CEEB08 /* Ext+UICollectionViewCell.swift in Sources */,
@@ -984,6 +1022,7 @@
 				683D00ED2815B1B800457827 /* MainMoodCell.swift in Sources */,
 				68E3755928311F9C0000BD71 /* Mood+CoreDataProperties.swift in Sources */,
 				6835D62F282D39DC002F658F /* PhotoCell.swift in Sources */,
+				68377D202884578C0064DFA0 /* MoodChart.swift in Sources */,
 				68A232A3282D0DD90044733B /* FeelingsCell.swift in Sources */,
 				6878022E282CE07A003FA9A0 /* MoodSaverController.swift in Sources */,
 				68A9C1712815CCC900FD264A /* MoodDescriptionCell.swift in Sources */,
@@ -995,6 +1034,7 @@
 				684BB55D286F3A8700600DE7 /* FirstStepOnBoardingCell.swift in Sources */,
 				6D748FD427D64867006CBA91 /* UI_Colors.swift in Sources */,
 				6D74902A27D65F3B006CBA91 /* SafeIndex.swift in Sources */,
+				68377D2A288497A10064DFA0 /* BigBarCell.swift in Sources */,
 				6D748FB727D63FF2006CBA91 /* SceneDelegate.swift in Sources */,
 				68C51FFA285FC19000F0BF19 /* Ext+UITableViewHeaderFooterView.swift in Sources */,
 				6D748FE427D64B49006CBA91 /* String+LocalizeTableName.swift in Sources */,
@@ -1167,6 +1207,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6B8USNFRGW;
@@ -1188,6 +1229,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.polykuzin.moodify-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1199,6 +1241,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6B8USNFRGW;
@@ -1220,6 +1263,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.polykuzin.moodify-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
