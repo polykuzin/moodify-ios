@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21223" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21204"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,11 +25,10 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart_background" translatesAutoresizingMaskIntoConstraints="NO" id="Ztp-Z0-Bke">
                             <rect key="frame" x="0.0" y="0.0" width="325" height="331"/>
                         </imageView>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EwF-LW-EVt">
-                            <rect key="frame" x="44" y="10" width="270" height="306"/>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EwF-LW-EVt">
+                            <rect key="frame" x="44" y="10" width="270" height="337"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="306" id="QRY-4K-lFz"/>
                                 <constraint firstAttribute="width" constant="270" id="VHz-5d-wSk"/>
                             </constraints>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aK4-w9-ngv">
@@ -38,14 +38,23 @@
                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </collectionViewFlowLayout>
                         </collectionView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5Y-5F-nAc">
+                            <rect key="frame" x="46" y="164" width="271.66666666666669" height="3"/>
+                            <color key="backgroundColor" red="0.011764705882352941" green="0.49411764705882355" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="3" id="oLT-zm-Y4H"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="EwF-LW-EVt" firstAttribute="top" secondItem="uCm-0s-0ZW" secondAttribute="top" constant="10" id="1ON-1a-W07"/>
                         <constraint firstItem="EwF-LW-EVt" firstAttribute="leading" secondItem="uCm-0s-0ZW" secondAttribute="leading" constant="44" id="1k0-8o-gNX"/>
+                        <constraint firstAttribute="trailing" secondItem="q5Y-5F-nAc" secondAttribute="trailing" constant="7.3600000000000003" id="3sv-23-7CW"/>
+                        <constraint firstItem="q5Y-5F-nAc" firstAttribute="centerY" secondItem="uCm-0s-0ZW" secondAttribute="centerY" id="AZB-YB-jy5"/>
+                        <constraint firstItem="q5Y-5F-nAc" firstAttribute="leading" secondItem="uCm-0s-0ZW" secondAttribute="leading" constant="46" id="Gix-n2-Jzv"/>
                         <constraint firstItem="Ztp-Z0-Bke" firstAttribute="leading" secondItem="uCm-0s-0ZW" secondAttribute="leading" id="OV3-1y-SW7"/>
                         <constraint firstAttribute="trailing" secondItem="EwF-LW-EVt" secondAttribute="trailing" constant="11" id="TAh-xE-m63"/>
-                        <constraint firstAttribute="bottom" secondItem="EwF-LW-EVt" secondAttribute="bottom" constant="15" id="UCk-tf-pxG"/>
                         <constraint firstAttribute="bottom" secondItem="Ztp-Z0-Bke" secondAttribute="bottom" id="fnp-Sl-BW5"/>
                         <constraint firstItem="Ztp-Z0-Bke" firstAttribute="top" secondItem="uCm-0s-0ZW" secondAttribute="top" id="lP9-2l-Su3"/>
                         <constraint firstAttribute="trailing" secondItem="Ztp-Z0-Bke" secondAttribute="trailing" id="rBn-q9-O7i"/>
@@ -104,6 +113,7 @@
                 <constraint firstAttribute="trailing" secondItem="uCm-0s-0ZW" secondAttribute="trailing" id="cSb-Ht-VoR"/>
                 <constraint firstAttribute="bottom" secondItem="uCm-0s-0ZW" secondAttribute="bottom" constant="16" id="gFk-Yk-Tak"/>
                 <constraint firstItem="uCm-0s-0ZW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="mm7-hj-JNg"/>
+                <constraint firstAttribute="bottom" secondItem="EwF-LW-EVt" secondAttribute="bottom" id="qu4-8u-MKs"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>

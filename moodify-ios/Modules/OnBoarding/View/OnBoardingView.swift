@@ -14,6 +14,7 @@ protocol _Step {
 
 final class OnBoardingView : BaseView {
     
+    public var onFirstRun: (() -> ())?
     public var onAllowNotifications: (() -> ())?
     
     @IBOutlet private weak var pagesStack: UIStackView!
@@ -69,6 +70,8 @@ final class OnBoardingView : BaseView {
             self.animatePageDot(for: 1)
         } else if let _ = collectionView.visibleCells.first as? SecondStepOnboardingCell {
             self.animatePageDot(for: 2)
+        } else {
+            self.onFirstRun?()
         }
     }
     

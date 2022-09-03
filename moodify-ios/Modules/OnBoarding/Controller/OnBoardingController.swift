@@ -19,6 +19,10 @@ final class OnBoardingController : BaseController {
             guard let self = self else { return }
             self.requestNotifications()
         }
+        self.nestedView.onFirstRun = { [weak self] in
+            guard let self = self else { return }
+            UserDefaults.standard.set(true, forKey: "first_run")
+        }
         self.nestedView.configure(with: manager.makeState())
     }
     

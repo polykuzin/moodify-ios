@@ -13,6 +13,13 @@ class MoodChart: UIView {
     @IBOutlet private weak var contentView: UIView!
     @IBOutlet private weak var chartCollection: UICollectionView!
     
+    public struct ViewState {
+        
+        public struct BigBar: _BigBar {
+            var value: CGFloat
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -45,6 +52,9 @@ extension MoodChart: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BigBarCell.reuseId, for: indexPath) as? BigBarCell
         else { return .init() }
+        let height = CGFloat.random(in: 100...300)
+        let barHeight = ViewState.BigBar(value: height)
+        cell.configure(with: barHeight)
         return cell
     }
 }
@@ -52,7 +62,11 @@ extension MoodChart: UICollectionViewDataSource {
 extension MoodChart: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 28, height: chartCollection.frame.height - 20)
+        let width = chartView.frame.width * 0.15 - 27
+        if collectionView == chartCollection {
+            return CGSize(width: width, height: chartCollection.frame.height - 20)
+        }
+        return CGSize(width: width, height: 16)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
