@@ -55,7 +55,7 @@ extension MoodChart: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BigBarCell.reuseId, for: indexPath) as? BigBarCell
         else { return .init() }
-        let height: CGFloat = chartCollection.frame.height - 65
+        let height: CGFloat = chartCollection.frame.height - 57
         let weekday = ViewState.weekdays[indexPath.row]
         let barState = ViewState.BigBar(value: height, weekday: weekday)
         cell.configure(with: barState)

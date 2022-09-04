@@ -16,17 +16,17 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="355" height="360"/>
+            <rect key="frame" x="0.0" y="0.0" width="355" height="378"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uCm-0s-0ZW">
-                    <rect key="frame" x="30" y="13" width="325" height="331"/>
+                    <rect key="frame" x="30" y="13" width="325" height="349"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart_background" translatesAutoresizingMaskIntoConstraints="NO" id="Ztp-Z0-Bke">
-                            <rect key="frame" x="0.0" y="0.0" width="325" height="331"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart_gradient" translatesAutoresizingMaskIntoConstraints="NO" id="Ztp-Z0-Bke">
+                            <rect key="frame" x="0.0" y="0.0" width="325" height="330"/>
                         </imageView>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EwF-LW-EVt">
-                            <rect key="frame" x="44" y="10" width="270" height="337"/>
+                            <rect key="frame" x="44" y="10" width="270" height="355"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="270" id="VHz-5d-wSk"/>
@@ -39,7 +39,7 @@
                             </collectionViewFlowLayout>
                         </collectionView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5Y-5F-nAc">
-                            <rect key="frame" x="38" y="164" width="279.66666666666669" height="3"/>
+                            <rect key="frame" x="38" y="173" width="279.66666666666669" height="3"/>
                             <color key="backgroundColor" red="0.011764705882352941" green="0.49411764705882355" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="3" id="oLT-zm-Y4H"/>
@@ -55,7 +55,7 @@
                         <constraint firstItem="q5Y-5F-nAc" firstAttribute="leading" secondItem="uCm-0s-0ZW" secondAttribute="leading" constant="38" id="Gix-n2-Jzv"/>
                         <constraint firstItem="Ztp-Z0-Bke" firstAttribute="leading" secondItem="uCm-0s-0ZW" secondAttribute="leading" id="OV3-1y-SW7"/>
                         <constraint firstAttribute="trailing" secondItem="EwF-LW-EVt" secondAttribute="trailing" constant="11" id="TAh-xE-m63"/>
-                        <constraint firstAttribute="bottom" secondItem="Ztp-Z0-Bke" secondAttribute="bottom" id="fnp-Sl-BW5"/>
+                        <constraint firstAttribute="bottom" secondItem="Ztp-Z0-Bke" secondAttribute="bottom" constant="19" id="iOq-F1-Z2w"/>
                         <constraint firstItem="Ztp-Z0-Bke" firstAttribute="top" secondItem="uCm-0s-0ZW" secondAttribute="top" id="lP9-2l-Su3"/>
                         <constraint firstAttribute="trailing" secondItem="Ztp-Z0-Bke" secondAttribute="trailing" id="rBn-q9-O7i"/>
                     </constraints>
@@ -122,7 +122,7 @@
         </view>
     </objects>
     <resources>
-        <image name="chart_background" width="325" height="330"/>
+        <image name="chart_gradient" width="325" height="330"/>
         <image name="goodbaby" width="230" height="230"/>
         <image name="happybaby" width="230" height="230"/>
         <image name="normalbaby" width="230" height="230"/>

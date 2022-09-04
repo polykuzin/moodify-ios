@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0D-vk-amt">
-                        <rect key="frame" x="0.0" y="-0.5" width="22" height="118"/>
+                        <rect key="frame" x="0.0" y="8.5" width="22" height="118"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="22" id="GE3-5I-gMr"/>
@@ -43,7 +43,7 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="ms7-yY-zC0" secondAttribute="trailing" id="0h5-2m-Vdb"/>
                 <constraint firstItem="L0D-vk-amt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="87D-4D-n9I"/>
-                <constraint firstItem="ms7-yY-zC0" firstAttribute="top" secondItem="L0D-vk-amt" secondAttribute="bottom" constant="24" id="Cef-S8-Xd7"/>
+                <constraint firstItem="ms7-yY-zC0" firstAttribute="top" secondItem="L0D-vk-amt" secondAttribute="bottom" constant="15" id="Cef-S8-Xd7"/>
                 <constraint firstAttribute="bottom" secondItem="ms7-yY-zC0" secondAttribute="bottom" id="eAs-Pn-76e"/>
                 <constraint firstItem="ms7-yY-zC0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nEa-z2-lHH"/>
                 <constraint firstAttribute="trailing" secondItem="L0D-vk-amt" secondAttribute="trailing" id="ozN-oa-3GQ"/>
