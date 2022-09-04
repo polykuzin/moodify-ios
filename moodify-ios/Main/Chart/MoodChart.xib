@@ -39,7 +39,7 @@
                             </collectionViewFlowLayout>
                         </collectionView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5Y-5F-nAc">
-                            <rect key="frame" x="46" y="164" width="271.66666666666669" height="3"/>
+                            <rect key="frame" x="38" y="164" width="279.66666666666669" height="3"/>
                             <color key="backgroundColor" red="0.011764705882352941" green="0.49411764705882355" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="3" id="oLT-zm-Y4H"/>
@@ -52,7 +52,7 @@
                         <constraint firstItem="EwF-LW-EVt" firstAttribute="leading" secondItem="uCm-0s-0ZW" secondAttribute="leading" constant="44" id="1k0-8o-gNX"/>
                         <constraint firstAttribute="trailing" secondItem="q5Y-5F-nAc" secondAttribute="trailing" constant="7.3600000000000003" id="3sv-23-7CW"/>
                         <constraint firstItem="q5Y-5F-nAc" firstAttribute="centerY" secondItem="uCm-0s-0ZW" secondAttribute="centerY" id="AZB-YB-jy5"/>
-                        <constraint firstItem="q5Y-5F-nAc" firstAttribute="leading" secondItem="uCm-0s-0ZW" secondAttribute="leading" constant="46" id="Gix-n2-Jzv"/>
+                        <constraint firstItem="q5Y-5F-nAc" firstAttribute="leading" secondItem="uCm-0s-0ZW" secondAttribute="leading" constant="38" id="Gix-n2-Jzv"/>
                         <constraint firstItem="Ztp-Z0-Bke" firstAttribute="leading" secondItem="uCm-0s-0ZW" secondAttribute="leading" id="OV3-1y-SW7"/>
                         <constraint firstAttribute="trailing" secondItem="EwF-LW-EVt" secondAttribute="trailing" constant="11" id="TAh-xE-m63"/>
                         <constraint firstAttribute="bottom" secondItem="Ztp-Z0-Bke" secondAttribute="bottom" id="fnp-Sl-BW5"/>

@@ -9,6 +9,7 @@ import UIKit
 
 protocol _BigBar {
     var value: CGFloat { get }
+    var weekday: String { get }
 }
 
 class BigBarCell: UICollectionViewCell {
@@ -16,6 +17,7 @@ class BigBarCell: UICollectionViewCell {
     private let gradient = CAGradientLayer()
 
     @IBOutlet private weak var barView: UIView!
+    @IBOutlet private weak var weekdayLabel: UILabel!
     @IBOutlet private weak var barHeight: NSLayoutConstraint!
     
     override func awakeFromNib() {
@@ -28,6 +30,7 @@ class BigBarCell: UICollectionViewCell {
     }
     
     public func configure(with data: _BigBar) {
+        self.weekdayLabel.text = data.weekday
         self.barHeight.constant = data.value
         self.barView.frame.size.height = data.value
         self.gradient.colors = [

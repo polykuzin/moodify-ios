@@ -15,8 +15,11 @@ class MoodChart: UIView {
     
     public struct ViewState {
         
+        static var weekdays: [String] = ["M", "T", "W", "T", "F", "S", "S"]
+        
         public struct BigBar: _BigBar {
             var value: CGFloat
+            var weekday: String
         }
     }
     
@@ -52,9 +55,10 @@ extension MoodChart: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BigBarCell.reuseId, for: indexPath) as? BigBarCell
         else { return .init() }
-        let height = CGFloat.random(in: 100...300)
-        let barHeight = ViewState.BigBar(value: height)
-        cell.configure(with: barHeight)
+        let height: CGFloat = chartCollection.frame.height - 65
+        let weekday = ViewState.weekdays[indexPath.row]
+        let barState = ViewState.BigBar(value: height, weekday: weekday)
+        cell.configure(with: barState)
         return cell
     }
 }

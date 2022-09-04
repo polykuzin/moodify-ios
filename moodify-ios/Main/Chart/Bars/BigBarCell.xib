@@ -19,16 +19,17 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0D-vk-amt">
-                        <rect key="frame" x="0.0" y="-2.5" width="22" height="120"/>
+                        <rect key="frame" x="0.0" y="-0.5" width="22" height="118"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="22" id="GE3-5I-gMr"/>
-                            <constraint firstAttribute="height" constant="120" id="mPF-d6-0xC"/>
+                            <constraint firstAttribute="height" constant="118" id="mPF-d6-0xC"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="М" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ms7-yY-zC0">
                         <rect key="frame" x="0.0" y="141.5" width="22" height="20.5"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="20.5" id="Voc-Pa-Nvj"/>
                             <constraint firstAttribute="width" constant="22" id="xWb-MO-5Nj"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
@@ -51,8 +52,9 @@
             <connections>
                 <outlet property="barHeight" destination="mPF-d6-0xC" id="PrX-22-TvX"/>
                 <outlet property="barView" destination="L0D-vk-amt" id="MrT-3f-Rz2"/>
+                <outlet property="weekdayLabel" destination="ms7-yY-zC0" id="iLu-sE-dDS"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="137.27678571428569"/>
+            <point key="canvasLocation" x="137.68115942028987" y="136.60714285714286"/>
         </collectionViewCell>
     </objects>
     <resources>
