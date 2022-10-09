@@ -26,6 +26,24 @@ class MainPageController: UIViewController {
             let vc = JournalController()
             navigation.pushViewController(vc, animated: true)
         }
+//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
+//        else { return }
+//        let managedContext = appDelegate.persistentContainer.viewContext
+//        let mood = Mood(context: managedContext)
+//
+//        var dateComponents = DateComponents()
+//        dateComponents.year = 2022
+//        dateComponents.month = 9
+//        dateComponents.day = 12
+//
+//        let userCalendar = Calendar(identifier: .gregorian)
+//        let someDateTime = userCalendar.date(from: dateComponents)
+//
+//        mood.date = someDateTime
+//        mood.mood = "happy"
+//        mood.feelings = []
+//        mood.images = []
+//        appDelegate.saveContext()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,7 +60,7 @@ class MainPageController: UIViewController {
             do {
                 let managedContext = appDelegate.persistentContainer.viewContext
                 let results = try managedContext.fetch(fetch)
-                moods = results
+                self.moods = results
             } catch let error as NSError {
                 print("Fetch error: \(error) description: \(error.userInfo)")
             }

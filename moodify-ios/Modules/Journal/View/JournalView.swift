@@ -31,7 +31,7 @@ class JournalView: UIView {
         }
         
         struct MoodChart: _MoodChart {
-            
+            var moods: [Mood]
         }
     }
     

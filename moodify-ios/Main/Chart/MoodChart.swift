@@ -9,13 +9,17 @@ import UIKit
 
 class MoodChart: UIView {
     
+    private let converter = MoodConverter()
+    private var moods: [ViewState.BigBar] = []
+    
     @IBOutlet private weak var chartView: UIView!
     @IBOutlet private weak var contentView: UIView!
+    @IBOutlet private weak var babysStackView: UIStackView!
     @IBOutlet private weak var chartCollection: UICollectionView!
     
     public struct ViewState {
         
-        static var weekdays: [String] = ["M", "T", "W", "T", "F", "S", "S"]
+        static var weekdays: [String] = ["Mon", "Tue", "Wen", "Thu", "Fri", "Sat", "Sun"]
         
         public struct BigBar: _BigBar {
             var value: CGFloat
@@ -44,6 +48,16 @@ class MoodChart: UIView {
         chartCollection.dataSource = self
         chartCollection.register(BigBarCell.nib, forCellWithReuseIdentifier: BigBarCell.reuseId)
     }
+    
+    public func configure(with moods: [Mood]) {
+        let maxHeight = chartCollection.frame.height - 57
+        let values = converter.convertMoodsToWeekdayScale(moods: moods, maxValue: maxHeight)
+        for (weekday, value) in zip(ViewState.weekdays, values) {
+            let state = ViewState.BigBar(value: value, weekday: String(weekday.first!))
+            self.moods.append(state)
+        }
+        self.chartCollection.reloadData()
+    }
 }
 
 extension MoodChart: UICollectionViewDataSource {
@@ -55,10 +69,10 @@ extension MoodChart: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BigBarCell.reuseId, for: indexPath) as? BigBarCell
         else { return .init() }
-        let height: CGFloat = chartCollection.frame.height - 57
-        let weekday = ViewState.weekdays[indexPath.row]
-        let barState = ViewState.BigBar(value: height, weekday: weekday)
-        cell.configure(with: barState)
+        if moods.count != 0 {
+            let state = self.moods[indexPath.row]
+            cell.configure(with: state)
+        }
         return cell
     }
 }

@@ -9,13 +9,18 @@ import UIKit
 import CoreTableView
 
 protocol _MoodChart: CellData {
-    
+    var moods: [Mood] { get }
 }
 
 extension _MoodChart {
     
     var height: CGFloat {
         return 383
+    }
+    
+    func prepare(cell: UITableViewCell, for tableView: UITableView, indexPath: IndexPath) {
+        guard let cell = cell as? MoodChartCell else { return }
+        cell.configure(with: self)
     }
     
     func cell(for tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
@@ -32,5 +37,9 @@ class MoodChartCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    public func configure(with data: _MoodChart) {
+        self.moodChart.configure(with: data.moods)
     }
 }

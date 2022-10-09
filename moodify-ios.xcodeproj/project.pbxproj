@@ -1318,8 +1318,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MosMetro-official/CoreTableView";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = exactVersion;
+				version = 0.0.6;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

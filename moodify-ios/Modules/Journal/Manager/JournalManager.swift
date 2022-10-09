@@ -51,7 +51,8 @@ final class JournalManager {
             title: "average_title".localized(using: "Journal"),
             description: "average_descr".localized(using: "Journal")
         )
-        let moodChart = JournalState.MoodChart().toElement()
+        let moods = loadSavedMoods()
+        let moodChart = JournalState.MoodChart(moods: moods).toElement()
         let section = SectionState(header: averageHeader, footer: nil)
         let state = State(model: section, elements: [moodChart])
         return state
