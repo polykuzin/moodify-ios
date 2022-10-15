@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,6 +29,13 @@
                     <rect key="frame" x="0.0" y="115" width="414" height="781"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZT-dX-dIS" customClass="MoodSegment" customModule="moodify_ios" customModuleProvider="target">
+                    <rect key="frame" x="16" y="120" width="382" height="38"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="mxx-s0-IDO"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -39,9 +47,12 @@
                 <constraint firstItem="TJL-iC-Jif" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="C1A-19-nZ8"/>
                 <constraint firstItem="TJL-iC-Jif" firstAttribute="top" secondItem="Oyo-Rh-ngI" secondAttribute="bottom" constant="5" id="D0Z-y5-YGX"/>
                 <constraint firstItem="Oyo-Rh-ngI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="Hfj-Ae-NlP"/>
+                <constraint firstItem="CZT-dX-dIS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="IDj-Oa-O0f"/>
                 <constraint firstAttribute="bottom" secondItem="Vfv-1O-Zac" secondAttribute="bottom" id="aBB-Gs-G0j"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Oyo-Rh-ngI" secondAttribute="trailing" id="axT-BK-14q"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CZT-dX-dIS" secondAttribute="trailing" constant="16" id="eog-5c-bQw"/>
                 <constraint firstItem="Vfv-1O-Zac" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jli-Ru-gRu"/>
+                <constraint firstItem="CZT-dX-dIS" firstAttribute="top" secondItem="Oyo-Rh-ngI" secondAttribute="bottom" constant="10" id="kcc-KQ-SLM"/>
                 <constraint firstAttribute="bottom" secondItem="TJL-iC-Jif" secondAttribute="bottom" id="xN5-Nx-bk9"/>
             </constraints>
             <connections>

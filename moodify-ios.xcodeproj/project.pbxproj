@@ -96,6 +96,8 @@
 		68FCA6F528109126004EDCED /* MoodChooserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68FCA6F428109126004EDCED /* MoodChooserView.xib */; };
 		68FCA6F928109216004EDCED /* MoodChooser.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68FCA6F828109216004EDCED /* MoodChooser.xcassets */; };
 		68FCA6FB281094B3004EDCED /* MoodChooserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FCA6FA281094B3004EDCED /* MoodChooserController.swift */; };
+		68FD042128F325A1005AF5A9 /* MoodSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FD042028F325A1005AF5A9 /* MoodSegment.swift */; };
+		68FD042328F325AE005AF5A9 /* MoodSegment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68FD042228F325AE005AF5A9 /* MoodSegment.xib */; };
 		68FEDCDD286F239E00BC7B4F /* MoodChooser.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68FEDCDF286F239E00BC7B4F /* MoodChooser.strings */; };
 		68FEDCE2286F246500BC7B4F /* MoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FEDCE1286F246500BC7B4F /* MoodService.swift */; };
 		6D748FB527D63FF2006CBA91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D748FB427D63FF2006CBA91 /* AppDelegate.swift */; };
@@ -221,6 +223,8 @@
 		68FCA6F428109126004EDCED /* MoodChooserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodChooserView.xib; sourceTree = "<group>"; };
 		68FCA6F828109216004EDCED /* MoodChooser.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MoodChooser.xcassets; sourceTree = "<group>"; };
 		68FCA6FA281094B3004EDCED /* MoodChooserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodChooserController.swift; sourceTree = "<group>"; };
+		68FD042028F325A1005AF5A9 /* MoodSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSegment.swift; sourceTree = "<group>"; };
+		68FD042228F325AE005AF5A9 /* MoodSegment.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodSegment.xib; sourceTree = "<group>"; };
 		68FEDCDE286F239E00BC7B4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MoodChooser.strings; sourceTree = "<group>"; };
 		68FEDCE0286F240A00BC7B4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/MoodChooser.strings; sourceTree = "<group>"; };
 		68FEDCE1286F246500BC7B4F /* MoodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodService.swift; sourceTree = "<group>"; };
@@ -632,6 +636,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		68FD041F28F32569005AF5A9 /* Segment */ = {
+			isa = PBXGroup;
+			children = (
+				68FD042028F325A1005AF5A9 /* MoodSegment.swift */,
+				68FD042228F325AE005AF5A9 /* MoodSegment.xib */,
+			);
+			path = Segment;
+			sourceTree = "<group>";
+		};
 		6D748FA827D63FF2006CBA91 = {
 			isa = PBXGroup;
 			children = (
@@ -677,6 +690,7 @@
 		6D748FC927D646E1006CBA91 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				68FD041F28F32569005AF5A9 /* Segment */,
 				68377D1E2884577E0064DFA0 /* Chart */,
 				68E3755A283121C70000BD71 /* Database */,
 				68780237282CED89003FA9A0 /* Navigation */,
@@ -932,6 +946,7 @@
 			files = (
 				68A2329E282D07A40044733B /* MoodTotalCell.xib in Resources */,
 				68A23298282CEE030044733B /* MoodBar.xib in Resources */,
+				68FD042328F325AE005AF5A9 /* MoodSegment.xib in Resources */,
 				68D631C72839662C0085FFEF /* MainPageView.xib in Resources */,
 				6DBDF3C027EF841C00CEEB08 /* OnBoardingView.xib in Resources */,
 				684BB557286F38C100600DE7 /* OnBoarding.strings in Resources */,
@@ -1059,6 +1074,7 @@
 				68C51FF5285FB55700F0BF19 /* SettingsCell.swift in Sources */,
 				68C51FF2285FB3C400F0BF19 /* SettingsManager.swift in Sources */,
 				68FEDCE2286F246500BC7B4F /* MoodService.swift in Sources */,
+				68FD042128F325A1005AF5A9 /* MoodSegment.swift in Sources */,
 				6D748FFB27D64D43006CBA91 /* BaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
