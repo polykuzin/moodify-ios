@@ -24,6 +24,7 @@ class SettingsView: UIView {
             var hasSeparator: Bool
             var leftImage: UIImage?
             var rightAccessory: SettingsCell.RightAccessory?
+            var onItemSelect: Command<Void>
         }
     }
     

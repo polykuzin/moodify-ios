@@ -5,18 +5,25 @@
 //  Created by Andrey Rusinovich on 19.06.2022.
 //
 
-import Foundation
+import UIKit
 import CoreTableView
 
 final class SettingsManager {
     
     typealias SettingsState = SettingsView.ViewState
     
+    private weak var controller: UIViewController?
+    
+    init(controller: UIViewController?) {
+        self.controller = controller
+    }
+    
     public func makeSettingsState() -> [State] {
         let general = makeGeneralBlock()
         let passcode = makePasscodeBlock()
         let notifications = makeNotificationsBlock()
-        return [general, passcode, notifications]
+        let share = makeShareAppBlock()
+        return [share]//[general, passcode, notifications]
     }
     
     private func makeGeneralBlock() -> State {
@@ -25,7 +32,10 @@ final class SettingsManager {
             title: "Color theme",
             hasSeparator: false,
             leftImage: .init(named: "theme"),
-            rightAccessory: nil
+            rightAccessory: nil,
+            onItemSelect: Command {
+                
+            }
         ).toElement()
         let generalBlock = SectionState(header: generalHeader, footer: nil)
         return State(model: generalBlock, elements: [theme])
@@ -37,13 +47,19 @@ final class SettingsManager {
             title: "Enable",
             hasSeparator: true,
             leftImage: nil,
-            rightAccessory: .switcher
+            rightAccessory: .switcher,
+            onItemSelect: Command {
+                
+            }
         ).toElement()
         let change = SettingsState.Settings(
             title: "Change passcode",
             hasSeparator: false,
             leftImage: nil,
-            rightAccessory: nil
+            rightAccessory: nil,
+            onItemSelect: Command {
+                
+            }
         ).toElement()
         let passcodeBlock = SectionState(header: passcodeHeader, footer: nil)
         return State(model: passcodeBlock, elements: [enabled, change])
@@ -55,15 +71,38 @@ final class SettingsManager {
             title: "Allow",
             hasSeparator: true,
             leftImage: .init(named: "clock"),
-            rightAccessory: .switcher
+            rightAccessory: .switcher,
+            onItemSelect: Command {
+                
+            }
         ).toElement()
         let reminder = SettingsState.Settings(
             title: "Reminder at",
             hasSeparator: false,
             leftImage: nil,
-            rightAccessory: .timePicker
+            rightAccessory: .timePicker,
+            onItemSelect: Command {
+                
+            }
         ).toElement()
         let notificationsBlock = SectionState(header: notificationsHeader, footer: nil)
         return State(model: notificationsBlock, elements: [allow, reminder])
+    }
+    
+    private func makeShareAppBlock() -> State {
+        let shareHeader = SettingsState.SettingsHeader(title: "SHARE")
+        let share = SettingsState.Settings(
+            title: "Share with friends",
+            hasSeparator: false,
+            leftImage: .init(named: "share_app"),
+            rightAccessory: nil,
+            onItemSelect: Command {
+                let items = [URL(string: "https://www.apple.com")!]
+                let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+                self.controller?.present(ac, animated: true)
+            }
+        ).toElement()
+        let shareBlock = SectionState(header: shareHeader, footer: nil)
+        return State(model: shareBlock, elements: [share])
     }
 }

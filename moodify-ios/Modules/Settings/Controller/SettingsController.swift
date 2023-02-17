@@ -9,8 +9,17 @@ import UIKit
 
 class SettingsController: UIViewController {
     
-    let manager = SettingsManager()
+    var manager: SettingsManager?
     let nestedView = SettingsView.loadFromNib()
+    
+    init() {
+        super.init(nibName: "SettingsController", bundle: nil)
+        self.manager = SettingsManager(controller: self)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
     
     override func loadView() {
         self.view = nestedView
@@ -18,6 +27,8 @@ class SettingsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.nestedView.configure(with: manager.makeSettingsState())
+        if let manager {
+            self.nestedView.configure(with: manager.makeSettingsState())
+        }
     }
 }
