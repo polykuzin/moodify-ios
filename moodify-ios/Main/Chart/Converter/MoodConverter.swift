@@ -25,7 +25,7 @@ final class MoodConverter {
                 print(value, maxValue, scale)
                 moodsValues.append(value)
             } else {
-                moodsValues.append(16)
+                moodsValues.append(0)
             }
         }
         return moodsValues

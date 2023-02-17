@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,7 +26,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="TJL-iC-Jif" customClass="BaseTableView" customModule="CoreTableView">
-                    <rect key="frame" x="0.0" y="115" width="414" height="781"/>
+                    <rect key="frame" x="0.0" y="198" width="414" height="698"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZT-dX-dIS" customClass="MoodSegment" customModule="moodify_ios" customModuleProvider="target">
@@ -45,7 +45,6 @@
                 <constraint firstItem="Oyo-Rh-ngI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7Z7-J6-Vqf"/>
                 <constraint firstItem="TJL-iC-Jif" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="BVb-Q9-xIB"/>
                 <constraint firstItem="TJL-iC-Jif" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="C1A-19-nZ8"/>
-                <constraint firstItem="TJL-iC-Jif" firstAttribute="top" secondItem="Oyo-Rh-ngI" secondAttribute="bottom" constant="5" id="D0Z-y5-YGX"/>
                 <constraint firstItem="Oyo-Rh-ngI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="Hfj-Ae-NlP"/>
                 <constraint firstItem="CZT-dX-dIS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="IDj-Oa-O0f"/>
                 <constraint firstAttribute="bottom" secondItem="Vfv-1O-Zac" secondAttribute="bottom" id="aBB-Gs-G0j"/>
@@ -53,6 +52,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CZT-dX-dIS" secondAttribute="trailing" constant="16" id="eog-5c-bQw"/>
                 <constraint firstItem="Vfv-1O-Zac" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jli-Ru-gRu"/>
                 <constraint firstItem="CZT-dX-dIS" firstAttribute="top" secondItem="Oyo-Rh-ngI" secondAttribute="bottom" constant="10" id="kcc-KQ-SLM"/>
+                <constraint firstItem="TJL-iC-Jif" firstAttribute="top" secondItem="CZT-dX-dIS" secondAttribute="bottom" constant="40" id="s5H-zl-clY"/>
                 <constraint firstAttribute="bottom" secondItem="TJL-iC-Jif" secondAttribute="bottom" id="xN5-Nx-bk9"/>
             </constraints>
             <connections>

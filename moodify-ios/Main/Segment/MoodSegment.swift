@@ -16,14 +16,7 @@ class MoodSegment: UIView {
         return view
     }()
     
-    private let curLabel: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = .black
-        label.text = "Hello"
-        label.textColor = .green
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    private let currentPeriodLabel = UILabel()
 
     @IBOutlet private weak var weekLabel: UILabel!
     @IBOutlet private weak var yearLabel: UILabel!
@@ -54,9 +47,19 @@ class MoodSegment: UIView {
         let tapYear = UITapGestureRecognizer(target: self, action: #selector(yearTapped))
         self.yearLabel.addGestureRecognizer(tapYear)
         self.currentPeriod.layer.cornerRadius = 10
+        self.currentPeriod.layer.shadowRadius = 4
+        self.currentPeriod.layer.shadowOpacity = 0.25
+        self.currentPeriod.layer.shadowColor = UIColor.black.cgColor
+        self.currentPeriod.layer.shadowOffset = CGSize(width: 0, height: 4)
         self.currentPeriod.frame.size.width = self.weekLabel.frame.width - 7
         self.currentPeriod.frame.size.height = self.weekLabel.frame.height - 7
         self.currentPeriod.center = self.weekLabel.center
+        self.currentPeriodLabel.text = "Week"
+        self.currentPeriodLabel.textAlignment = .center
+        self.currentPeriodLabel.textColor = .segmentText
+        self.currentPeriodLabel.font = .systemFont(ofSize: 18, weight: .semibold)
+        self.currentPeriodLabel.frame = currentPeriod.bounds
+        self.currentPeriod.addSubview(currentPeriodLabel)
         self.contentView.addSubview(currentPeriod)
     }
     
@@ -67,9 +70,10 @@ class MoodSegment: UIView {
             self.currentPeriod.frame.size.width = width
             self.currentPeriod.frame.size.height = height
             self.currentPeriod.center = self.weekLabel.center
+            self.currentPeriodLabel.text = "Week"
+            self.currentPeriodLabel.center = CGPoint(x: self.currentPeriod.frame.width / 2, y: self.currentPeriod.frame.height / 2)
             self.layoutIfNeeded()
         }
-        print("center", weekLabel.center, currentPeriod.center)
     }
     
     @objc private func monthTapped() {
@@ -79,6 +83,8 @@ class MoodSegment: UIView {
             self.currentPeriod.frame.size.width = width
             self.currentPeriod.frame.size.height = height
             self.currentPeriod.center = self.monthLabel.center
+            self.currentPeriodLabel.text = "Month"
+            self.currentPeriodLabel.center = CGPoint(x: self.currentPeriod.frame.width / 2, y: self.currentPeriod.frame.height / 2)
             self.layoutIfNeeded()
         }
     }
@@ -90,6 +96,8 @@ class MoodSegment: UIView {
             self.currentPeriod.frame.size.width = width
             self.currentPeriod.frame.size.height = height
             self.currentPeriod.center = self.yearLabel.center
+            self.currentPeriodLabel.text = "Year"
+            self.currentPeriodLabel.center = CGPoint(x: self.currentPeriod.frame.width / 2, y: self.currentPeriod.frame.height / 2)
             self.layoutIfNeeded()
         }
     }

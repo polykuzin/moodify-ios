@@ -61,6 +61,18 @@ class MoodSaverController: UIViewController  {
                 return
             }
             
+            let fetch: NSFetchRequest<Mood> = Mood.fetchRequest()
+            do {
+                let managedContext = appDelegate.persistentContainer.viewContext
+                let results = try managedContext.fetch(fetch)
+                if results.contains(where: { Calendar.current.isDateInToday($0.date!) }) {
+                    self.showErrorSaveMood()
+                    return
+                }
+            } catch let error as NSError {
+                print("Fetch error: \(error) description: \(error.userInfo)")
+            }
+            
             let managedContext = appDelegate.persistentContainer.viewContext
             let mood = Mood(context: managedContext)
             mood.date = Date()
@@ -72,5 +84,18 @@ class MoodSaverController: UIViewController  {
             self.tabBarController?.selectedIndex = 0
             self.navigationController?.popToRootViewController(animated: false)
         }
+    }
+    
+    private func showErrorSaveMood() {
+        let alert = UIAlertController(
+            title: "oops:(\nYou already saved your mood today",
+            message: "Try it tomorrow)",
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in
+            self.tabBarController?.selectedIndex = 0
+            self.navigationController?.popToRootViewController(animated: false)
+        })
+        self.present(alert, animated: true)
     }
 }
