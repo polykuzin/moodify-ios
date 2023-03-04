@@ -97,7 +97,7 @@ final class SettingsManager {
             leftImage: .init(named: "share_app"),
             rightAccessory: nil,
             onItemSelect: Command {
-                let items = [URL(string: "https://www.apple.com")!]
+                let items = [URL(string: "https://apps.apple.com/ru/app/moodify-mood-tracker-app/id1632680760")!]
                 let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
                 self.controller?.present(ac, animated: true)
             }
